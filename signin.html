@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In - DripLine</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="auth.css" />
+</head>
+<body>
+
+  <header class="authHeader">
+    <div class="container authHeader__row">
+      <a class="brand" href="index.html" aria-label="DripLine Home">
+        <img src="dripline.jpg" alt="DripLine" class="brand__logo" />
+        <span class="brand__name">DRIPLINE</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="authMain">
+    <div class="container">
+      <div class="authWrap">
+        <section class="authCard">
+          <div class="authTop">
+            <h1 class="authTitle">Sign In</h1>
+            <p class="authSub">Welcome back. Please enter your details to access your account.</p>
+          </div>
+
+          <form class="authForm" action="#" method="post">
+            <div class="field">
+              <label class="label" for="email">Email</label>
+              <input class="input" id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="field">
+              <label class="label" for="password">Password</label>
+              <input class="input" id="password" name="password" type="password" placeholder="Enter your password" required />
+            </div>
+
+            <div class="authRow">
+              <label class="check">
+                <input type="checkbox" name="remember" />
+                <span>Remember me</span>
+              </label>
+
+              <a class="link" href="forget.html">Forgot password?</a>
+            </div>
+
+            <button class="authBtn" type="submit">Sign In</button>
+
+            <div class="authBottom">
+              Don’t have an account? <a href="signup.html">Sign up</a>
+            </div>
+
+            <div class="authNote">
+              For security, please don’t share your password with anyone.
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+
+      <div class="footer__col footer__brandCol">
+        <img src="dripline.jpg" alt="" class="footer__mark" />
+
+        <div class="footer__links">
+          <a href="about.html">About DripLine</a>
+          <a href="terms.html">Terms & Conditions</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="return-policy.html">Cancellation & Return Policy</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="footer__col footer__mid">
+        <div class="footer__help">
+          <div class="footer__title">
+            <span class="footer__iconTxt">☎</span>
+            <span>FOR ANY HELP YOU MAY CALL US AT</span>
+          </div>
+
+          <div class="footer__helpText">
+            +8801975538778<br />
+            Customer Service<br />
+            Track your order or get help returning an order
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__col footer__right">
+        <div class="footer__follow">
+          <div class="footer__title">
+            <span class="footer__check">✓</span>
+            <span>FOLLOW US</span>
+          </div>
+
+          <div class="footer__followText">
+            Stay updated on our latest arrivals, exclusive promotions and events.
+          </div>
+
+          <div class="socialRow">
+            <a class="socialBtn" href="INSTAGRAM_LINK_HERE" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+              <span class="socialIcon" aria-hidden="true">
+                <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="socialBtn__txt">Instagram</span>
+            </a>
+
+            <a class="socialBtn" href="https://wa.me/+8801975538778" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+              <span class="socialIcon" aria-hidden="true">
+                <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.6-4.1A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M9.2 8.9c.2-.5.5-.5.8-.5h.6c.2 0 .4 0 .5.4l.6 1.4c.1.3 0 .6-.2.8l-.4.4c-.1.1-.2.3-.1.5.4.8 1.3 1.8 2.3 2.3.2.1.4 0 .5-.1l.4-.4c.2-.2.5-.3.8-.2l1.4.6c.4.1.4.3.4.5v.6c0 .3 0 .6-.5.8-.4.2-1.3.4-2.6-.1-1.3-.6-3.1-1.9-4.3-4.1-1.1-2.1-.3-3-.1-3.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="socialBtn__txt">WhatsApp</span>
+            </a>
+          </div>
+
+          <a class="fbCard" href="https://www.facebook.com/fashionhk7" target="_blank" rel="noopener">
+            <div class="fbCard__left">
+              <img src="dripline.jpg" alt="Facebook Page" class="fbCard__avatar" />
+            </div>
+
+            <div class="fbCard__mid">
+              <div class="fbCard__name">DripLine</div>
+              <div class="fbCard__meta">Facebook Page</div>
+
+              <div class="fbCard__stats">
+                <div class="stat">
+                  <div class="stat__num">5.1K</div>
+                  <div class="stat__lbl">Followers</div>
+                </div>
+
+                <div class="stat stat--divider" aria-hidden="true"></div>
+
+                <div class="stat">
+                  <div class="stat__num">1</div>
+                  <div class="stat__lbl">Following</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="fbCard__right">
+              <div class="fbCard__btn">Follow</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottomRow">
+        <div>Your order is handled daily with a lot of ❤️ and delivered across Bangladesh!</div>
+        <div class="footer__copy">Copyright © DripLine. All Rights Reserved</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

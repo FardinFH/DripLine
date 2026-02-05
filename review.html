@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DripLine | Customer Reviews</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="review.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__row">
+
+      <a class="brand" href="index.html" aria-label="DripLine Home">
+        <img src="dripline.jpg" alt="DripLine" class="brand__logo" />
+        <span class="brand__name">DRIPLINE</span>
+      </a>
+
+      <div class="search">
+        <input class="search__input" type="text" placeholder="Search reviews (name / product)" aria-label="Search reviews" id="reviewSearch" />
+      </div>
+
+      <div class="header__right">
+        <div class="promoTag" title="Get 5% OFF on Page">
+          Get <strong>5% OFF</strong> on <span>Page</span>
+        </div>
+
+        <div class="header__icons">
+          <a class="iconBtn" href="store.html" aria-label="Stores" title="Stores">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="2" />
+                <path d="M12 11.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </span>
+            <span class="iconBtn__label">Stores</span>
+          </a>
+
+          <a class="iconBtn" href="review.html" aria-label="Reviews" title="Reviews">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3l2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Reviews</span>
+          </a>
+<a class="iconBtn" href="return.html" aria-label="Return & Replacement" title="Return & Replacement">
+  <span class="uiIcon" aria-hidden="true">
+    <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M7 7h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-7a3 3 0 0 1 3-3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M8 7a4 4 0 0 1 8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10 13h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10.5 16.5l-2-2 2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13.5 12.5l2 2-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+  <span class="iconBtn__label">Return</span>
+</a>
+          <details class="profileWrap">
+            <summary class="iconBtn iconBtn--btn profileBtn" aria-label="Profile" title="Profile" aria-haspopup="menu">
+              <span class="uiIcon" aria-hidden="true">
+                <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 21a8 8 0 0 0-16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </span>
+              <span class="iconBtn__label">Profile</span>
+            </summary>
+
+            <div class="profileDropdown" role="menu" aria-label="Profile menu">
+              <div class="profileDropdown__head">Welcome</div>
+              <div class="profileDropdown__auth">
+                <a href="signin.html" class="profileDropdown__link profileDropdown__link--primary">Sign in</a>
+                <span class="profileDropdown__sep">/</span>
+                <a href="signup.html" class="profileDropdown__link">Sign up</a>
+              </div>
+
+              <div class="profileDropdown__list">
+                <a href="track.html" class="profileDropdown__item" role="menuitem">
+                  <svg class="ddIcon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M7 3h10v4H7V3Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M6 7h12l-1 14H7L6 7Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M9 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  <span>Track Order</span>
+                </a>
+                <a href="about.html" class="profileDropdown__item" role="menuitem">
+                  <svg class="ddIcon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V6l-8-4-8 4v6c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M12 11v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M12 8.25h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                  <span>About Us</span>
+                </a>
+              </div>
+            </div>
+          </details>
+
+          <a class="iconBtn" href="wishlist.html" aria-label="Wishlist" title="Wishlist">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s-7-4.35-9.2-8.4C1 9.2 3.2 6.5 6.2 6.5c1.6 0 3.1.8 3.8 2 0.7-1.2 2.2-2 3.8-2 3 0 5.2 2.7 3.4 6.1C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Wishlist</span>
+          </a>
+
+          <a class="iconBtn" href="bag.html" aria-label="Bag" title="Bag">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 7h12l1 14H5L6 7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M9 7a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Bag</span>
+          </a>
+        </div>
+
+        <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+
+    </div>
+
+    <div class="mobileNav" id="mobileNav" hidden>
+      <a href="men.html" class="mobileNav__link">MEN</a>
+      <a href="marketplace.html" class="mobileNav__link">SHOP NOW</a>
+      <a href="jersey.html" class="mobileNav__link">JERSEY</a>
+      <a href="essentials.html" class="mobileNav__link">ESSENTIALS</a>
+
+      <div class="mobileNav__divider"></div>
+
+      <a href="store.html" class="mobileNav__link">Stores</a>
+      <a href="review.html" class="mobileNav__link mobileNav__link--active">Reviews</a>
+      <a href="signin.html" class="mobileNav__link">Sign in</a>
+      <a href="signup.html" class="mobileNav__link">Sign up</a>
+      <a href="wishlist.html" class="mobileNav__link">Wishlist</a>
+      <a href="bag.html" class="mobileNav__link">Bag</a>
+      <a href="track.html" class="mobileNav__link">Track Order</a>
+      <a href="about.html" class="mobileNav__link">About Us</a>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div class="container stats__wrap">
+      <div class="stats__head">
+        <div class="stats__left">
+          <h3 class="stats__title">Customer Reviews</h3>
+          <p class="stats__sub">
+            Share your experience with a product. Add a photo if you want—your feedback helps others shop confidently.
+          </p>
+        </div>
+
+        <div class="stats__tabs" role="group" aria-label="Review filters">
+          <button class="tabBtn tabBtn--active" type="button" data-filter="all">All</button>
+          <button class="tabBtn" type="button" data-filter="5">5★</button>
+          <button class="tabBtn" type="button" data-filter="4">4★+</button>
+          <button class="tabBtn" type="button" data-filter="3">3★+</button>
+        </div>
+      </div>
+
+      <div class="stats__grid">
+        <div class="statsCard statsCard--main">
+          <div class="statsCard__top">
+            <div class="statsCard__kpi">
+              <div class="kpi__label">Write a Review</div>
+              <div class="kpi__value" style="font-size:18px; margin-top:10px;">Submit your feedback</div>
+            </div>
+            <div class="statsCard__badge" id="formHint">Photo optional</div>
+          </div>
+
+          <div class="reviewFormWrap">
+            <form id="reviewForm" class="reviewForm" autocomplete="off">
+              <div class="reviewRow">
+                <div class="reviewField">
+                  <label class="reviewLabel" for="rName">Your Name</label>
+                  <input class="reviewInput" id="rName" type="text" placeholder="e.g. Sajib Ahmed" required />
+                </div>
+
+                <div class="reviewField">
+                  <label class="reviewLabel" for="rProduct">Product Name</label>
+                  <input class="reviewInput" id="rProduct" type="text" placeholder="e.g. Oversized Tee" required />
+                </div>
+              </div>
+
+              <div class="reviewRow">
+                <div class="reviewField">
+                  <label class="reviewLabel" for="rOrder">Order ID (optional)</label>
+                  <input class="reviewInput" id="rOrder" type="text" placeholder="e.g. DL-10482" />
+                </div>
+
+                <div class="reviewField">
+                  <label class="reviewLabel">Star Rating</label>
+                  <div class="starPicker" role="radiogroup" aria-label="Star rating">
+                    <button class="starBtn" type="button" data-star="1" aria-label="1 star">★</button>
+                    <button class="starBtn" type="button" data-star="2" aria-label="2 stars">★</button>
+                    <button class="starBtn" type="button" data-star="3" aria-label="3 stars">★</button>
+                    <button class="starBtn" type="button" data-star="4" aria-label="4 stars">★</button>
+                    <button class="starBtn" type="button" data-star="5" aria-label="5 stars">★</button>
+                    <input type="hidden" id="rStars" value="5" />
+                    <span class="starText" id="starText">5/5</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="reviewField">
+                <label class="reviewLabel" for="rText">Your Review</label>
+                <textarea class="reviewTextarea" id="rText" rows="5" placeholder="Write your experience (quality, size, delivery, comfort...)" required></textarea>
+              </div>
+
+              <div class="reviewRow">
+                <div class="reviewField">
+                  <label class="reviewLabel" for="rPhoto">Product Photo (optional)</label>
+                  <input class="reviewFile" id="rPhoto" type="file" accept="image/*" />
+                  <div class="photoPreview" id="photoPreview" hidden>
+                    <img id="previewImg" alt="Selected photo preview" />
+                    <button class="tabBtn" type="button" id="removePhoto">Remove</button>
+                  </div>
+                </div>
+
+                <div class="reviewField">
+                  <label class="reviewLabel" for="rAnon">Privacy</label>
+                  <label class="checkPill">
+                    <input type="checkbox" id="rAnon" />
+                    <span>Show as Anonymous</span>
+                  </label>
+                  <div class="reviewHelp">We never publish phone/email here.</div>
+                </div>
+              </div>
+
+              <div class="reviewActions">
+                <button class="primaryBtn" type="submit">Submit Review</button>
+                <button class="ghostBtn" type="button" id="resetForm">Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="statsSide">
+          <div class="miniCard">
+            <div class="miniCard__label">Average Rating</div>
+            <div class="miniCard__value" id="avgRating">—</div>
+            <div class="miniCard__hint" id="avgHint">Based on reviews</div>
+          </div>
+
+          <div class="miniCard">
+            <div class="miniCard__label">Total Reviews</div>
+            <div class="miniCard__value" id="totalReviews">—</div>
+            <div class="miniCard__hint">Live on this page</div>
+          </div>
+
+          <div class="miniCard">
+            <div class="miniCard__label">Top Product</div>
+            <div class="miniCard__value" id="topProduct">—</div>
+            <div class="miniCard__hint">Most reviewed</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashStack" style="margin-top:18px;">
+        <div class="dashCard">
+          <div class="dashCard__head">
+            <div>
+              <div class="dashCard__title">Latest Reviews</div>
+              <div class="dashCard__sub">See what customers are saying</div>
+            </div>
+            <div class="reviewSort">
+              <select class="reviewSelect" id="sortSelect" aria-label="Sort reviews">
+                <option value="new">Newest first</option>
+                <option value="high">Highest rating</option>
+                <option value="low">Lowest rating</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="reviewList" id="reviewList" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="stats__note">
+        Note: This page demo-data uses local browser storage. When you connect backend later, you can replace the submit/list logic with API calls.
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+
+      <div class="footer__col footer__brandCol">
+        <img src="dripline.jpg" alt="" class="footer__mark" />
+
+        <div class="footer__links">
+          <a href="about.html">About DripLine</a>
+          <a href="terms.html">Terms & Conditions</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="return-policy.html">Cancellation & Return Policy</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="footer__col footer__mid">
+        <div class="footer__help">
+          <div class="footer__title">
+            <span class="footer__iconTxt">☎</span>
+            <span>FOR ANY HELP YOU MAY CALL US AT</span>
+          </div>
+
+          <div class="footer__helpText">
+            +8801975538778<br />
+            Customer Service<br />
+            Track your order or get help returning an order
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__col footer__right">
+        <div class="footer__follow">
+          <div class="footer__title">
+            <span class="footer__check">✓</span>
+            <span>FOLLOW US</span>
+          </div>
+
+          <div class="footer__followText">
+            Stay updated on our latest arrivals, exclusive promotions and events.
+          </div>
+
+          <div class="socialRow">
+            <a class="socialBtn" href="instagram.html" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+              <span class="socialIcon" aria-hidden="true">
+                <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="socialBtn__txt">Instagram</span>
+            </a>
+
+            <a class="socialBtn" href="https://wa.me/+8801975538778" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+              <span class="socialIcon" aria-hidden="true">
+                <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.6-4.1A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M9.2 8.9c.2-.5.5-.5.8-.5h.6c.2 0 .4 0 .5.4l.6 1.4c.1.3 0 .6-.2.8l-.4.4c-.1.1-.2.3-.1.5.4.8 1.3 1.8 2.3 2.3.2.1.4 0 .5-.1l.4-.4c.2-.2.5-.3.8-.2l1.4.6c.4.1.4.3.4.5v.6c0 .3 0 .6-.5.8-.4.2-1.3.4-2.6-.1-1.3-.6-3.1-1.9-4.3-4.1-1.1-2.1-.3-3-.1-3.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="socialBtn__txt">WhatsApp</span>
+            </a>
+          </div>
+
+          <a class="fbCard" href="https://www.facebook.com/fashionhk7" target="_blank" rel="noopener">
+            <div class="fbCard__left">
+              <img src="dripline.jpg" alt="Facebook Page" class="fbCard__avatar" />
+            </div>
+
+            <div class="fbCard__mid">
+              <div class="fbCard__name">DripLine</div>
+              <div class="fbCard__meta">Facebook Page</div>
+
+              <div class="fbCard__stats">
+                <div class="stat">
+                  <div class="stat__num">5.1K</div>
+                  <div class="stat__lbl">Followers</div>
+                </div>
+
+                <div class="stat stat--divider" aria-hidden="true"></div>
+
+                <div class="stat">
+                  <div class="stat__num">1</div>
+                  <div class="stat__lbl">Following</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="fbCard__right">
+              <div class="fbCard__btn">Follow</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottomRow">
+        <div>Your order is handled daily with a lot of ❤️ and delivered across Bangladesh!</div>
+        <div class="footer__copy">Copyright © DripLine. All Rights Reserved</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+
+    if (menuBtn && mobileNav) {
+      menuBtn.addEventListener("click", () => {
+        const isHidden = mobileNav.hasAttribute("hidden");
+        if (isHidden) {
+          mobileNav.removeAttribute("hidden");
+          menuBtn.setAttribute("aria-expanded", "true");
+        } else {
+          mobileNav.setAttribute("hidden", "");
+          menuBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
+    document.addEventListener("click", (e) => {
+      const details = document.querySelector(".profileWrap");
+      if (!details) return;
+      if (details.hasAttribute("open") && !details.contains(e.target)) details.removeAttribute("open");
+    });
+
+    const STORAGE_KEY = "dripline_reviews_v1";
+
+    const reviewList = document.getElementById("reviewList");
+    const sortSelect = document.getElementById("sortSelect");
+    const reviewSearch = document.getElementById("reviewSearch");
+
+    const avgRating = document.getElementById("avgRating");
+    const avgHint = document.getElementById("avgHint");
+    const totalReviews = document.getElementById("totalReviews");
+    const topProduct = document.getElementById("topProduct");
+
+    const form = document.getElementById("reviewForm");
+    const rName = document.getElementById("rName");
+    const rProduct = document.getElementById("rProduct");
+    const rOrder = document.getElementById("rOrder");
+    const rText = document.getElementById("rText");
+    const rAnon = document.getElementById("rAnon");
+    const rPhoto = document.getElementById("rPhoto");
+    const rStars = document.getElementById("rStars");
+
+    const photoPreview = document.getElementById("photoPreview");
+    const previewImg = document.getElementById("previewImg");
+    const removePhoto = document.getElementById("removePhoto");
+    const resetForm = document.getElementById("resetForm");
+
+    const starBtns = Array.from(document.querySelectorAll(".starBtn"));
+    const starText = document.getElementById("starText");
+
+    const filterBtns = Array.from(document.querySelectorAll('[data-filter]'));
+    let activeFilter = "all";
+
+    function safeText(s) {
+      return String(s || "").replace(/[<>]/g, "");
+    }
+
+    function formatDate(ts) {
+      const d = new Date(ts);
+      const dd = d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "2-digit" });
+      const tt = d.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" });
+      return dd + " · " + tt;
+    }
+
+    function starsHtml(n) {
+      const full = Math.max(0, Math.min(5, Number(n) || 0));
+      let out = "";
+      for (let i = 1; i <= 5; i++) out += `<span class="starShow ${i <= full ? "starShow--on" : ""}">★</span>`;
+      return out;
+    }
+
+    function getInitial() {
+      const seed = [
+        {
+          id: crypto.randomUUID(),
+          name: "Nafisa",
+          product: "Oversized Tee",
+          order: "DL-10021",
+          stars: 5,
+          text: "Fabric quality and stitching are premium. Size is perfect and delivery was fast.",
+          photo: "",
+          ts: Date.now() - 1000 * 60 * 55
+        },
+        {
+          id: crypto.randomUUID(),
+          name: "Rifat",
+          product: "Jersey",
+          order: "",
+          stars: 4,
+          text: "Good fit and color. Wish the collar was slightly tighter, but overall great value.",
+          photo: "",
+          ts: Date.now() - 1000 * 60 * 180
+        },
+        {
+          id: crypto.randomUUID(),
+          name: "Anonymous",
+          product: "Basic Tee",
+          order: "DL-09911",
+          stars: 5,
+          text: "Very comfortable. After wash still looks new. Will order again.",
+          photo: "",
+          ts: Date.now() - 1000 * 60 * 720
+        }
+      ];
+      return seed;
+    }
+
+    function loadReviews() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(getInitial()));
+          return getInitial();
+        }
+        const arr = JSON.parse(raw);
+        return Array.isArray(arr) ? arr : getInitial();
+      } catch {
+        return getInitial();
+      }
+    }
+
+    function saveReviews(items) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+    }
+
+    let reviews = loadReviews();
+
+    function computeStats(list) {
+      const n = list.length;
+      totalReviews.textContent = n ? String(n) : "0";
+
+      if (!n) {
+        avgRating.textContent = "—";
+        avgHint.textContent = "No reviews yet";
+        topProduct.textContent = "—";
+        return;
+      }
+
+      const sum = list.reduce((a, b) => a + (Number(b.stars) || 0), 0);
+      const avg = sum / n;
+      avgRating.textContent = avg.toFixed(2) + " / 5";
+      avgHint.textContent = "Based on " + n + " reviews";
+
+      const map = new Map();
+      list.forEach(r => {
+        const key = (r.product || "").trim().toLowerCase();
+        if (!key) return;
+        map.set(key, (map.get(key) || 0) + 1);
+      });
+
+      let best = "";
+      let bestCount = 0;
+      for (const [k, v] of map.entries()) {
+        if (v > bestCount) {
+          bestCount = v;
+          best = k;
+        }
+      }
+      topProduct.textContent = best ? best.split(" ").map(w => w ? w[0].toUpperCase() + w.slice(1) : "").join(" ") : "—";
+    }
+
+    function applyFilterAndRender() {
+      const q = (reviewSearch.value || "").trim().toLowerCase();
+
+      let list = reviews.slice();
+
+      if (activeFilter !== "all") {
+        const min = Number(activeFilter);
+        list = list.filter(r => (Number(r.stars) || 0) >= min);
+      }
+
+      if (q) {
+        list = list.filter(r => {
+          const name = (r.name || "").toLowerCase();
+          const prod = (r.product || "").toLowerCase();
+          return name.includes(q) || prod.includes(q);
+        });
+      }
+
+      const mode = sortSelect.value;
+      if (mode === "high") list.sort((a, b) => (b.stars - a.stars) || (b.ts - a.ts));
+      else if (mode === "low") list.sort((a, b) => (a.stars - b.stars) || (b.ts - a.ts));
+      else list.sort((a, b) => b.ts - a.ts);
+
+      renderReviews(list);
+      computeStats(reviews);
+    }
+
+    function renderReviews(list) {
+      if (!list.length) {
+        reviewList.innerHTML = `
+          <div class="emptyBox">
+            <div class="emptyTitle">No reviews found</div>
+            <div class="emptySub">Try clearing filters or search another product.</div>
+          </div>
+        `;
+        return;
+      }
+
+      reviewList.innerHTML = list.map(r => {
+        const name = safeText(r.name || "Customer");
+        const product = safeText(r.product || "Product");
+        const order = safeText(r.order || "");
+        const text = safeText(r.text || "");
+        const when = formatDate(r.ts);
+        const hasPhoto = !!r.photo;
+
+        return `
+          <article class="reviewItem">
+            <div class="reviewItem__top">
+              <div class="reviewMeta">
+                <div class="reviewName">${name}</div>
+                <div class="reviewSub">
+                  <span class="reviewProduct">${product}</span>
+                  ${order ? `<span class="reviewDot">•</span><span class="reviewOrder">${order}</span>` : ""}
+                  <span class="reviewDot">•</span><span class="reviewWhen">${when}</span>
+                </div>
+              </div>
+              <div class="reviewStars" aria-label="${Number(r.stars) || 0} star rating">
+                ${starsHtml(r.stars)}
+              </div>
+            </div>
+
+            <div class="reviewBody">
+              ${hasPhoto ? `<div class="reviewPhoto"><img src="${r.photo}" alt="Product photo by customer" /></div>` : ""}
+              <div class="reviewText">${text}</div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function setStarUI(value) {
+      const v = Math.max(1, Math.min(5, Number(value) || 5));
+      rStars.value = String(v);
+      starText.textContent = v + "/5";
+      starBtns.forEach(btn => {
+        const s = Number(btn.dataset.star);
+        btn.classList.toggle("starBtn--on", s <= v);
+      });
+    }
+
+    setStarUI(5);
+
+    starBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        setStarUI(btn.dataset.star);
+      });
+    });
+
+    rPhoto.addEventListener("change", () => {
+      const file = rPhoto.files && rPhoto.files[0];
+      if (!file) {
+        photoPreview.hidden = true;
+        previewImg.src = "";
+        return;
+      }
+      const url = URL.createObjectURL(file);
+      previewImg.src = url;
+      photoPreview.hidden = false;
+    });
+
+    removePhoto.addEventListener("click", () => {
+      rPhoto.value = "";
+      previewImg.src = "";
+      photoPreview.hidden = true;
+    });
+
+    resetForm.addEventListener("click", () => {
+      form.reset();
+      setStarUI(5);
+      rPhoto.value = "";
+      previewImg.src = "";
+      photoPreview.hidden = true;
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = rAnon.checked ? "Anonymous" : safeText(rName.value).trim();
+      const product = safeText(rProduct.value).trim();
+      const order = safeText(rOrder.value).trim();
+      const text = safeText(rText.value).trim();
+      const stars = Number(rStars.value) || 5;
+
+      if (!product || !text || !name) return;
+
+      const file = rPhoto.files && rPhoto.files[0];
+
+      const pushReview = (photoDataUrl) => {
+        const item = {
+          id: crypto.randomUUID(),
+          name,
+          product,
+          order,
+          stars,
+          text,
+          photo: photoDataUrl || "",
+          ts: Date.now()
+        };
+        reviews.unshift(item);
+        saveReviews(reviews);
+        form.reset();
+        setStarUI(5);
+        rPhoto.value = "";
+        previewImg.src = "";
+        photoPreview.hidden = true;
+
+        filterBtns.forEach(b => b.classList.remove("tabBtn--active"));
+        filterBtns[0].classList.add("tabBtn--active");
+        activeFilter = "all";
+
+        applyFilterAndRender();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = () => pushReview(String(reader.result || ""));
+        reader.readAsDataURL(file);
+      } else {
+        pushReview("");
+      }
+    });
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach(b => b.classList.remove("tabBtn--active"));
+        btn.classList.add("tabBtn--active");
+        activeFilter = btn.dataset.filter;
+        applyFilterAndRender();
+      });
+    });
+
+    sortSelect.addEventListener("change", applyFilterAndRender);
+    reviewSearch.addEventListener("input", applyFilterAndRender);
+
+    applyFilterAndRender();
+  </script>
+
+</body>
+</html>

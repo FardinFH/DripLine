@@ -1,0 +1,113 @@
+.fpShell{
+  display:flex;
+  justify-content:center;
+  padding:18px 0 6px;
+}
+
+.fpCard{
+  width:min(520px, 100%);
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  box-shadow:var(--shadow);
+  padding:22px;
+}
+
+.fpHead{
+  margin-bottom:14px;
+}
+
+.fpTitle{
+  margin:0;
+  font-size:28px;
+  letter-spacing:-.02em;
+  color:#111827;
+  font-weight:900;
+}
+
+.fpSub{
+  margin:8px 0 0 0;
+  color:var(--muted);
+  font-weight:700;
+  line-height:1.7;
+}
+
+.fpForm{
+  display:grid;
+  gap:12px;
+}
+
+.fpField{
+  display:grid;
+  gap:8px;
+}
+
+.fpLabel{
+  font-weight:900;
+  font-size:13px;
+  color:#111827;
+}
+
+.fpInput{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:12px 12px;
+  background:#fff;
+  outline:none;
+  font-weight:700;
+  color:#111827;
+}
+
+.fpInput:focus{
+  border-color:rgba(14,165,233,.6);
+  box-shadow:0 0 0 4px rgba(14,165,233,.12);
+}
+
+.fpPassWrap{
+  display:grid;
+  gap:12px;
+  padding-top:2px;
+}
+
+.fpBtn{
+  width:100%;
+  border:1px solid var(--line);
+  background:rgba(14,165,233,.95);
+  color:#fff;
+  border-color:rgba(14,165,233,.35);
+  padding:12px 14px;
+  border-radius:12px;
+  font-weight:900;
+  cursor:pointer;
+  transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+}
+
+.fpBtn:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 16px 38px rgba(16,24,40,0.10);
+}
+
+.fpBtn:disabled{
+  opacity:.55;
+  cursor:not-allowed;
+  transform:none;
+  box-shadow:none;
+}
+
+.fpLinks{
+  display:flex;
+  justify-content:center;
+  margin-top:4px;
+}
+
+.fpLink{
+  font-weight:900;
+  color:var(--accent);
+  font-size:13px;
+}
+
+@media (max-width: 560px){
+  .fpCard{ padding:18px; }
+  .fpTitle{ font-size:24px; }
+}

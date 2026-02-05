@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bag - DripLine</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="bag.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__row">
+
+      <a class="brand" href="index.html" aria-label="DripLine Home">
+        <img src="dripline.jpg" alt="DripLine" class="brand__logo" />
+        <span class="brand__name">DRIPLINE</span>
+      </a>
+
+      <div class="search">
+        <input class="search__input" type="text" placeholder="Search" aria-label="Search" />
+      </div>
+
+      <div class="header__right">
+        <div class="promoTag" title="Get 5% OFF on Page">
+          Get <strong>5% OFF</strong> on <span>Page</span>
+        </div>
+
+        <div class="header__icons">
+          <a class="iconBtn" href="store.html" aria-label="Stores" title="Stores">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="2" />
+                <path d="M12 11.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </span>
+            <span class="iconBtn__label">Stores</span>
+          </a>
+
+          <a class="iconBtn" href="review.html" aria-label="Reviews" title="Reviews">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3l2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Reviews</span>
+          </a>
+<a class="iconBtn" href="return.html" aria-label="Return & Replacement" title="Return & Replacement">
+  <span class="uiIcon" aria-hidden="true">
+    <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M7 7h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-7a3 3 0 0 1 3-3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M8 7a4 4 0 0 1 8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10 13h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10.5 16.5l-2-2 2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13.5 12.5l2 2-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+  <span class="iconBtn__label">Return</span>
+</a>
+          <div class="profileWrap">
+            <button class="iconBtn iconBtn--btn profileBtn" type="button" aria-label="Profile" title="Profile" aria-haspopup="menu" aria-expanded="false">
+              <span class="uiIcon" aria-hidden="true">
+                <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 21a8 8 0 0 0-16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </span>
+              <span class="iconBtn__label">Profile</span>
+            </button>
+
+            <div class="profileDropdown" role="menu" aria-label="Profile menu">
+              <div class="profileDropdown__head">Welcome</div>
+              <div class="profileDropdown__auth">
+                <a href="signin.html" class="profileDropdown__link profileDropdown__link--primary">Sign in</a>
+                <span class="profileDropdown__sep">/</span>
+                <a href="signup.html" class="profileDropdown__link">Sign up</a>
+              </div>
+
+              <div class="profileDropdown__list">
+                <a href="#" class="profileDropdown__item" role="menuitem">
+                  <svg class="ddIcon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M7 3h10v4H7V3Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M6 7h12l-1 14H7L6 7Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M9 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  <span>Track Order</span>
+                </a>
+                <a href="about.html" class="profileDropdown__item" role="menuitem">
+                  <svg class="ddIcon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V6l-8-4-8 4v6c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M12 11v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M12 8.25h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                  <span>About Us</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a class="iconBtn" href="wishlist.html" aria-label="Wishlist" title="Wishlist">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s-7-4.35-9.2-8.4C1 9.2 3.2 6.5 6.2 6.5c1.6 0 3.1.8 3.8 2 0.7-1.2 2.2-2 3.8-2 3 0 5.2 2.7 3.4 6.1C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Wishlist</span>
+          </a>
+
+          <a class="iconBtn" href="bag.html" aria-label="Bag" title="Bag">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 7h12l1 14H5L6 7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M9 7a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Bag</span>
+          </a>
+        </div>
+
+        <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+
+    </div>
+
+    <div class="mobileNav" id="mobileNav" hidden>
+      <a href="men.html" class="mobileNav__link mobileNav__link--active">MEN</a>
+      <a href="marketplace.html" class="mobileNav__link">SHOP NOW</a>
+      <a href="jersey.html" class="mobileNav__link">JERSEY</a>
+      <a href="essentials.html" class="mobileNav__link">ESSENTIALS</a>
+    </div>
+  </header>
+
+  <main class="bagWrap">
+    <div class="container">
+
+      <section class="bagShell">
+        <div class="bagTop">
+          <div>
+            <div class="bagCrumb">
+              <a href="index.html">Home</a>
+              <span class="bagCrumb__sep">›</span>
+              <span>Bag</span>
+            </div>
+            <h1 class="bagTitle">Your Bag</h1>
+            <p class="bagSub">Select what you want to buy, choose delivery zone, and confirm your order (Cash on Delivery).</p>
+          </div>
+
+          <div class="bagPills">
+            <div class="bagPill">
+              <span class="bagDot" aria-hidden="true"></span>
+              <span><strong id="itemsCount">3</strong> items</span>
+            </div>
+            <a class="bagLink" href="marketplace.html">Continue shopping</a>
+          </div>
+        </div>
+
+        <div class="bagGrid">
+
+          <section class="bagLeft">
+            <div class="bagCard">
+              <div class="bagCard__head">
+                <div class="bagCard__title">Items</div>
+
+                <div class="bagHeadActions">
+                  <label class="pickAll">
+                    <input type="checkbox" id="selectAllItems" checked />
+                    <span>Select all</span>
+                  </label>
+
+                  <button class="miniBtn" type="button">Clear bag</button>
+                </div>
+              </div>
+
+              <div class="bagItems">
+                <article class="bagItem" data-price="690">
+                  <div class="bagPick">
+                    <label class="pickOne">
+                      <input class="itemPick" type="checkbox" checked />
+                      <span class="pickUi" aria-hidden="true"></span>
+                    </label>
+                  </div>
+
+                  <div class="bagItem__media">
+                    <img class="bagItem__img" src="collage.jpg" alt="Product" />
+                  </div>
+
+                  <div class="bagItem__body">
+                    <div class="bagItem__top">
+                      <div>
+                        <h3 class="bagItem__name">Premium Cotton T-Shirt</h3>
+                        <div class="bagItem__meta">SKU: DL-TS-102 · Size: L · Color: Black</div>
+                      </div>
+
+                      <button class="iconX" type="button" aria-label="Remove item" title="Remove">
+                        <svg class="iconX__svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path d="M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                          <path d="M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="bagItem__bottom">
+                      <div class="qty">
+                        <button class="qty__btn" type="button" aria-label="Decrease">−</button>
+                        <input class="qty__input" type="number" min="1" value="1" />
+                        <button class="qty__btn" type="button" aria-label="Increase">+</button>
+                      </div>
+
+                      <div class="bagPrice">
+                        <div class="bagPrice__now">৳ 690</div>
+                        <div class="bagPrice__was">৳ 890</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="bagItem" data-price="990">
+                  <div class="bagPick">
+                    <label class="pickOne">
+                      <input class="itemPick" type="checkbox" checked />
+                      <span class="pickUi" aria-hidden="true"></span>
+                    </label>
+                  </div>
+
+                  <div class="bagItem__media">
+                    <img class="bagItem__img" src="hero.jpg" alt="Product" />
+                  </div>
+
+                  <div class="bagItem__body">
+                    <div class="bagItem__top">
+                      <div>
+                        <h3 class="bagItem__name">Event Edition Oversized Tee</h3>
+                        <div class="bagItem__meta">SKU: DL-OS-215 · Size: XL · Color: White</div>
+                      </div>
+
+                      <button class="iconX" type="button" aria-label="Remove item" title="Remove">
+                        <svg class="iconX__svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path d="M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                          <path d="M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="bagItem__bottom">
+                      <div class="qty">
+                        <button class="qty__btn" type="button" aria-label="Decrease">−</button>
+                        <input class="qty__input" type="number" min="1" value="1" />
+                        <button class="qty__btn" type="button" aria-label="Increase">+</button>
+                      </div>
+
+                      <div class="bagPrice">
+                        <div class="bagPrice__now">৳ 990</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="bagItem" data-price="1490">
+                  <div class="bagPick">
+                    <label class="pickOne">
+                      <input class="itemPick" type="checkbox" checked />
+                      <span class="pickUi" aria-hidden="true"></span>
+                    </label>
+                  </div>
+
+                  <div class="bagItem__media">
+                    <img class="bagItem__img" src="dripline.jpg" alt="Product" />
+                  </div>
+
+                  <div class="bagItem__body">
+                    <div class="bagItem__top">
+                      <div>
+                        <h3 class="bagItem__name">Minimal Logo Hoodie</h3>
+                        <div class="bagItem__meta">SKU: DL-HD-044 · Size: M · Color: Navy</div>
+                      </div>
+
+                      <button class="iconX" type="button" aria-label="Remove item" title="Remove">
+                        <svg class="iconX__svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path d="M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                          <path d="M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="bagItem__bottom">
+                      <div class="qty">
+                        <button class="qty__btn" type="button" aria-label="Decrease">−</button>
+                        <input class="qty__input" type="number" min="1" value="1" />
+                        <button class="qty__btn" type="button" aria-label="Increase">+</button>
+                      </div>
+
+                      <div class="bagPrice">
+                        <div class="bagPrice__now">৳ 1,490</div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="bagHint">
+                Tip: Only selected items will be included in the subtotal & total.
+              </div>
+            </div>
+
+            <div class="bagCard">
+              <div class="bagCard__head">
+                <div class="bagCard__title">Shipping details</div>
+                <div class="bagCard__tag">Bangladesh delivery</div>
+              </div>
+
+              <form class="shipForm" action="#" method="post">
+                <div class="fGrid2">
+                  <div class="field">
+                    <label class="label" for="fullName">Full Name</label>
+                    <input class="input" id="fullName" name="fullName" type="text" placeholder="Your name" required />
+                  </div>
+
+                  <div class="field">
+                    <label class="label" for="phone">Phone Number</label>
+                    <input class="input" id="phone" name="phone" type="tel" placeholder="+8801XXXXXXXXX" required />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label" for="address">Full Address</label>
+                  <input class="input" id="address" name="address" type="text" placeholder="House, road, area, city" required />
+                </div>
+
+                <div class="field">
+                  <label class="label" for="deliveryZone">Delivery Zone</label>
+                  <select class="input" id="deliveryZone" name="deliveryZone" required>
+                    <option value="" selected disabled>Select zone</option>
+                    <option value="dhaka">Inside Dhaka</option>
+                    <option value="outside">Outside Dhaka</option>
+                  </select>
+                </div>
+
+                <div class="fGrid2">
+                  <div class="field">
+                    <label class="label" for="city">City</label>
+                    <input class="input" id="city" name="city" type="text" placeholder="Dhaka" required />
+                  </div>
+
+                  <div class="field">
+                    <label class="label" for="area">Area</label>
+                    <input class="input" id="area" name="area" type="text" placeholder="Mirpur / Uttara / ..." required />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label" for="note">Order Note (optional)</label>
+                  <input class="input" id="note" name="note" type="text" placeholder="Any delivery instruction" />
+                </div>
+              </form>
+            </div>
+          </section>
+
+          <aside class="bagRight">
+            <div class="sumCard">
+              <div class="sumHead">
+                <div class="sumTitle">Order Summary</div>
+                <div class="sumMini">COD only</div>
+              </div>
+
+              <div class="sumRows">
+                <div class="sumRow">
+                  <span>Selected items</span>
+                  <strong id="selectedCount">3</strong>
+                </div>
+
+                <div class="sumRow">
+                  <span>Subtotal</span>
+                  <strong id="subTotal">৳ 3,170</strong>
+                </div>
+
+                <div class="sumRow sumRow--discount" id="discountRow" hidden>
+                  <span>Discount <span class="sumTag" id="discountTag">—</span></span>
+                  <strong id="discountAmount">৳ 0</strong>
+                </div>
+
+                <div class="sumRow">
+                  <span>Delivery <span class="sumTag" id="zoneTag">Select zone</span></span>
+                  <strong id="deliveryFee">৳ 0</strong>
+                </div>
+
+                <div class="sumRow sumRow--total">
+                  <span>Total</span>
+                  <strong id="grandTotal">৳ 3,170</strong>
+                </div>
+              </div>
+
+              <div class="promoUse">
+                <button class="promoUseBtn" id="openPromoBtn" type="button">Use promo code / vouchers</button>
+                <button class="promoClearBtn" id="clearPromoBtn" type="button" hidden>Remove</button>
+              </div>
+
+              <div class="payBox">
+                <div class="payTitle">Payment Method</div>
+
+                <label class="payOpt">
+                  <input type="radio" name="payment" checked />
+                  <span class="payOpt__txt">
+                    <strong>Cash on Delivery</strong>
+                    <span>Pay when you receive the product</span>
+                  </span>
+                </label>
+
+                <div class="payNote">
+                  You can confirm only selected items. Delivery charge depends on zone.
+                </div>
+              </div>
+
+              <label class="terms">
+                <input type="checkbox" id="agreeTerms" />
+                <span>I agree to the <a href="terms.html">Terms & Conditions</a> and <a href="return-policy.html">Return Policy</a>.</span>
+              </label>
+
+              <button class="confirmBtn confirmBtn--disabled" id="confirmOrderBtn" type="button" disabled>
+                Confirm Order (Selected Items)
+              </button>
+
+              <div class="sumFoot">
+                Select items + choose delivery zone to enable confirm.
+              </div>
+            </div>
+
+            <div class="helpCard">
+              <div class="helpTitle">Need help?</div>
+              <div class="helpText">
+                Call: +8801975538778<br />
+                WhatsApp: +8801975538778
+              </div>
+              <a class="helpLink" href="contact.html">Go to Contact Us</a>
+            </div>
+          </aside>
+
+        </div>
+
+        <section class="bagEmpty" hidden>
+          <div class="bagEmpty__icon">👜</div>
+          <h2 class="bagEmpty__title">Your bag is empty</h2>
+          <p class="bagEmpty__text">Browse products and add items to your bag to continue checkout.</p>
+          <a class="confirmBtn bagEmpty__cta" href="marketplace.html">Go to Marketplace</a>
+        </section>
+
+      </section>
+
+    </div>
+  </main>
+
+  <div class="promoModal" id="promoModal" hidden>
+    <div class="promoModal__overlay" data-close="1"></div>
+
+    <div class="promoModal__panel" role="dialog" aria-modal="true" aria-label="Select promo code or voucher">
+      <div class="promoModal__head">
+        <div>
+          <div class="promoModal__title">Select Promo / Voucher</div>
+          <div class="promoModal__sub">Choose any 1 code to apply discount on subtotal.</div>
+        </div>
+
+        <button class="promoModal__x" type="button" aria-label="Close" data-close="1">
+          <svg class="promoModal__xsvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="promoModal__body">
+        <div class="promoList" id="promoList"></div>
+        <div class="promoEmpty" id="promoEmpty" hidden>No promo/voucher found.</div>
+      </div>
+
+      <div class="promoModal__foot">
+        <button class="promoModal__btn" type="button" data-close="1">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+
+      <div class="footer__col footer__brandCol">
+        <img src="dripline.jpg" alt="" class="footer__mark" />
+
+        <div class="footer__links">
+          <a href="about.html">About DripLine</a>
+          <a href="terms.html">Terms & Conditions</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="return-policy.html">Cancellation & Return Policy</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="footer__col footer__mid">
+        <div class="footer__help">
+          <div class="footer__title">
+            <span class="footer__iconTxt">☎</span>
+            <span>FOR ANY HELP YOU MAY CALL US AT</span>
+          </div>
+
+          <div class="footer__helpText">
+            +8801975538778<br />
+            Customer Service<br />
+            Track your order or get help returning an order
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__col footer__right">
+        <div class="footer__follow">
+          <div class="footer__title">
+            <span class="footer__check">✓</span>
+            <span>FOLLOW US</span>
+          </div>
+
+          <div class="footer__followText">
+            Stay updated on our latest arrivals, exclusive promotions and events.
+          </div>
+
+          <div class="socialRow">
+            <a class="socialBtn" href="INSTAGRAM_LINK_HERE" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+              <span class="socialIcon" aria-hidden="true">
+                <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="socialBtn__txt">Instagram</span>
+            </a>
+
+            <a class="socialBtn" href="https://wa.me/+8801975538778" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+              <span class="socialIcon" aria-hidden="true">
+                <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.6-4.1A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M9.2 8.9c.2-.5.5-.5.8-.5h.6c.2 0 .4 0 .5.4l.6 1.4c.1.3 0 .6-.2.8l-.4.4c-.1.1-.2.3-.1.5.4.8 1.3 1.8 2.3 2.3.2.1.4 0 .5-.1l.4-.4c.2-.2.5-.3.8-.2l1.4.6c.4.1.4.3.4.5v.6c0 .3 0 .6-.5.8-.4.2-1.3.4-2.6-.1-1.3-.6-3.1-1.9-4.3-4.1-1.1-2.1-.3-3-.1-3.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="socialBtn__txt">WhatsApp</span>
+            </a>
+          </div>
+
+          <a class="fbCard" href="https://www.facebook.com/fashionhk7" target="_blank" rel="noopener">
+            <div class="fbCard__left">
+              <img src="dripline.jpg" alt="Facebook Page" class="fbCard__avatar" />
+            </div>
+
+            <div class="fbCard__mid">
+              <div class="fbCard__name">DripLine</div>
+              <div class="fbCard__meta">Facebook Page</div>
+
+              <div class="fbCard__stats">
+                <div class="stat">
+                  <div class="stat__num">5.1K</div>
+                  <div class="stat__lbl">Followers</div>
+                </div>
+
+                <div class="stat stat--divider" aria-hidden="true"></div>
+
+                <div class="stat">
+                  <div class="stat__num">1</div>
+                  <div class="stat__lbl">Following</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="fbCard__right">
+              <div class="fbCard__btn">Follow</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottomRow">
+        <div>Your order is handled daily with a lot of ❤️ and delivered across Bangladesh!</div>
+        <div class="footer__copy">Copyright © DripLine. All Rights Reserved</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const KEY_PROMO = "dripline_promo_codes_v1";
+      const KEY_VOUCHER = "dripline_vouchers_v1";
+      const KEY_APPLIED = "dripline_applied_discount_v1";
+
+      const $ = (id) => document.getElementById(id);
+
+      const moneyToNumber = (txt) => {
+        const s = String(txt || "").replace(/[^\d.]/g, "");
+        const n = Number(s || 0);
+        return Number.isFinite(n) ? n : 0;
+      };
+
+      const formatBDT = (n) => {
+        const x = Math.max(0, Math.round(Number(n || 0)));
+        return "৳ " + x.toLocaleString();
+      };
+
+      const isExpired = (validUntil) => Number(validUntil || 0) < Date.now();
+
+      const safeParse = (raw) => {
+        try { return JSON.parse(raw); } catch { return null; }
+      };
+
+      const readPromoCodes = () => {
+        const raw = localStorage.getItem(KEY_PROMO);
+        const arr = safeParse(raw);
+        if (!Array.isArray(arr)) return [];
+        return arr
+          .map(p => ({
+            kind: "promo",
+            code: String(p?.code ?? "").toUpperCase().trim(),
+            validUntil: Number(p?.validUntil ?? 0),
+            note: String(p?.note ?? ""),
+            discountType: String(p?.discountType ?? "percent"),
+            discountValue: Number(p?.discountValue ?? 5)
+          }))
+          .filter(x => x.code && x.validUntil && !isExpired(x.validUntil));
+      };
+
+      const readVouchers = () => {
+        const raw = localStorage.getItem(KEY_VOUCHER);
+        const arr = safeParse(raw);
+        if (!Array.isArray(arr)) return [];
+        return arr
+          .map(v => ({
+            kind: "voucher",
+            code: String(v?.code ?? v?.voucherCode ?? "").toUpperCase().trim(),
+            validUntil: Number(v?.validUntil ?? v?.expiresAt ?? 0),
+            note: String(v?.note ?? v?.title ?? ""),
+            discountType: String(v?.discountType ?? (v?.amount ? "flat" : "percent")),
+            discountValue: Number(v?.discountValue ?? v?.amount ?? v?.percent ?? 10)
+          }))
+          .filter(x => x.code && x.validUntil && !isExpired(x.validUntil));
+      };
+
+      const seedIfEmpty = () => {
+        const promoArr = safeParse(localStorage.getItem(KEY_PROMO));
+        const vouArr = safeParse(localStorage.getItem(KEY_VOUCHER));
+        const hasPromo = Array.isArray(promoArr) && promoArr.length;
+        const hasVou = Array.isArray(vouArr) && vouArr.length;
+
+        if (!hasPromo) {
+          const now = Date.now();
+          const day = 86400000;
+          localStorage.setItem(KEY_PROMO, JSON.stringify([
+            { code: "DRIP5", validUntil: now + 10*day, note: "Default promo", discountType:"percent", discountValue:5, createdAt: now },
+            { code: "SAVE100", validUntil: now + 5*day, note: "Limited", discountType:"flat", discountValue:100, createdAt: now }
+          ]));
+        }
+
+        if (!hasVou) {
+          const now = Date.now();
+          const day = 86400000;
+          localStorage.setItem(KEY_VOUCHER, JSON.stringify([
+            { code: "VOUCH10", validUntil: now + 12*day, note: "Voucher", discountType:"percent", discountValue:10, createdAt: now }
+          ]));
+        }
+      };
+
+      const getSubtotal = () => moneyToNumber($("subTotal")?.textContent);
+      const getDelivery = () => moneyToNumber($("deliveryFee")?.textContent);
+
+      const applyDiscountToUI = (applied) => {
+        const sub = getSubtotal();
+        const delivery = getDelivery();
+
+        if (!applied || !applied.code) {
+          $("discountRow").hidden = true;
+          $("discountTag").textContent = "—";
+          $("discountAmount").textContent = formatBDT(0);
+          $("grandTotal").textContent = formatBDT(sub + delivery);
+          $("clearPromoBtn").hidden = true;
+          return;
+        }
+
+        const type = applied.discountType === "flat" ? "flat" : "percent";
+        const val = Number(applied.discountValue || 0);
+
+        let disc = 0;
+        if (type === "flat") disc = val;
+        else disc = (sub * val) / 100;
+
+        disc = Math.min(sub, Math.max(0, disc));
+
+        $("discountRow").hidden = false;
+        $("discountTag").textContent = applied.code;
+        $("discountAmount").textContent = "− " + formatBDT(disc);
+        $("grandTotal").textContent = formatBDT((sub - disc) + delivery);
+        $("clearPromoBtn").hidden = false;
+      };
+
+      const readApplied = () => {
+        const raw = localStorage.getItem(KEY_APPLIED);
+        const v = safeParse(raw);
+        if (!v || !v.code) return null;
+        return {
+          code: String(v.code || "").toUpperCase().trim(),
+          discountType: String(v.discountType || "percent"),
+          discountValue: Number(v.discountValue || 0),
+          kind: String(v.kind || "promo")
+        };
+      };
+
+      const writeApplied = (item) => {
+        if (!item) {
+          localStorage.removeItem(KEY_APPLIED);
+          applyDiscountToUI(null);
+          return;
+        }
+        localStorage.setItem(KEY_APPLIED, JSON.stringify({
+          code: item.code,
+          discountType: item.discountType,
+          discountValue: item.discountValue,
+          kind: item.kind
+        }));
+        applyDiscountToUI(item);
+      };
+
+      const openModal = () => {
+        const modal = $("promoModal");
+        modal.hidden = false;
+        document.body.style.overflow = "hidden";
+      };
+
+      const closeModal = () => {
+        const modal = $("promoModal");
+        modal.hidden = true;
+        document.body.style.overflow = "";
+      };
+
+      const itemLabel = (it) => {
+        const type = it.discountType === "flat" ? "৳" + Math.round(it.discountValue) : Math.round(it.discountValue) + "%";
+        return type;
+      };
+
+      const renderModal = () => {
+        const listEl = $("promoList");
+        const emptyEl = $("promoEmpty");
+
+        seedIfEmpty();
+        const items = [...readPromoCodes(), ...readVouchers()]
+          .sort((a,b) => Number(b.validUntil||0) - Number(a.validUntil||0));
+
+        if (!items.length) {
+          listEl.innerHTML = "";
+          emptyEl.hidden = false;
+          return;
+        }
+
+        emptyEl.hidden = true;
+        listEl.innerHTML = items.map(it => `
+          <button class="promoItem" type="button" data-code="${String(it.code).replace(/"/g,'&quot;')}">
+            <div class="promoItem__left">
+              <div class="promoItem__code">${it.code}</div>
+              <div class="promoItem__meta">
+                <span class="promoItem__pill">${it.kind === "voucher" ? "Voucher" : "Promo"}</span>
+                <span class="promoItem__sep">•</span>
+                <span class="promoItem__muted">Valid till ${new Date(it.validUntil).toLocaleDateString()}</span>
+              </div>
+              <div class="promoItem__note">${String(it.note || "—").replace(/</g,'&lt;').replace(/>/g,'&gt;')}</div>
+            </div>
+            <div class="promoItem__right">
+              <div class="promoItem__off">${itemLabel(it)} OFF</div>
+              <div class="promoItem__cta">Apply</div>
+            </div>
+          </button>
+        `).join("");
+
+        listEl.querySelectorAll(".promoItem").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const code = btn.getAttribute("data-code") || "";
+            const picked = items.find(x => x.code === code);
+            if (!picked) return;
+            writeApplied(picked);
+            closeModal();
+          });
+        });
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const openBtn = $("openPromoBtn");
+        const clearBtn = $("clearPromoBtn");
+        const modal = $("promoModal");
+
+        openBtn.addEventListener("click", () => {
+          renderModal();
+          openModal();
+        });
+
+        clearBtn.addEventListener("click", () => {
+          writeApplied(null);
+        });
+
+        modal.addEventListener("click", (e) => {
+          const t = e.target;
+          if (t && t.getAttribute && t.getAttribute("data-close") === "1") closeModal();
+        });
+
+        window.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && !modal.hidden) closeModal();
+        });
+
+        applyDiscountToUI(readApplied());
+      });
+    })();
+  </script>
+
+  <script src="main.js"></script>
+</body>
+</html>

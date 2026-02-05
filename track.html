@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Track Order - DripLine</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="track.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__row">
+
+    <a class="brand" href="index.html" aria-label="DripLine Home">
+      <img src="dripline.jpg" alt="DripLine" class="brand__logo" />
+      <span class="brand__name">DRIPLINE</span>
+    </a>
+
+    <div class="search">
+      <input class="search__input" type="text" placeholder="Search" aria-label="Search" />
+    </div>
+
+    <div class="header__right">
+      <div class="promoTag" title="Get 5% OFF on Page">
+        Get <strong>5% OFF</strong> on <span>Page</span>
+      </div>
+
+      <div class="header__icons">
+        <a class="iconBtn" href="store.html" aria-label="Stores" title="Stores">
+          <span class="uiIcon" aria-hidden="true">
+            <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="2" />
+              <path d="M12 11.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </span>
+          <span class="iconBtn__label">Stores</span>
+        </a>
+
+        <a class="iconBtn" href="review.html" aria-label="Reviews" title="Reviews">
+          <span class="uiIcon" aria-hidden="true">
+            <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3l2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="iconBtn__label">Reviews</span>
+        </a>
+<a class="iconBtn" href="return.html" aria-label="Return & Replacement" title="Return & Replacement">
+  <span class="uiIcon" aria-hidden="true">
+    <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M7 7h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-7a3 3 0 0 1 3-3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M8 7a4 4 0 0 1 8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10 13h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10.5 16.5l-2-2 2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13.5 12.5l2 2-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+  <span class="iconBtn__label">Return</span>
+</a>
+        <div class="profileWrap">
+          <button class="iconBtn iconBtn--btn profileBtn" type="button" aria-label="Profile" title="Profile" aria-haspopup="menu" aria-expanded="false">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 21a8 8 0 0 0-16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Profile</span>
+          </button>
+
+          <div class="profileDropdown" role="menu" aria-label="Profile menu">
+            <div class="profileDropdown__head">Welcome</div>
+            <div class="profileDropdown__auth">
+              <a href="signin.html" class="profileDropdown__link profileDropdown__link--primary">Sign in</a>
+              <span class="profileDropdown__sep">/</span>
+              <a href="signup.html" class="profileDropdown__link">Sign up</a>
+            </div>
+
+            <div class="profileDropdown__list">
+              <a href="track.html" class="profileDropdown__item" role="menuitem">
+                <span>Track Order</span>
+              </a>
+              <a href="about.html" class="profileDropdown__item" role="menuitem">
+                <span>About Us</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a class="iconBtn" href="wishlist.html" aria-label="Wishlist" title="Wishlist">
+          <span class="uiIcon" aria-hidden="true">
+            <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 21s-7-4.35-9.2-8.4C1 9.2 3.2 6.5 6.2 6.5c1.6 0 3.1.8 3.8 2 0.7-1.2 2.2-2 3.8-2 3 0 5.2 2.7 3.4 6.1C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="iconBtn__label">Wishlist</span>
+        </a>
+
+        <a class="iconBtn" href="bag.html" aria-label="Bag" title="Bag">
+          <span class="uiIcon" aria-hidden="true">
+            <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 7h12l1 14H5L6 7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M9 7a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="iconBtn__label">Bag</span>
+        </a>
+      </div>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+  </div>
+
+  <div class="mobileNav" id="mobileNav" hidden>
+    <a href="men.html" class="mobileNav__link">MEN</a>
+    <a href="marketplace.html" class="mobileNav__link">SHOP NOW</a>
+    <a href="jersey.html" class="mobileNav__link">JERSEY</a>
+    <a href="essentials.html" class="mobileNav__link">ESSENTIALS</a>
+  </div>
+</header>
+
+<section class="crumbBar">
+  <div class="container crumbBar__row">
+    <div class="crumb">
+      <a href="index.html" class="crumb__link">Home</a>
+      <span class="crumb__sep">›</span>
+      <span class="crumb__current">Track Order</span>
+    </div>
+
+    <div class="crumbBar__note">
+      Search by Order ID, customer name, phone, or product name.
+    </div>
+  </div>
+</section>
+
+<main class="toWrap">
+  <div class="container">
+
+    <section class="toTop">
+      <div>
+        <h1 class="toTitle">Track Orders</h1>
+        <p class="toSub">View and search all customer orders in one place.</p>
+      </div>
+
+      <div class="toStats">
+        <div class="toPill"><span class="toDot" aria-hidden="true"></span><span><strong id="countAll">0</strong> total</span></div>
+        <div class="toPill toPill--ok"><span class="toDot" aria-hidden="true"></span><span><strong id="countDelivered">0</strong> dispatched</span></div>
+        <div class="toPill toPill--warn"><span class="toDot" aria-hidden="true"></span><span><strong id="countPending">0</strong> pending</span></div>
+      </div>
+    </section>
+
+    <section class="toSearchCard">
+      <div class="toSearchIcon" aria-hidden="true">⌕</div>
+      <input id="orderSearch" class="toSearchInput" type="text" placeholder="Search Order ID / Customer / Phone / Product / Status..." autocomplete="off" />
+      <button id="clearBtn" class="toSearchBtn" type="button">Clear</button>
+    </section>
+
+    <section class="toTableCard" aria-label="Orders table">
+      <div class="toTableTop">
+        <div class="toTableTitle">All Orders</div>
+
+        <div class="toFilters">
+          <select id="statusFilter" class="toSelect" aria-label="Filter by status">
+            <option value="all" selected>All Status</option>
+            <option value="in review">In Review</option>
+            <option value="pending">Pending</option>
+            <option value="accepted">Accepted</option>
+            <option value="processing">Processing</option>
+            <option value="dispatched">Dispatched</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+
+          <select id="sortBy" class="toSelect" aria-label="Sort orders">
+            <option value="date_desc" selected>Sort: Newest</option>
+            <option value="date_asc">Sort: Oldest</option>
+            <option value="price_desc">Sort: Price High</option>
+            <option value="price_asc">Sort: Price Low</option>
+            <option value="qty_desc">Sort: Qty High</option>
+            <option value="qty_asc">Sort: Qty Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="toTableScroll">
+        <table class="toTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Phone</th>
+              <th>Product</th>
+              <th class="tRight">Price</th>
+              <th class="tCenter">Qty</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="ordersBody"></tbody>
+        </table>
+      </div>
+
+      <div class="toEmpty" id="emptyState" hidden>
+        No orders found for your search.
+      </div>
+    </section>
+
+  </div>
+
+  <div class="toModal" id="orderModal" hidden aria-hidden="true">
+    <div class="toModal__backdrop" id="modalBackdrop"></div>
+
+    <div class="toModal__card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="toModal__top">
+        <div>
+          <div class="toModal__title" id="modalTitle">Order Details</div>
+          <div class="toModal__sub" id="modalSub">—</div>
+        </div>
+
+        <button class="toModal__close" id="modalClose" type="button" aria-label="Close">✕</button>
+      </div>
+
+      <div class="toModal__meta">
+        <div class="toMetaItem">
+          <div class="toMetaK">Order ID</div>
+          <div class="toMetaV tMono" id="mOrderId">—</div>
+        </div>
+        <div class="toMetaItem">
+          <div class="toMetaK">Date</div>
+          <div class="toMetaV tMono" id="mDate">—</div>
+        </div>
+        <div class="toMetaItem">
+          <div class="toMetaK">Status</div>
+          <div class="toMetaV" id="mStatusWrap"></div>
+        </div>
+      </div>
+
+      <div class="toModal__grid">
+        <div class="toPanel">
+          <div class="toPanel__title">Customer</div>
+          <div class="toPanel__row">
+            <div class="toPanel__k">Name</div>
+            <div class="toPanel__v" id="mCustomer">—</div>
+          </div>
+          <div class="toPanel__row">
+            <div class="toPanel__k">Phone</div>
+            <div class="toPanel__v tMono" id="mPhone">—</div>
+          </div>
+          <div class="toPanel__row">
+            <div class="toPanel__k">Address</div>
+            <div class="toPanel__v" id="mAddress">—</div>
+          </div>
+        </div>
+
+        <div class="toPanel">
+          <div class="toPanel__title">Order Summary</div>
+          <div class="toPanel__row">
+            <div class="toPanel__k">Subtotal</div>
+            <div class="toPanel__v tMono" id="mSubtotal">—</div>
+          </div>
+          <div class="toPanel__row">
+            <div class="toPanel__k">Delivery</div>
+            <div class="toPanel__v tMono" id="mDelivery">—</div>
+          </div>
+          <div class="toPanel__row toPanel__row--total">
+            <div class="toPanel__k">Total</div>
+            <div class="toPanel__v tMono" id="mTotal">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="toPanel toPanel--wide">
+        <div class="toPanel__title">Items</div>
+
+        <div class="toItemsHead">
+          <div>Product</div>
+          <div class="tRight">Price</div>
+          <div class="tCenter">Qty</div>
+          <div class="tRight">Subtotal</div>
+        </div>
+
+        <div class="toItems" id="mItems"></div>
+      </div>
+
+      <div class="toPanel toPanel--wide" id="cancelReasonPanel" hidden>
+        <div class="toPanel__title">Cancel Reason</div>
+        <div class="toPanel__row" style="border-top:none;padding-top:0">
+          <div class="toPanel__k">Reason</div>
+          <div class="toPanel__v" id="mCancelReason">—</div>
+        </div>
+      </div>
+
+      <div class="toModal__foot">
+        <div class="toModal__note" id="mNote">We will update you once the order status changes.</div>
+
+        <div class="toModal__actions">
+          <button class="toActBtn toActBtn--danger" id="mCancel" type="button" hidden>Cancel Order</button>
+          <a class="toActBtn toActBtn--ghost" id="mCall" href="tel:+8801975538778">Call Support</a>
+          <a class="toActBtn toActBtn--primary" id="mWhatsApp" href="https://wa.me/+8801975538778" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+
+    <div class="footer_col footer_brandCol">
+      <img src="dripline.jpg" alt="" class="footer__mark" />
+
+      <div class="footer__links">
+        <a href="about.html">About DripLine</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="return-policy.html">Cancellation & Return Policy</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="footer_col footer_mid">
+      <div class="footer__help">
+        <div class="footer__title">
+          <span class="footer__iconTxt">☎</span>
+          <span>FOR ANY HELP YOU MAY CALL US AT</span>
+        </div>
+
+        <div class="footer__helpText">
+          +8801975538778<br />
+          Customer Service<br />
+          Track your order or get help returning an order
+        </div>
+      </div>
+    </div>
+
+    <div class="footer_col footer_right">
+      <div class="footer__follow">
+        <div class="footer__title">
+          <span class="footer__check">✓</span>
+          <span>FOLLOW US</span>
+        </div>
+
+        <div class="footer__followText">
+          Stay updated on our latest arrivals, exclusive promotions and events.
+        </div>
+
+        <div class="socialRow">
+          <a class="socialBtn" href="INSTAGRAM_LINK_HERE" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+            <span class="socialIcon" aria-hidden="true">
+              <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="socialBtn__txt">Instagram</span>
+          </a>
+
+          <a class="socialBtn" href="https://wa.me/+8801975538778" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+            <span class="socialIcon" aria-hidden="true">
+              <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.6-4.1A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M9.2 8.9c.2-.5.5-.5.8-.5h.6c.2 0 .4 0 .5.4l.6 1.4c.1.3 0 .6-.2.8l-.4.4c-.1.1-.2.3-.1.5.4.8 1.3 1.8 2.3 2.3.2.1.4 0 .5-.1l.4-.4c.2-.2.5-.3.8-.2l1.4.6c.4.1.4.3.4.5v.6c0 .3 0 .6-.5.8-.4.2-1.3.4-2.6-.1-1.3-.6-3.1-1.9-4.3-4.1-1.1-2.1-.3-3-.1-3.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="socialBtn__txt">WhatsApp</span>
+          </a>
+        </div>
+
+        <a class="fbCard" href="https://www.facebook.com/fashionhk7" target="_blank" rel="noopener">
+          <div class="fbCard__left">
+            <img src="dripline.jpg" alt="Facebook Page" class="fbCard__avatar" />
+          </div>
+
+          <div class="fbCard__mid">
+            <div class="fbCard__name">DripLine</div>
+            <div class="fbCard__meta">Facebook Page</div>
+
+            <div class="fbCard__stats">
+              <div class="stat">
+                <div class="stat__num">5.1K</div>
+                <div class="stat__lbl">Followers</div>
+              </div>
+
+              <div class="stat stat--divider" aria-hidden="true"></div>
+
+              <div class="stat">
+                <div class="stat__num">1</div>
+                <div class="stat__lbl">Following</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fbCard__right">
+            <div class="fbCard__btn">Follow</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottomRow">
+      <div>Your order is handled daily with a lot of ❤️ and delivered across Bangladesh!</div>
+      <div class="footer__copy">Copyright © DripLine. All Rights Reserved</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const orders = [
+    {
+      date: "2026-02-01",
+      id: "DL-10231",
+      customer: "Hasan H",
+      phone: "01711-223344",
+      product: "Signature Drop Tee",
+      price: 780,
+      qty: 2,
+      status: "Pending",
+      delivery: 90,
+      address: "House 12, Road 5, Dhanmondi, Dhaka",
+      cancelReason: "",
+      items: [{ name: "Signature Drop Tee", price: 780, qty: 2 }]
+    },
+    {
+      date: "2026-02-01",
+      id: "DL-10232",
+      customer: "Nafisa R",
+      phone: "01819-889900",
+      product: "Premium Cotton T-Shirt",
+      price: 690,
+      qty: 1,
+      status: "In Review",
+      delivery: 70,
+      address: "Sector 10, Uttara, Dhaka",
+      cancelReason: "",
+      items: [{ name: "Premium Cotton T-Shirt", price: 690, qty: 1 }]
+    },
+    {
+      date: "2026-01-31",
+      id: "DL-10220",
+      customer: "Rafi U",
+      phone: "01975-538778",
+      product: "Classic Polo",
+      price: 1050,
+      qty: 1,
+      status: "Dispatched",
+      delivery: 90,
+      address: "Kazipara, Mirpur, Dhaka",
+      cancelReason: "",
+      items: [{ name: "Classic Polo", price: 1050, qty: 1 }]
+    },
+    {
+      date: "2026-01-30",
+      id: "DL-10198",
+      customer: "Mim A",
+      phone: "01610-334455",
+      product: "Minimal Logo Hoodie",
+      price: 1490,
+      qty: 1,
+      status: "Processing",
+      delivery: 120,
+      address: "Chawkbazar, Chattogram",
+      cancelReason: "",
+      items: [{ name: "Minimal Logo Hoodie", price: 1490, qty: 1 }]
+    },
+    {
+      date: "2026-01-29",
+      id: "DL-10170",
+      customer: "Tanim S",
+      phone: "01720-111222",
+      product: "Event Edition Oversized Tee",
+      price: 990,
+      qty: 3,
+      status: "Accepted",
+      delivery: 90,
+      address: "Jalalabad, Sylhet",
+      cancelReason: "",
+      items: [{ name: "Event Edition Oversized Tee", price: 990, qty: 3 }]
+    },
+    {
+      date: "2026-01-27",
+      id: "DL-10110",
+      customer: "Sabbir K",
+      phone: "01556-300996",
+      product: "Everyday Sweatshirt",
+      price: 1190,
+      qty: 1,
+      status: "Cancelled",
+      delivery: 0,
+      address: "Not Applicable",
+      cancelReason: "Customer requested cancel",
+      items: [{ name: "Everyday Sweatshirt", price: 1190, qty: 1 }]
+    }
+  ];
+
+  const body = document.getElementById("ordersBody");
+  const q = document.getElementById("orderSearch");
+  const clearBtn = document.getElementById("clearBtn");
+  const emptyState = document.getElementById("emptyState");
+  const statusFilter = document.getElementById("statusFilter");
+  const sortBy = document.getElementById("sortBy");
+
+  const countAll = document.getElementById("countAll");
+  const countDelivered = document.getElementById("countDelivered");
+  const countPending = document.getElementById("countPending");
+
+  const orderModal = document.getElementById("orderModal");
+  const modalBackdrop = document.getElementById("modalBackdrop");
+  const modalClose = document.getElementById("modalClose");
+
+  const modalSub = document.getElementById("modalSub");
+  const mOrderId = document.getElementById("mOrderId");
+  const mDate = document.getElementById("mDate");
+  const mStatusWrap = document.getElementById("mStatusWrap");
+
+  const mCustomer = document.getElementById("mCustomer");
+  const mPhone = document.getElementById("mPhone");
+  const mAddress = document.getElementById("mAddress");
+
+  const mSubtotal = document.getElementById("mSubtotal");
+  const mDelivery = document.getElementById("mDelivery");
+  const mTotal = document.getElementById("mTotal");
+
+  const mItems = document.getElementById("mItems");
+  const mNote = document.getElementById("mNote");
+  const mCancel = document.getElementById("mCancel");
+
+  const cancelReasonPanel = document.getElementById("cancelReasonPanel");
+  const mCancelReason = document.getElementById("mCancelReason");
+
+  let activeOrderId = null;
+
+  function money(n){
+    const s = String(Math.round(n));
+    return "৳ " + s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
+  function norm(s){ return String(s || "").toLowerCase().trim(); }
+  function statusKey(s){ return norm(s).replace(/\s+/g, " "); }
+
+  function pillClass(s){
+    const k = statusKey(s);
+    if(k === "accepted") return "st st--ok";
+    if(k === "processing") return "st st--vio";
+    if(k === "dispatched") return "st st--blue";
+    if(k === "pending") return "st st--warn";
+    if(k === "in review") return "st st--mid";
+    if(k === "cancelled") return "st st--off";
+    return "st";
+  }
+
+  function canCancel(status){
+    const k = statusKey(status);
+    return k === "pending" || k === "in review";
+  }
+
+  function calcSubtotal(o){
+    if(Array.isArray(o.items) && o.items.length){
+      return o.items.reduce((sum, it) => sum + (Number(it.price) || 0) * (Number(it.qty) || 0), 0);
+    }
+    return (Number(o.price) || 0) * (Number(o.qty) || 0);
+  }
+
+  function sortList(list){
+    const mode = sortBy.value;
+
+    return [...list].sort((a,b) => {
+      if(mode === "date_desc") return new Date(b.date) - new Date(a.date);
+      if(mode === "date_asc") return new Date(a.date) - new Date(b.date);
+      if(mode === "price_desc") return b.price - a.price;
+      if(mode === "price_asc") return a.price - b.price;
+      if(mode === "qty_desc") return b.qty - a.qty;
+      if(mode === "qty_asc") return a.qty - b.qty;
+      return 0;
+    });
+  }
+
+  function openModal(order){
+    activeOrderId = order.id;
+
+    const subtotal = calcSubtotal(order);
+    const delivery = Number(order.delivery) || 0;
+    const total = subtotal + delivery;
+
+    modalSub.textContent = `${order.customer} • ${order.phone}`;
+    mOrderId.textContent = order.id;
+    mDate.textContent = order.date;
+    mStatusWrap.innerHTML = `<span class="${pillClass(order.status)}">${order.status}</span>`;
+
+    mCustomer.textContent = order.customer;
+    mPhone.textContent = order.phone;
+    mAddress.textContent = order.address || "—";
+
+    mSubtotal.textContent = money(subtotal);
+    mDelivery.textContent = money(delivery);
+    mTotal.textContent = money(total);
+
+    const items = Array.isArray(order.items) && order.items.length
+      ? order.items
+      : [{ name: order.product, price: order.price, qty: order.qty }];
+
+    mItems.innerHTML = items.map(it => {
+      const p = Number(it.price) || 0;
+      const qy = Number(it.qty) || 0;
+      return `
+        <div class="toItemRow">
+          <div class="toItemName">${it.name}</div>
+          <div class="tRight tMono">${money(p)}</div>
+          <div class="tCenter tMono">${qy}</div>
+          <div class="tRight tMono">${money(p * qy)}</div>
+        </div>
+      `;
+    }).join("");
+
+    const k = statusKey(order.status);
+    if(k === "dispatched") mNote.textContent = "Order dispatched. You will receive it soon.";
+    else if(k === "cancelled") mNote.textContent = "This order has been cancelled. Contact support if you need help.";
+    else if(k === "processing") mNote.textContent = "Order is processing now. We are preparing your items.";
+    else if(k === "accepted") mNote.textContent = "Order accepted. We will start processing shortly.";
+    else if(k === "pending") mNote.textContent = "Order pending. We are reviewing your order.";
+    else mNote.textContent = "We will update you once the order status changes.";
+
+    cancelReasonPanel.hidden = k !== "cancelled";
+    if(k === "cancelled") mCancelReason.textContent = (order.cancelReason && order.cancelReason.trim()) ? order.cancelReason : "—";
+
+    mCancel.hidden = !canCancel(order.status);
+
+    orderModal.hidden = false;
+    orderModal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal(){
+    orderModal.hidden = true;
+    orderModal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    activeOrderId = null;
+  }
+
+  function render(){
+    const query = norm(q.value);
+    const filterStatus = statusFilter.value;
+
+    let list = orders.filter(o => {
+      const blob = norm([o.date,o.id,o.customer,o.phone,o.product,o.status,o.price,o.qty].join(" "));
+      const matchesQuery = query === "" || blob.includes(query);
+      const okStatus = (filterStatus === "all") || (statusKey(o.status) === filterStatus);
+      return matchesQuery && okStatus;
+    });
+
+    list = sortList(list);
+
+    body.innerHTML = list.map(o => `
+      <tr>
+        <td class="tMono">${o.date}</td>
+        <td class="tMono"><a class="toIdLink" href="#" data-order-id="${o.id}">${o.id}</a></td>
+        <td>${o.customer}</td>
+        <td class="tMono">${o.phone}</td>
+        <td>${o.product}</td>
+        <td class="tRight tMono">${money(o.price)}</td>
+        <td class="tCenter tMono">${o.qty}</td>
+        <td><span class="${pillClass(o.status)}">${o.status}</span></td>
+      </tr>
+    `).join("");
+
+    emptyState.hidden = list.length !== 0;
+
+    countAll.textContent = String(orders.length);
+    countDelivered.textContent = String(orders.filter(x => statusKey(x.status) === "dispatched").length);
+    countPending.textContent = String(orders.filter(x => statusKey(x.status) === "pending").length);
+  }
+
+  body.addEventListener("click", (e) => {
+    const a = e.target.closest(".toIdLink");
+    if(!a) return;
+    e.preventDefault();
+    const id = a.getAttribute("data-order-id");
+    const order = orders.find(x => x.id === id);
+    if(order) openModal(order);
+  });
+
+  mCancel.addEventListener("click", () => {
+    if(!activeOrderId) return;
+
+    const order = orders.find(x => x.id === activeOrderId);
+    if(!order) return;
+
+    if(!canCancel(order.status)) return;
+
+    const reason = prompt(`Cancel reason for ${order.id}?`);
+    if(!reason || !reason.trim()) return;
+
+    const ok = confirm(`Confirm cancel order ${order.id}?`);
+    if(!ok) return;
+
+    order.status = "Cancelled";
+    order.cancelReason = reason.trim();
+
+    render();
+    openModal(order);
+  });
+
+  q.addEventListener("input", render);
+  statusFilter.addEventListener("change", render);
+  sortBy.addEventListener("change", render);
+
+  clearBtn.addEventListener("click", () => {
+    q.value = "";
+    statusFilter.value = "all";
+    sortBy.value = "date_desc";
+    q.focus();
+    render();
+  });
+
+  modalBackdrop.addEventListener("click", closeModal);
+  modalClose.addEventListener("click", closeModal);
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape" && !orderModal.hidden) closeModal();
+  });
+
+  orderModal.hidden = true;
+  orderModal.setAttribute("aria-hidden","true");
+  render();
+</script>
+
+<script src="main.js"></script>
+</body>
+</html>

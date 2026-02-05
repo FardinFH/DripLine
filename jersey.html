@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DripLine | Jersey</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="pagese.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__row">
+
+    <a class="brand" href="index.html" aria-label="DripLine Home">
+      <img src="dripline.jpg" alt="DripLine" class="brand__logo" />
+      <span class="brand__name">DRIPLINE</span>
+    </a>
+
+    <div class="search">
+      <input class="search__input" type="text" placeholder="Search" aria-label="Search" />
+    </div>
+
+    <div class="header__right">
+      <div class="promoTag" title="Get 5% OFF on Page">
+        Get <strong>5% OFF</strong> on <span>Page</span>
+      </div>
+
+      <div class="header__icons">
+        <a class="iconBtn" href="store.html" aria-label="Stores" title="Stores">
+          <span class="uiIcon" aria-hidden="true">
+            <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="2" />
+              <path d="M12 11.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </span>
+          <span class="iconBtn__label">Stores</span>
+        </a>
+
+          <a class="iconBtn" href="review.html" aria-label="Reviews" title="Reviews">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3l2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Reviews</span>
+          </a>
+<a class="iconBtn" href="return.html" aria-label="Return & Replacement" title="Return & Replacement">
+  <span class="uiIcon" aria-hidden="true">
+    <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M7 7h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-7a3 3 0 0 1 3-3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M8 7a4 4 0 0 1 8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10 13h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10.5 16.5l-2-2 2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13.5 12.5l2 2-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+  <span class="iconBtn__label">Return</span>
+</a>
+        <div class="profileWrap">
+          <button class="iconBtn iconBtn--btn profileBtn" type="button" aria-label="Profile" title="Profile" aria-haspopup="menu" aria-expanded="false">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 21a8 8 0 0 0-16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Profile</span>
+          </button>
+
+          <div class="profileDropdown" role="menu" aria-label="Profile menu">
+            <div class="profileDropdown__head">Welcome</div>
+            <div class="profileDropdown__auth">
+              <a href="signin.html" class="profileDropdown__link profileDropdown__link--primary">Sign in</a>
+              <span class="profileDropdown__sep">/</span>
+              <a href="signup.html" class="profileDropdown__link">Sign up</a>
+            </div>
+
+            <div class="profileDropdown__list">
+              <a href="#" class="profileDropdown__item" role="menuitem">
+                <svg class="ddIcon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 3h10v4H7V3Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M6 7h12l-1 14H7L6 7Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M9 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>Track Order</span>
+              </a>
+              <a href="about.html" class="profileDropdown__item" role="menuitem">
+                <svg class="ddIcon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V6l-8-4-8 4v6c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M12 11v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 8.25h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <span>About Us</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a class="iconBtn" href="wishlist.html" aria-label="Wishlist" title="Wishlist">
+          <span class="uiIcon" aria-hidden="true">
+            <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 21s-7-4.35-9.2-8.4C1 9.2 3.2 6.5 6.2 6.5c1.6 0 3.1.8 3.8 2 0.7-1.2 2.2-2 3.8-2 3 0 5.2 2.7 3.4 6.1C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="iconBtn__label">Wishlist</span>
+        </a>
+
+        <a class="iconBtn" href="bag.html" aria-label="Bag" title="Bag">
+          <span class="uiIcon" aria-hidden="true">
+            <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 7h12l1 14H5L6 7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M9 7a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="iconBtn__label">Bag</span>
+        </a>
+      </div>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+  </div>
+
+  <div class="mobileNav" id="mobileNav" hidden>
+    <a href="men.html" class="mobileNav__link">MEN</a>
+    <a href="marketplace.html" class="mobileNav__link">SHOP NOW</a>
+    <a href="jersey.html" class="mobileNav__link mobileNav__link--active">JERSEY</a>
+    <a href="essentials.html" class="mobileNav__link">ESSENTIALS</a>
+  </div>
+</header>
+
+<section class="categoryStrip">
+  <div class="container categoryStrip__row">
+    <a class="catBtn" href="marketplace.html">SHOP NOW</a>
+    <a class="catBtn" href="men.html">MEN</a>
+    <a class="catBtn catBtn--active" href="jersey.html">JERSEY</a>
+    <a class="catBtn" href="essentials.html">ESSENTIALS</a>
+  </div>
+</section>
+
+<section class="crumbBar">
+  <div class="container crumbBar__row">
+    <div class="crumb">
+      <a class="crumb__link" href="index.html">Home</a>
+      <span class="crumb__sep">›</span>
+      <span class="crumb__current">Jersey</span>
+    </div>
+    <div class="crumbBar__note">All Jerseys</div>
+  </div>
+</section>
+
+<main class="page">
+  <div class="container">
+
+    <div class="pageHead">
+      <div class="pageHead__left">
+        <h1 class="pageTitle">Jersey</h1>
+        <p class="pageSub">All types of jerseys in one place.</p>
+      </div>
+
+      <div class="pageHead__right">
+        <div class="chips">
+          <button class="chip chip--active" type="button">All</button>
+          <button class="chip" type="button">Football</button>
+          <button class="chip" type="button">Cricket</button>
+          <button class="chip" type="button">Basketball</button>
+          <button class="chip" type="button">Training</button>
+        </div>
+        <select class="sortSelect" aria-label="Sort products">
+          <option>Sort: Featured</option>
+          <option>Newest</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <section class="grid">
+      <a class="card" href="details.html?cat=jersey&id=201">
+        <div class="card__imgWrap">
+          <img class="card__img" src="products/jersey-1.jpg" alt="Football Club Jersey" />
+          <span class="badge badge--sale">-25%</span>
+        </div>
+        <div class="card__body">
+          <div class="card__title">Football Club Jersey</div>
+          <div class="card__meta">Breathable • Pro fit</div>
+          <div class="card__priceRow">
+            <div class="price">৳ 990</div>
+            <div class="priceOld">৳ 1320</div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="details.html?cat=jersey&id=202">
+        <div class="card__imgWrap">
+          <img class="card__img" src="products/jersey-2.jpg" alt="National Team Jersey" />
+          <span class="badge">New</span>
+        </div>
+        <div class="card__body">
+          <div class="card__title">National Team Jersey</div>
+          <div class="card__meta">Lightweight • Dry fit</div>
+          <div class="card__priceRow">
+            <div class="price">৳ 1090</div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="details.html?cat=jersey&id=203">
+        <div class="card__imgWrap">
+          <img class="card__img" src="products/jersey-3.jpg" alt="Cricket Match Jersey" />
+          <span class="badge badge--hot">Hot</span>
+        </div>
+        <div class="card__body">
+          <div class="card__title">Cricket Match Jersey</div>
+          <div class="card__meta">Soft mesh • Comfort</div>
+          <div class="card__priceRow">
+            <div class="price">৳ 890</div>
+            <div class="priceOld">৳ 990</div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="details.html?cat=jersey&id=204">
+        <div class="card__imgWrap">
+          <img class="card__img" src="products/jersey-4.jpg" alt="Basketball Jersey" />
+        </div>
+        <div class="card__body">
+          <div class="card__title">Basketball Jersey</div>
+          <div class="card__meta">Sleeveless • Street</div>
+          <div class="card__priceRow">
+            <div class="price">৳ 850</div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="details.html?cat=jersey&id=205">
+        <div class="card__imgWrap">
+          <img class="card__img" src="products/jersey-5.jpg" alt="Training Jersey" />
+          <span class="badge badge--sale">-15%</span>
+        </div>
+        <div class="card__body">
+          <div class="card__title">Training Jersey</div>
+          <div class="card__meta">Stretch • Daily wear</div>
+          <div class="card__priceRow">
+            <div class="price">৳ 790</div>
+            <div class="priceOld">৳ 930</div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="details.html?cat=jersey&id=206">
+        <div class="card__imgWrap">
+          <img class="card__img" src="products/jersey-6.jpg" alt="Retro Club Jersey" />
+        </div>
+        <div class="card__body">
+          <div class="card__title">Retro Club Jersey</div>
+          <div class="card__meta">Classic • Limited</div>
+          <div class="card__priceRow">
+            <div class="price">৳ 1190</div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="details.html?cat=jersey&id=207">
+        <div class="card__imgWrap">
+          <img class="card__img" src="products/jersey-7.jpg" alt="Goalkeeper Jersey" />
+          <span class="badge badge--hot">Hot</span>
+        </div>
+        <div class="card__body">
+          <div class="card__title">Goalkeeper Jersey</div>
+          <div class="card__meta">Grip-ready • Durable</div>
+          <div class="card__priceRow">
+            <div class="price">৳ 1290</div>
+          </div>
+        </div>
+      </a>
+
+      <a class="card" href="details.html?cat=jersey&id=208">
+        <div class="card__imgWrap">
+          <img class="card__img" src="products/jersey-8.jpg" alt="Cricket Practice Jersey" />
+          <span class="badge">New</span>
+        </div>
+        <div class="card__body">
+          <div class="card__title">Cricket Practice Jersey</div>
+          <div class="card__meta">Quick-dry • Easy fit</div>
+          <div class="card__priceRow">
+            <div class="price">৳ 790</div>
+          </div>
+        </div>
+      </a>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+
+    <div class="footer__col footer__brandCol">
+      <img src="dripline.jpg" alt="" class="footer__mark" />
+
+      <div class="footer__links">
+        <a href="about.html">About DripLine</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="return-policy.html">Cancellation & Return Policy</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="footer__col footer__mid">
+      <div class="footer__help">
+        <div class="footer__title">
+          <span class="footer__iconTxt">☎</span>
+          <span>FOR ANY HELP YOU MAY CALL US AT</span>
+        </div>
+
+        <div class="footer__helpText">
+          +8801975538778<br />
+          Customer Service<br />
+          Track your order or get help returning an order
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__col footer__right">
+      <div class="footer__follow">
+        <div class="footer__title">
+          <span class="footer__check">✓</span>
+          <span>FOLLOW US</span>
+        </div>
+
+        <div class="footer__followText">
+          Stay updated on our latest arrivals, exclusive promotions and events.
+        </div>
+
+        <div class="socialRow">
+          <a class="socialBtn" href="INSTAGRAM_LINK_HERE" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+            <span class="socialIcon" aria-hidden="true">
+              <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="socialBtn__txt">Instagram</span>
+          </a>
+
+          <a class="socialBtn" href="https://wa.me/+8801975538778" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+            <span class="socialIcon" aria-hidden="true">
+              <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.6-4.1A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M9.2 8.9c.2-.5.5-.5.8-.5h.6c.2 0 .4 0 .5.4l.6 1.4c.1.3 0 .6-.2.8l-.4.4c-.1.1-.2.3-.1.5.4.8 1.3 1.8 2.3 2.3.2.1.4 0 .5-.1l.4-.4c.2-.2.5-.3.8-.2l1.4.6c.4.1.4.3.4.5v.6c0 .3 0 .6-.5.8-.4.2-1.3.4-2.6-.1-1.3-.6-3.1-1.9-4.3-4.1-1.1-2.1-.3-3-.1-3.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="socialBtn__txt">WhatsApp</span>
+          </a>
+        </div>
+
+        <a class="fbCard" href="https://www.facebook.com/fashionhk7" target="_blank" rel="noopener">
+          <div class="fbCard__left">
+            <img src="dripline.jpg" alt="Facebook Page" class="fbCard__avatar" />
+          </div>
+
+          <div class="fbCard__mid">
+            <div class="fbCard__name">DripLine</div>
+            <div class="fbCard__meta">Facebook Page</div>
+
+            <div class="fbCard__stats">
+              <div class="stat">
+                <div class="stat__num">5.1K</div>
+                <div class="stat__lbl">Followers</div>
+              </div>
+
+              <div class="stat stat--divider" aria-hidden="true"></div>
+
+              <div class="stat">
+                <div class="stat__num">1</div>
+                <div class="stat__lbl">Following</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fbCard__right">
+            <div class="fbCard__btn">Follow</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottomRow">
+      <div>Your order is handled daily with a lot of ❤️ and delivered across Bangladesh!</div>
+      <div class="footer__copy">Copyright © DripLine. All Rights Reserved</div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

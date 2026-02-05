@@ -1,0 +1,253 @@
+.mpWrap{
+  background:#f7f8fa;
+  border-top:1px solid var(--line);
+  padding:26px 0 54px;
+}
+
+.mpTop{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:linear-gradient(180deg, #ffffff, rgba(14,165,233,.03));
+  box-shadow:var(--shadow);
+}
+
+.mpTitle{
+  margin:0;
+  font-size:28px;
+  letter-spacing:-.02em;
+  color:#111827;
+}
+
+.mpSub{
+  margin:10px 0 0 0;
+  color:var(--muted);
+  font-weight:600;
+  line-height:1.7;
+  max-width:760px;
+}
+
+.mpTools{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.toolPill{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:999px;
+  background:rgba(14,165,233,.08);
+  border:1px solid rgba(14,165,233,.16);
+  color:#111827;
+  font-weight:900;
+  font-size:13px;
+}
+
+.toolDot{
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  background:rgba(34,197,94,.95);
+  box-shadow:0 0 0 4px rgba(34,197,94,.14);
+}
+
+.toolSelect{
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#fff;
+  font-weight:900;
+  color:#111827;
+  outline:none;
+}
+
+.toolSelect:focus{
+  border-color:rgba(14,165,233,.6);
+  box-shadow:0 0 0 4px rgba(14,165,233,.12);
+}
+
+.mpGrid{
+  margin-top:16px;
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:14px;
+}
+
+.pCard{
+  display:grid;
+  grid-template-rows:auto 1fr;
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 12px 28px rgba(16,24,40,.08);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.pCard:hover{
+  transform: translateY(-2px);
+  box-shadow:0 20px 46px rgba(16,24,40,.14);
+}
+
+.pMedia{
+  position:relative;
+  background:#f3f4f6;
+}
+
+.pImg{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  display:block;
+}
+
+.pBadge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  padding:8px 10px;
+  border-radius:999px;
+  background:rgba(16,24,40,.92);
+  color:#fff;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:.02em;
+  box-shadow:0 10px 20px rgba(16,24,40,.22);
+}
+
+.pBody{
+  padding:14px;
+  display:grid;
+  gap:12px;
+}
+
+.pHead{
+  display:grid;
+  gap:6px;
+}
+
+.pName{
+  margin:0;
+  font-size:15px;
+  font-weight:900;
+  color:#111827;
+  line-height:1.25;
+}
+
+.pMeta{
+  color:var(--muted);
+  font-weight:700;
+  font-size:12px;
+  line-height:1.55;
+}
+
+.pSizes{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.sizeChip{
+  padding:7px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:#111827;
+  font-weight:900;
+  font-size:12px;
+}
+
+.sizeChip--on{
+  background:rgba(14,165,233,.10);
+  border-color:rgba(14,165,233,.28);
+}
+
+.pPriceRow{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.pPrice{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+}
+
+.pPrice--single{
+  gap:0;
+}
+
+.pNow{
+  font-weight:900;
+  font-size:16px;
+  color:#111827;
+}
+
+.pWas{
+  font-weight:800;
+  font-size:12px;
+  color:var(--muted);
+}
+
+.pActions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.actTag{
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid rgba(14,165,233,.20);
+  background:rgba(14,165,233,.08);
+  color:#111827;
+  font-weight:900;
+  font-size:12px;
+  white-space:nowrap;
+}
+
+.mpBottomNote{
+  margin-top:16px;
+  padding:12px 14px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background:rgba(16,24,40,.04);
+  color:#111827;
+  font-weight:700;
+  font-size:13px;
+  line-height:1.6;
+}
+
+@media (max-width: 1100px){
+  .mpGrid{
+    grid-template-columns:repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px){
+  .mpGrid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px){
+  .mpGrid{
+    grid-template-columns:1fr;
+  }
+  .pImg{
+    height:220px;
+  }
+}

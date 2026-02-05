@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wholesale / Bulk Order - DripLine</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="wholesale.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__row">
+
+    <a class="brand" href="index.html" aria-label="DripLine Home">
+      <img src="dripline.jpg" alt="DripLine" class="brand__logo" />
+      <span class="brand__name">DRIPLINE</span>
+    </a>
+
+    <div class="search">
+      <input class="search__input" type="text" placeholder="Search" aria-label="Search" />
+    </div>
+
+    <div class="header__right">
+      <div class="promoTag" title="Get 5% OFF on Page">
+        Get <strong>5% OFF</strong> on <span>Page</span>
+      </div>
+
+      <div class="header__icons">
+        <a class="iconBtn" href="store.html" aria-label="Stores" title="Stores">
+          <span class="uiIcon" aria-hidden="true">
+            <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="2" />
+              <path d="M12 11.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="2" />
+            </svg>
+          </span>
+          <span class="iconBtn__label">Stores</span>
+        </a>
+
+          <a class="iconBtn" href="review.html" aria-label="Reviews" title="Reviews">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3l2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Reviews</span>
+          </a>
+
+        <div class="profileWrap">
+          <button class="iconBtn iconBtn--btn profileBtn" type="button" aria-label="Profile" title="Profile" aria-haspopup="menu" aria-expanded="false">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 21a8 8 0 0 0-16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Profile</span>
+          </button>
+
+          <div class="profileDropdown" role="menu" aria-label="Profile menu">
+            <div class="profileDropdown__head">Welcome</div>
+            <div class="profileDropdown__auth">
+              <a href="signin.html" class="profileDropdown__link profileDropdown__link--primary">Sign in</a>
+              <span class="profileDropdown__sep">/</span>
+              <a href="signup.html" class="profileDropdown__link">Sign up</a>
+            </div>
+
+            <div class="profileDropdown__list">
+              <a href="#" class="profileDropdown__item" role="menuitem"><span>Track Order</span></a>
+              <a href="about.html" class="profileDropdown__item" role="menuitem"><span>About Us</span></a>
+            </div>
+          </div>
+        </div>
+
+        <a class="iconBtn" href="wishlist.html" aria-label="Wishlist" title="Wishlist">
+          <span class="uiIcon" aria-hidden="true">
+            <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 21s-7-4.35-9.2-8.4C1 9.2 3.2 6.5 6.2 6.5c1.6 0 3.1.8 3.8 2 0.7-1.2 2.2-2 3.8-2 3 0 5.2 2.7 3.4 6.1C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="iconBtn__label">Wishlist</span>
+        </a>
+
+        <a class="iconBtn" href="bag.html" aria-label="Bag" title="Bag">
+          <span class="uiIcon" aria-hidden="true">
+            <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 7h12l1 14H5L6 7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M9 7a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="iconBtn__label">Bag</span>
+        </a>
+      </div>
+
+      <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+
+  </div>
+</header>
+
+<section class="crumbBar">
+  <div class="container crumbBar__row">
+    <div class="crumb">
+      <a class="crumb__link" href="index.html">Home</a>
+      <span class="crumb__sep">›</span>
+      <span class="crumb__current">Wholesale / Bulk Order</span>
+    </div>
+    <div class="crumbBar__note">
+      Production timeline: <strong>30–45 days</strong>. Advance payment: <strong>50%</strong>.
+      <a class="crumbBar__link" href="#request">Request</a>
+    </div>
+  </div>
+</section>
+
+<main class="wsWrap">
+  <div class="container">
+
+    <section class="wsHero">
+      <div class="wsHero__left">
+        <h1 class="wsTitle">Wholesale / Bulk Order</h1>
+        <p class="wsSub">
+          Submit your wholesale request with advance payment details. We will call you once production is completed.
+        </p>
+
+        <div class="wsCtas">
+          <a class="wsBtn wsBtn--primary" href="#request">Request Now</a>
+          <a class="wsBtn wsBtn--ghost" href="https://wa.me/+8801975538778" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+
+        <div class="wsMini">
+          <div class="wsMini__item">
+            <div class="wsMini__k">Production timeline</div>
+            <div class="wsMini__v">30–45 days</div>
+          </div>
+          <div class="wsMini__item">
+            <div class="wsMini__k">Advance payment</div>
+            <div class="wsMini__v">50% required</div>
+          </div>
+          <div class="wsMini__item">
+            <div class="wsMini__k">Cancellation</div>
+            <div class="wsMini__v">Allowed within 2 days</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wsHero__right">
+        <div class="wsHeroCard">
+          <div class="wsHeroCard__top">
+            <div class="wsHeroCard__tag">Payment Verification</div>
+            <div class="wsHeroCard__hint">Required to confirm your request</div>
+          </div>
+
+          <div class="wsPayBox">
+            <div class="wsPayLine">
+              <div class="wsPayK">bKash numbers</div>
+              <div class="wsPayV"><strong>01975538778</strong> / <strong>01556300996</strong></div>
+            </div>
+
+            <div class="wsPayLine">
+              <div class="wsPayK">Required</div>
+              <div class="wsPayV">50% advance payment</div>
+            </div>
+
+            <div class="wsPayLine">
+              <div class="wsPayK">Submit</div>
+              <div class="wsPayV">Transaction ID + Sender number</div>
+            </div>
+
+            <div class="wsPayNote">
+              A request summary will be available after submission. Cancellation is allowed within 2 days from submission time. After that, cancellation is not available.
+            </div>
+          </div>
+
+          <div class="wsHeroCard__foot">
+            <a class="wsInline" href="#request">Submit request →</a>
+            <a class="wsInline" href="#summary">View summary →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wsSection" id="request">
+      <div class="wsSection__head">
+        <div>
+          <h2 class="wsH2">Wholesale Request</h2>
+          <p class="wsP">Complete the form and click the button once to save the request to summary and send the same request on WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="wsFormGrid">
+        <form class="wsForm" id="quoteForm" autocomplete="on">
+          <div class="wsFieldRow">
+            <div class="wsField">
+              <label class="wsLabel" for="qName">Full name</label>
+              <input class="wsInput" id="qName" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="wsField">
+              <label class="wsLabel" for="qPhone">Contact number</label>
+              <input class="wsInput" id="qPhone" type="tel" placeholder="+8801XXXXXXXXX" required />
+            </div>
+          </div>
+
+          <div class="wsFieldRow">
+            <div class="wsField">
+              <label class="wsLabel" for="qCat">Product category</label>
+              <select class="wsSelect" id="qCat" required>
+                <option value="" selected disabled>Select a category</option>
+                <option>Plain T-Shirt</option>
+                <option>Polo</option>
+                <option>Hoodie</option>
+                <option>Sweatshirt</option>
+                <option>Jersey / Active</option>
+                <option>Custom Request</option>
+              </select>
+            </div>
+
+            <div class="wsField">
+              <label class="wsLabel" for="qQtyExact">Exact quantity</label>
+              <input class="wsInput" id="qQtyExact" type="number" min="1" placeholder="e.g., 120" required />
+            </div>
+          </div>
+
+          <div class="wsFieldRow">
+            <div class="wsField">
+              <label class="wsLabel" for="qGsm">GSM / Fabric</label>
+              <select class="wsSelect" id="qGsm">
+                <option value="" selected>Not sure</option>
+                <option>180 GSM</option>
+                <option>200 GSM</option>
+                <option>220 GSM</option>
+                <option>Fleece</option>
+                <option>Dry fit</option>
+              </select>
+            </div>
+
+            <div class="wsField">
+              <label class="wsLabel" for="qBranding">Branding</label>
+              <select class="wsSelect" id="qBranding">
+                <option value="" selected>None</option>
+                <option>Print</option>
+                <option>Embroidery</option>
+                <option>Print + Embroidery</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="wsFieldRow">
+            <div class="wsField">
+              <label class="wsLabel" for="qZone">Delivery zone</label>
+              <select class="wsSelect" id="qZone" required>
+                <option value="" selected disabled>Select a zone</option>
+                <option>Inside Dhaka</option>
+                <option>Outside Dhaka</option>
+              </select>
+            </div>
+
+            <div class="wsField">
+              <label class="wsLabel" for="qNeededBy">Preferred deadline</label>
+              <input class="wsInput" id="qNeededBy" type="text" placeholder="e.g., within 30–45 days" />
+            </div>
+          </div>
+
+          <div class="wsField">
+            <label class="wsLabel" for="qNote">Order details</label>
+            <textarea class="wsTextarea" id="qNote" rows="4" placeholder="Colors, size breakdown, design notes (if any)"></textarea>
+          </div>
+
+          <div class="wsDivider"></div>
+
+          <div class="wsPayInfo">
+            <div class="wsPayTitle">Advance payment required (50%)</div>
+            <div class="wsPayText">bKash: <strong>01975538778</strong> or <strong>01556300996</strong></div>
+            <div class="wsPayHint">After payment, provide the transaction details below to confirm your request.</div>
+          </div>
+
+          <div class="wsFieldRow">
+            <div class="wsField">
+              <label class="wsLabel" for="qBkashTo">Paid to (bKash number)</label>
+              <select class="wsSelect" id="qBkashTo" required>
+                <option value="" selected disabled>Select</option>
+                <option>01975538778</option>
+                <option>01556300996</option>
+              </select>
+            </div>
+
+            <div class="wsField">
+              <label class="wsLabel" for="qAmount">Advance amount</label>
+              <input class="wsInput" id="qAmount" type="text" placeholder="e.g., 5000" required />
+            </div>
+          </div>
+
+          <div class="wsFieldRow">
+            <div class="wsField">
+              <label class="wsLabel" for="qTxnId">Transaction ID</label>
+              <input class="wsInput" id="qTxnId" type="text" placeholder="bKash transaction ID" required />
+            </div>
+
+            <div class="wsField">
+              <label class="wsLabel" for="qSender">Sender bKash number</label>
+              <input class="wsInput" id="qSender" type="tel" placeholder="01XXXXXXXXX" required />
+            </div>
+          </div>
+
+          <div class="wsFormActions">
+            <button class="wsBtn wsBtn--primary wsBtn--full" type="submit">Submit + Send WhatsApp</button>
+          </div>
+
+          <div class="wsFine">
+            Production timeline is <strong>30–45 days</strong>. Cancellation is allowed within <strong>2 days</strong> of submission. After that, cancellation is not available. We will call you once production is completed.
+          </div>
+        </form>
+
+        <aside class="wsSide">
+          <div class="wsSideCard">
+            <div class="wsSideTitle">Quick rules</div>
+
+            <div class="wsSideList">
+              <div class="wsSideItem">
+                <div class="wsSideK">Production timeline</div>
+                <div class="wsSideV">30–45 days</div>
+              </div>
+              <div class="wsSideItem">
+                <div class="wsSideK">Advance payment</div>
+                <div class="wsSideV">50% required (bKash)</div>
+              </div>
+              <div class="wsSideItem">
+                <div class="wsSideK">Cancellation</div>
+                <div class="wsSideV">Within 2 days from submission</div>
+              </div>
+              <div class="wsSideItem">
+                <div class="wsSideK">Update</div>
+                <div class="wsSideV">You will receive a call once production is completed</div>
+              </div>
+            </div>
+
+            <div class="wsSideCtas">
+              <a class="wsBtn wsBtn--primary wsBtn--full" href="tel:+8801975538778">Call: 01975538778</a>
+              <a class="wsBtn wsBtn--ghost wsBtn--full" href="tel:+8801556300996">Call: 01556300996</a>
+              <a class="wsBtn wsBtn--ghost wsBtn--full" href="https://wa.me/+8801975538778" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="wsSection" id="summary">
+      <div class="wsSection__head">
+        <div>
+          <h2 class="wsH2">Request Summary</h2>
+          <p class="wsP">Your latest submitted wholesale request will appear here.</p>
+        </div>
+      </div>
+
+      <div class="wsSummaryWrap">
+        <div class="wsSummary" id="summaryBox" hidden>
+          <div class="wsSumTop">
+            <div>
+              <div class="wsSumTitle">Request Submitted</div>
+              <div class="wsSumSub" id="sumTime"></div>
+            </div>
+            <div class="wsSumBadge" id="sumStatus">Active</div>
+          </div>
+
+          <div class="wsSumGrid" id="sumGrid"></div>
+
+          <div class="wsSumMsg">
+            Production timeline: <strong>30–45 days</strong>. We will call you once production is completed.
+          </div>
+
+          <div class="wsSumActions">
+            <button class="wsBtn wsBtn--ghost" id="cancelBtn" type="button">Cancel (within 2 days)</button>
+            <a class="wsBtn wsBtn--primary" id="waBtn" href="#" target="_blank" rel="noopener">Send WhatsApp Copy</a>
+          </div>
+
+          <div class="wsFine" id="cancelHint"></div>
+        </div>
+
+        <div class="wsEmpty" id="emptyBox">
+          No wholesale request submitted yet. Please complete the form above to submit your request.
+        </div>
+      </div>
+    </section>
+
+    <section class="wsCtaBar">
+      <div class="wsCtaBar__left">
+        <div class="wsCtaBar__t">Need a fast confirmation?</div>
+        <div class="wsCtaBar__d">Send your request details on WhatsApp. Payment verification is required for confirmation.</div>
+      </div>
+      <div class="wsCtaBar__right">
+        <a class="wsBtn wsBtn--primary" href="https://wa.me/+8801975538778" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="wsBtn wsBtn--ghost" href="tel:+8801975538778">Call</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__grid">
+
+    <div class="footer__col footer__brandCol">
+      <img src="dripline.jpg" alt="" class="footer__mark" />
+
+      <div class="footer__links">
+        <a href="about.html">About DripLine</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="return-policy.html">Cancellation & Return Policy</a>
+        <a href="faqs.html">FAQs</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+
+    <div class="footer__col footer__mid">
+      <div class="footer__help">
+        <div class="footer__title">
+          <span class="footer__iconTxt">☎</span>
+          <span>FOR ANY HELP YOU MAY CALL US AT</span>
+        </div>
+
+        <div class="footer__helpText">
+          +8801975538778<br />
+          Customer Service<br />
+          Track your order or get help returning an order
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__col footer__right">
+      <div class="footer__follow">
+        <div class="footer__title">
+          <span class="footer__check">✓</span>
+          <span>FOLLOW US</span>
+        </div>
+
+        <div class="footer__followText">
+          Stay updated on our latest arrivals, exclusive promotions and events.
+        </div>
+
+        <div class="socialRow">
+          <a class="socialBtn" href="INSTAGRAM_LINK_HERE" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+            <span class="socialIcon" aria-hidden="true">
+              <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+                <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="socialBtn__txt">Instagram</span>
+          </a>
+
+          <a class="socialBtn" href="https://wa.me/+8801975538778" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+            <span class="socialIcon" aria-hidden="true">
+              <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.6-4.1A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M9.2 8.9c.2-.5.5-.5.8-.5h.6c.2 0 .4 0 .5.4l.6 1.4c.1.3 0 .6-.2.8l-.4.4c-.1.1-.2.3-.1.5.4.8 1.3 1.8 2.3 2.3.2.1.4 0 .5-.1l.4-.4c.2-.2.5-.3.8-.2l1.4.6c.4.1.4.3.4.5v.6c0 .3 0 .6-.5.8-.4.2-1.3.4-2.6-.1-1.3-.6-3.1-1.9-4.3-4.1-1.1-2.1-.3-3-.1-3.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="socialBtn__txt">WhatsApp</span>
+          </a>
+        </div>
+
+        <a class="fbCard" href="https://www.facebook.com/fashionhk7" target="_blank" rel="noopener">
+          <div class="fbCard__left">
+            <img src="dripline.jpg" alt="Facebook Page" class="fbCard__avatar" />
+          </div>
+
+          <div class="fbCard__mid">
+            <div class="fbCard__name">DripLine</div>
+            <div class="fbCard__meta">Facebook Page</div>
+
+            <div class="fbCard__stats">
+              <div class="stat">
+                <div class="stat__num">5.1K</div>
+                <div class="stat__lbl">Followers</div>
+              </div>
+
+              <div class="stat stat--divider" aria-hidden="true"></div>
+
+              <div class="stat">
+                <div class="stat__num">1</div>
+                <div class="stat__lbl">Following</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fbCard__right">
+            <div class="fbCard__btn">Follow</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container footer__bottomRow">
+      <div>Your order is handled daily with a lot of ❤️ and delivered across Bangladesh!</div>
+      <div class="footer__copy">Copyright © DripLine. All Rights Reserved</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const KEY = "dripline_wholesale_req_v3";
+  const MS_2D = 2 * 24 * 60 * 60 * 1000;
+
+  const form = document.getElementById("quoteForm");
+  const summaryBox = document.getElementById("summaryBox");
+  const emptyBox = document.getElementById("emptyBox");
+  const sumGrid = document.getElementById("sumGrid");
+  const sumTime = document.getElementById("sumTime");
+  const sumStatus = document.getElementById("sumStatus");
+  const cancelBtn = document.getElementById("cancelBtn");
+  const cancelHint = document.getElementById("cancelHint");
+  const waBtn = document.getElementById("waBtn");
+
+  function v(id){ return (document.getElementById(id).value || "").trim(); }
+  function esc(s){ return String(s || "").replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])); }
+  function fmtTime(ts){ return new Date(ts).toLocaleString(); }
+
+  function buildMsg(data){
+    return (
+      `Wholesale Request (Submitted)%0A` +
+      `Name: ${encodeURIComponent(data.name)}%0A` +
+      `Contact: ${encodeURIComponent(data.phone)}%0A` +
+      `Category: ${encodeURIComponent(data.category)}%0A` +
+      `Quantity: ${encodeURIComponent(String(data.quantity))}%0A` +
+      `GSM/Fabric: ${encodeURIComponent(data.gsm || "Not sure")}%0A` +
+      `Branding: ${encodeURIComponent(data.branding || "None")}%0A` +
+      `Delivery Zone: ${encodeURIComponent(data.zone)}%0A` +
+      `Preferred Deadline: ${encodeURIComponent(data.neededBy || "30–45 days")}%0A` +
+      `Order Details: ${encodeURIComponent(data.details || "-")}%0A%0A` +
+      `Advance Payment: 50% (bKash)%0A` +
+      `Paid To: ${encodeURIComponent(data.paidTo)}%0A` +
+      `Advance Amount: ${encodeURIComponent(data.amount)}%0A` +
+      `Transaction ID: ${encodeURIComponent(data.txnId)}%0A` +
+      `Sender Number: ${encodeURIComponent(data.sender)}%0A%0A` +
+      `Note: Production timeline is 30–45 days. We will call once production is completed.`
+    );
+  }
+
+  function render(){
+    const raw = localStorage.getItem(KEY);
+    if(!raw){
+      summaryBox.hidden = true;
+      emptyBox.hidden = false;
+      return;
+    }
+
+    const data = JSON.parse(raw);
+    summaryBox.hidden = false;
+    emptyBox.hidden = true;
+
+    const now = Date.now();
+    const age = now - data.createdAt;
+    const canCancel = data.status === "Active" && age <= MS_2D;
+
+    sumTime.textContent = `Submitted: ${fmtTime(data.createdAt)}`;
+    sumStatus.textContent = data.status;
+    sumStatus.className = "wsSumBadge" + (data.status === "Cancelled" ? " wsSumBadge--off" : "");
+
+    const items = [
+      ["Name", data.name],
+      ["Contact", data.phone],
+      ["Category", data.category],
+      ["Quantity", data.quantity],
+      ["GSM/Fabric", data.gsm || "Not sure"],
+      ["Branding", data.branding || "None"],
+      ["Delivery Zone", data.zone],
+      ["Preferred Deadline", data.neededBy || "30–45 days"],
+      ["Paid To (bKash)", data.paidTo],
+      ["Advance Amount", data.amount],
+      ["Transaction ID", data.txnId],
+      ["Sender Number", data.sender]
+    ];
+
+    sumGrid.innerHTML = items.map(([k,val]) => (
+      `<div class="wsSumItem"><div class="wsSumK">${esc(k)}</div><div class="wsSumV">${esc(val)}</div></div>`
+    )).join("");
+
+    const waText = buildMsg(data);
+    waBtn.href = `https://wa.me/+8801975538778?text=${waText}`;
+
+    cancelBtn.disabled = !canCancel;
+    cancelBtn.textContent = canCancel ? "Cancel (within 2 days)" : "Cancellation closed";
+    cancelHint.textContent = canCancel
+      ? "You can cancel within 2 days of submission. Once cancelled, the request becomes inactive."
+      : "Cancellation is only available within 2 days after submission.";
+  }
+
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const qty = Number(v("qQtyExact"));
+    if(!Number.isFinite(qty) || qty < 1){
+      alert("Please enter a valid exact quantity.");
+      return;
+    }
+
+    const data = {
+      name: v("qName"),
+      phone: v("qPhone"),
+      category: v("qCat"),
+      quantity: qty,
+      gsm: v("qGsm"),
+      branding: v("qBranding"),
+      zone: v("qZone"),
+      neededBy: v("qNeededBy"),
+      details: v("qNote"),
+      paidTo: v("qBkashTo"),
+      amount: v("qAmount"),
+      txnId: v("qTxnId"),
+      sender: v("qSender"),
+      createdAt: Date.now(),
+      status: "Active"
+    };
+
+    localStorage.setItem(KEY, JSON.stringify(data));
+    render();
+    location.hash = "#summary";
+
+    const waText = buildMsg(data);
+    window.open(`https://wa.me/+8801975538778?text=${waText}`, "_blank");
+  });
+
+  cancelBtn.addEventListener("click", function(){
+    const raw = localStorage.getItem(KEY);
+    if(!raw) return;
+
+    const data = JSON.parse(raw);
+    const now = Date.now();
+    const age = now - data.createdAt;
+
+    if(data.status !== "Active") return;
+    if(age > MS_2D) return;
+
+    data.status = "Cancelled";
+    localStorage.setItem(KEY, JSON.stringify(data));
+    render();
+  });
+
+  render();
+</script>
+
+<script src="main.js"></script>
+</body>
+</html>

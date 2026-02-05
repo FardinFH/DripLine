@@ -1,0 +1,356 @@
+.wlWrap{
+  background:#f7f8fa;
+  border-top:1px solid var(--line);
+  padding:26px 0 48px;
+}
+
+.wlHero{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  box-shadow:var(--shadow);
+  padding:22px;
+}
+
+.wlTop{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:16px;
+  flex-wrap:wrap;
+  padding-bottom:14px;
+  border-bottom:1px solid var(--line);
+}
+
+.wlCrumb{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.wlCrumb a{
+  color:var(--accent);
+  font-weight:900;
+}
+
+.wlCrumb__sep{
+  opacity:.75;
+}
+
+.wlTitle{
+  margin:8px 0 0 0;
+  font-size:28px;
+  letter-spacing:-.02em;
+}
+
+.wlSub{
+  margin:8px 0 0 0;
+  color:var(--muted);
+  font-weight:600;
+  max-width:720px;
+  line-height:1.6;
+}
+
+.wlStats{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:12px;
+  min-width:280px;
+}
+
+.wlPill{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:999px;
+  background:rgba(14,165,233,.08);
+  border:1px solid rgba(14,165,233,.16);
+  color:#111827;
+  font-weight:800;
+  font-size:13px;
+}
+
+.wlPill strong{
+  font-weight:900;
+}
+
+.wlDot{
+  width:10px;
+  height:10px;
+  border-radius:999px;
+  background:rgba(34,197,94,.95);
+  box-shadow:0 0 0 4px rgba(34,197,94,.14);
+}
+
+.wlControls{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.wlSelectLabel{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  font-size:13px;
+  color:#111827;
+  padding:10px 12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#fff;
+}
+
+.wlSelect{
+  border:0;
+  outline:none;
+  font:inherit;
+  font-weight:800;
+  color:#111827;
+  background:transparent;
+  cursor:pointer;
+}
+
+.wlGrid{
+  margin-top:16px;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:14px;
+}
+
+.wlCard{
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  background:linear-gradient(180deg, #ffffff, rgba(14,165,233,.03));
+  box-shadow:0 10px 24px rgba(16,24,40,.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.wlCard:hover{
+  transform: translateY(-2px);
+  box-shadow:0 18px 40px rgba(16,24,40,.12);
+}
+
+.wlCard--oos{
+  opacity:.92;
+}
+
+.wlMedia{
+  position:relative;
+  display:block;
+  background:#f3f4f6;
+}
+
+.wlImg{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.wlBadge{
+  position:absolute;
+  left:12px;
+  top:12px;
+  padding:8px 10px;
+  border-radius:999px;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:.02em;
+  border:1px solid rgba(255,255,255,.20);
+  backdrop-filter: blur(8px);
+}
+
+.wlBadge--stock{
+  background:rgba(34,197,94,.18);
+  color:#065f46;
+  border-color:rgba(34,197,94,.28);
+}
+
+.wlBadge--low{
+  background:rgba(245,158,11,.18);
+  color:#92400e;
+  border-color:rgba(245,158,11,.28);
+}
+
+.wlBadge--out{
+  background:rgba(239,68,68,.16);
+  color:#7f1d1d;
+  border-color:rgba(239,68,68,.26);
+}
+
+.wlInfo{
+  padding:14px;
+  display:grid;
+  gap:12px;
+}
+
+.wlMeta{
+  display:grid;
+  gap:6px;
+}
+
+.wlName{
+  margin:0;
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:-.01em;
+}
+
+.wlName a{
+  color:#111827;
+}
+
+.wlSku{
+  font-size:12px;
+  color:var(--muted);
+  font-weight:700;
+}
+
+.wlPriceRow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.wlPrice{
+  display:flex;
+  align-items:baseline;
+  gap:10px;
+}
+
+.wlNow{
+  font-weight:900;
+  font-size:16px;
+  color:#111827;
+}
+
+.wlWas{
+  font-weight:800;
+  font-size:12px;
+  color:var(--muted);
+  text-decoration: line-through;
+}
+
+.wlIconBtn{
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#fff;
+  cursor:pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.wlIconBtn:hover{
+  background:rgba(16,24,40,.04);
+  transform: translateY(-1px);
+  box-shadow:0 14px 28px rgba(16,24,40,.10);
+}
+
+.wlIcon{
+  width:18px;
+  height:18px;
+  color:#111827;
+}
+
+.wlActions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.wlBtn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:11px 12px;
+  border-radius:999px;
+  font-weight:900;
+  letter-spacing:.02em;
+  border:1px solid transparent;
+  cursor:pointer;
+  font:inherit;
+}
+
+.wlBtn--primary{
+  background:var(--accent);
+  color:var(--btnText);
+  box-shadow:0 12px 30px rgba(14,165,233,.18);
+}
+
+.wlBtn--ghost{
+  background:#fff;
+  color:#111827;
+  border-color:var(--line);
+}
+
+.wlBtn--disabled{
+  background:rgba(16,24,40,.06);
+  color:rgba(16,24,40,.55);
+  border-color:var(--line);
+  cursor:not-allowed;
+}
+
+.wlEmpty{
+  margin-top:16px;
+  border:1px dashed rgba(16,24,40,.18);
+  border-radius:14px;
+  padding:26px;
+  text-align:center;
+  background:linear-gradient(180deg, rgba(14,165,233,.06), #fff);
+}
+
+.wlEmpty__icon{
+  width:56px;
+  height:56px;
+  margin:0 auto 10px;
+  border-radius:16px;
+  display:grid;
+  place-items:center;
+  background:rgba(14,165,233,.10);
+  border:1px solid rgba(14,165,233,.18);
+  font-size:22px;
+  font-weight:900;
+  color:#111827;
+}
+
+.wlEmpty__title{
+  margin:0;
+  font-size:18px;
+  font-weight:900;
+  color:#111827;
+}
+
+.wlEmpty__text{
+  margin:10px auto 14px;
+  max-width:520px;
+  color:var(--muted);
+  font-weight:600;
+  line-height:1.7;
+}
+
+.wlEmpty__cta{
+  width:auto;
+}
+
+@media (max-width: 1100px){
+  .wlGrid{ grid-template-columns:repeat(2, 1fr); }
+}
+
+@media (max-width: 720px){
+  .wlHero{ padding:18px; }
+  .wlStats{ align-items:flex-start; }
+  .wlGrid{ grid-template-columns:1fr; }
+  .wlImg{ height:210px; }
+}

@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DripLine | Fashion & Comfort</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__row">
+
+      <a class="brand" href="index.html" aria-label="DripLine Home">
+        <img src="dripline.jpg" alt="DripLine" class="brand__logo" />
+        <span class="brand__name">DRIPLINE</span>
+      </a>
+
+      <div class="search">
+        <input class="search__input" type="text" placeholder="Search" aria-label="Search" />
+      </div>
+
+      <div class="header__right">
+        <div class="promoTag" title="Get 5% OFF on Page">
+          Get <strong>5% OFF</strong> on <span>Page</span>
+        </div>
+
+        <div class="header__icons">
+          <a class="iconBtn" href="store.html" aria-label="Stores" title="Stores">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" stroke="currentColor" stroke-width="2" />
+                <path d="M12 11.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </span>
+            <span class="iconBtn__label">Stores</span>
+          </a>
+
+          <a class="iconBtn" href="review.html" aria-label="Reviews" title="Reviews">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3l2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L12 3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Reviews</span>
+          </a>
+
+<a class="iconBtn" href="return.html" aria-label="Return & Replacement" title="Return & Replacement">
+  <span class="uiIcon" aria-hidden="true">
+    <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="M7 7h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-7a3 3 0 0 1 3-3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M8 7a4 4 0 0 1 8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10 13h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10.5 16.5l-2-2 2-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M13.5 12.5l2 2-2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+  <span class="iconBtn__label">Return</span>
+</a>
+
+          <details class="profileWrap">
+            <summary class="iconBtn iconBtn--btn profileBtn" aria-label="Profile" title="Profile" aria-haspopup="menu">
+              <span class="uiIcon" aria-hidden="true">
+                <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 21a8 8 0 0 0-16 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </span>
+              <span class="iconBtn__label">Profile</span>
+            </summary>
+
+            <div class="profileDropdown" role="menu" aria-label="Profile menu">
+              <div class="profileDropdown__head">Welcome</div>
+              <div class="profileDropdown__auth">
+                <a href="signin.html" class="profileDropdown__link profileDropdown__link--primary">Sign in</a>
+                <span class="profileDropdown__sep">/</span>
+                <a href="signup.html" class="profileDropdown__link">Sign up</a>
+              </div>
+
+              <div class="profileDropdown__list">
+                <a href="track.html" class="profileDropdown__item" role="menuitem">
+                  <svg class="ddIcon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M7 3h10v4H7V3Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M6 7h12l-1 14H7L6 7Z" stroke="currentColor" stroke-width="2"/>
+                    <path d="M9 11h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                  <span>Track Order</span>
+                </a>
+                <a href="about.html" class="profileDropdown__item" role="menuitem">
+                  <svg class="ddIcon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M12 22s8-4 8-10V6l-8-4-8 4v6c0 6 8 10 8 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                    <path d="M12 11v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M12 8.25h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                  <span>About Us</span>
+                </a>
+              </div>
+            </div>
+          </details>
+
+          <a class="iconBtn" href="wishlist.html" aria-label="Wishlist" title="Wishlist">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s-7-4.35-9.2-8.4C1 9.2 3.2 6.5 6.2 6.5c1.6 0 3.1.8 3.8 2 0.7-1.2 2.2-2 3.8-2 3 0 5.2 2.7 3.4 6.1C19 16.65 12 21 12 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Wishlist</span>
+          </a>
+
+          <a class="iconBtn" href="bag.html" aria-label="Bag" title="Bag">
+            <span class="uiIcon" aria-hidden="true">
+              <svg class="iconSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 7h12l1 14H5L6 7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M9 7a3 3 0 0 1 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="iconBtn__label">Bag</span>
+          </a>
+        </div>
+
+        <button class="menuBtn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+      </div>
+
+    </div>
+
+    <div class="mobileNav" id="mobileNav" hidden>
+      <a href="men.html" class="mobileNav__link mobileNav__link--active">MEN</a>
+      <a href="marketplace.html" class="mobileNav__link">SHOP NOW</a>
+      <a href="jersey.html" class="mobileNav__link">JERSEY</a>
+      <a href="essentials.html" class="mobileNav__link">ESSENTIALS</a>
+
+      <div class="mobileNav__divider"></div>
+
+      <a href="store.html" class="mobileNav__link">Stores</a>
+      <a href="review.html" class="mobileNav__link">Reviews</a>
+      <a href="signin.html" class="mobileNav__link">Sign in</a>
+      <a href="signup.html" class="mobileNav__link">Sign up</a>
+      <a href="wishlist.html" class="mobileNav__link">Wishlist</a>
+      <a href="bag.html" class="mobileNav__link">Bag</a>
+      <a href="track.html" class="mobileNav__link">Track Order</a>
+      <a href="about.html" class="mobileNav__link">About Us</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="hero.jpg" alt="DripLine Banner" class="hero__img" />
+    </div>
+
+    <div class="container hero__content">
+      <div class="hero__left"></div>
+      <div class="hero__right"></div>
+    </div>
+  </section>
+
+  <section class="categoryStrip">
+    <div class="container categoryStrip__row">
+      <a class="catBtn catBtn--active" href="marketplace.html">SHOP NOW</a>
+      <a class="catBtn" href="men.html">MEN</a>
+      <a class="catBtn" href="jersey.html">JERSEY</a>
+      <a class="catBtn" href="essentials.html">ESSENTIALS</a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="container stats__wrap">
+      <div class="stats__head">
+        <div class="stats__left">
+          <h3 class="stats__title">Store Activity</h3>
+          <p class="stats__sub">
+            A quick view of recent activity trends. Switch Daily / Weekly / Monthly / Yearly to explore patterns.
+          </p>
+        </div>
+
+        <div class="stats__tabs" role="tablist" aria-label="Activity timeline">
+          <button class="tabBtn tabBtn--active" type="button" data-range="daily" role="tab" aria-selected="true">Daily</button>
+          <button class="tabBtn" type="button" data-range="weekly" role="tab" aria-selected="false">Weekly</button>
+          <button class="tabBtn" type="button" data-range="monthly" role="tab" aria-selected="false">Monthly</button>
+          <button class="tabBtn" type="button" data-range="yearly" role="tab" aria-selected="false">Yearly</button>
+        </div>
+      </div>
+
+      <div class="stats__grid">
+        <div class="statsCard statsCard--main">
+          <div class="statsCard__top">
+            <div class="statsCard__kpi">
+              <div class="kpi__label">Orders</div>
+              <div class="kpi__value" id="kpiValue">—</div>
+            </div>
+            <div class="statsCard__badge" id="kpiBadge">—</div>
+          </div>
+          <div class="chartBox" role="img" aria-label="Activity chart">
+            <canvas id="activityChart"></canvas>
+          </div>
+        </div>
+
+        <div class="statsSide">
+          <div class="miniCard">
+            <div class="miniCard__label">Visitors</div>
+            <div class="miniCard__value" id="visitorsValue">—</div>
+            <div class="miniCard__hint">Estimated traffic</div>
+          </div>
+
+          <div class="miniCard">
+            <div class="miniCard__label">Conversion</div>
+            <div class="miniCard__value" id="convValue">—</div>
+            <div class="miniCard__hint">Orders / Visitors</div>
+          </div>
+
+          <div class="miniCard">
+            <div class="miniCard__label">Revenue</div>
+            <div class="miniCard__value" id="revValue">—</div>
+            <div class="miniCard__hint">Approx. sales</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashStack">
+        <div class="dashCard">
+          <div class="dashCard__head">
+            <div>
+              <div class="dashCard__title">Product-wise Sales</div>
+              <div class="dashCard__sub">Top products sold in selected range</div>
+            </div>
+          </div>
+          <div class="dashChart">
+            <canvas id="productSalesBar"></canvas>
+          </div>
+        </div>
+
+        <div class="dashGrid">
+          <div class="dashCard">
+            <div class="dashCard__head">
+              <div>
+                <div class="dashCard__title">Product Mix</div>
+                <div class="dashCard__sub">Share of sales by category</div>
+              </div>
+            </div>
+            <div class="dashChart dashChart--sm">
+              <canvas id="productMixPie"></canvas>
+            </div>
+          </div>
+
+          <div class="dashCard">
+            <div class="dashCard__head">
+              <div>
+                <div class="dashCard__title">Review Ratings</div>
+                <div class="dashCard__sub">Star distribution from customers</div>
+              </div>
+            </div>
+            <div class="dashChart dashChart--sm">
+              <canvas id="ratingBar"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashGrid">
+          <div class="dashCard">
+            <div class="dashCard__head">
+              <div>
+                <div class="dashCard__title">Website Hits</div>
+                <div class="dashCard__sub">Daily / Weekly / Monthly / Yearly traffic</div>
+              </div>
+            </div>
+            <div class="dashChart dashChart--sm">
+              <canvas id="trafficLine"></canvas>
+            </div>
+          </div>
+
+          <div class="dashCard">
+            <div class="dashCard__head">
+              <div>
+                <div class="dashCard__title">Gender Split</div>
+                <div class="dashCard__sub">Male vs Female visitors (est.)</div>
+              </div>
+            </div>
+            <div class="dashChart dashChart--sm">
+              <canvas id="genderDoughnut"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats__note">
+        Tip: Use these charts to monitor product performance, customer sentiment, and traffic trends.
+      </div>
+    </div>
+  </section>
+
+  <a href="wholesale.html" class="bulkLink" aria-label="Bulk Order / Wholesale">
+    <section class="bulk">
+      <div class="container bulk__wrap">
+        <div class="bulk__left">
+          <h3 class="bulk__title">Bulk Order / Wholesale <span>›</span></h3>
+          <p class="bulk__text">
+            We provide plain t-shirts and apparel for custom branding needs at highly competitive wholesale pricing.
+            There is no minimum order requirement—so you can order comfortably based on your actual needs.
+            <strong>Delivery available within Bangladesh only.</strong>
+          </p>
+        </div>
+
+        <div class="bulk__right">
+          <img src="collage.jpg" alt="Bulk Products" class="bulk__img" />
+        </div>
+      </div>
+    </section>
+  </a>
+
+  <section class="partner">
+    <div class="container partner__wrap">
+      <div class="partner__content">
+        <h3>Trusted Partner</h3>
+        <p>
+          We work with <strong>YoursBrain</strong> as our digital marketing partner, supporting brand visibility,
+          campaign execution, and online growth through data-driven strategies.
+        </p>
+
+        <div class="partner__logoRow">
+          <a href="https://yoursbrain.com/" class="partner__logoLink" target="_blank" rel="noopener">
+            <img src="yoursbrain.jpeg" alt="YoursBrain" class="partner__logo" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+
+      <div class="footer__col footer__brandCol">
+        <img src="dripline.jpg" alt="" class="footer__mark" />
+
+        <div class="footer__links">
+          <a href="about.html">About DripLine</a>
+          <a href="terms.html">Terms & Conditions</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="return-policy.html">Cancellation & Return Policy</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="footer__col footer__mid">
+        <div class="footer__help">
+          <div class="footer__title">
+            <span class="footer__iconTxt">☎</span>
+            <span>FOR ANY HELP YOU MAY CALL US AT</span>
+          </div>
+
+          <div class="footer__helpText">
+            +8801975538778<br />
+            Customer Service<br />
+            Track your order or get help returning an order
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__col footer__right">
+        <div class="footer__follow">
+          <div class="footer__title">
+            <span class="footer__check">✓</span>
+            <span>FOLLOW US</span>
+          </div>
+
+          <div class="footer__followText">
+            Stay updated on our latest arrivals, exclusive promotions and events.
+          </div>
+
+          <div class="socialRow">
+            <a class="socialBtn" href="instagram.html" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+              <span class="socialIcon" aria-hidden="true">
+                <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span class="socialBtn__txt">Instagram</span>
+            </a>
+
+            <a class="socialBtn" href="https://wa.me/+8801975538778" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+              <span class="socialIcon" aria-hidden="true">
+                <svg class="socialSvg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.6-4.1A8 8 0 1 1 20 11.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M9.2 8.9c.2-.5.5-.5.8-.5h.6c.2 0 .4 0 .5.4l.6 1.4c.1.3 0 .6-.2.8l-.4.4c-.1.1-.2.3-.1.5.4.8 1.3 1.8 2.3 2.3.2.1.4 0 .5-.1l.4-.4c.2-.2.5-.3.8-.2l1.4.6c.4.1.4.3.4.5v.6c0 .3 0 .6-.5.8-.4.2-1.3.4-2.6-.1-1.3-.6-3.1-1.9-4.3-4.1-1.1-2.1-.3-3-.1-3.4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <span class="socialBtn__txt">WhatsApp</span>
+            </a>
+          </div>
+
+          <a class="fbCard" href="https://www.facebook.com/fashionhk7" target="_blank" rel="noopener">
+            <div class="fbCard__left">
+              <img src="dripline.jpg" alt="Facebook Page" class="fbCard__avatar" />
+            </div>
+
+            <div class="fbCard__mid">
+              <div class="fbCard__name">DripLine</div>
+              <div class="fbCard__meta">Facebook Page</div>
+
+              <div class="fbCard__stats">
+                <div class="stat">
+                  <div class="stat__num">5.1K</div>
+                  <div class="stat__lbl">Followers</div>
+                </div>
+
+                <div class="stat stat--divider" aria-hidden="true"></div>
+
+                <div class="stat">
+                  <div class="stat__num">1</div>
+                  <div class="stat__lbl">Following</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="fbCard__right">
+              <div class="fbCard__btn">Follow</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottomRow">
+        <div>Your order is handled daily with a lot of ❤️ and delivered across Bangladesh!</div>
+        <div class="footer__copy">Copyright © DripLine. All Rights Reserved</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileNav = document.getElementById("mobileNav");
+
+    if (menuBtn && mobileNav) {
+      menuBtn.addEventListener("click", () => {
+        const isHidden = mobileNav.hasAttribute("hidden");
+        if (isHidden) {
+          mobileNav.removeAttribute("hidden");
+          menuBtn.setAttribute("aria-expanded", "true");
+        } else {
+          mobileNav.setAttribute("hidden", "");
+          menuBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
+    const ranges = {
+      daily: {
+        labels: ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+        orders: [18, 26, 22, 30, 34, 41, 36],
+        visitors: [260, 310, 290, 360, 420, 520, 480],
+        revenue: [5200, 7400, 6100, 8900, 10100, 12800, 11500],
+        traffic: [1800, 2100, 1950, 2400, 2650, 3100, 2920]
+      },
+      weekly: {
+        labels: ["W1","W2","W3","W4","W5","W6","W7","W8"],
+        orders: [120, 148, 162, 171, 185, 194, 210, 228],
+        visitors: [2400, 2900, 3200, 3500, 3900, 4100, 4500, 4800],
+        revenue: [42000, 51500, 57200, 60500, 66800, 70100, 76400, 82500],
+        traffic: [16500, 19200, 20500, 22100, 24500, 25600, 27900, 30100]
+      },
+      monthly: {
+        labels: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+        orders: [520, 610, 680, 720, 790, 860, 910, 980, 1040, 1120, 1210, 1320],
+        visitors: [9200, 10300, 11500, 12600, 13900, 15100, 16200, 17500, 18700, 20100, 21400, 22900],
+        revenue: [188000, 214000, 238000, 252000, 279000, 301000, 322000, 348000, 369000, 401000, 428000, 462000],
+        traffic: [68000, 72000, 78500, 82400, 90100, 95200, 100500, 108800, 114200, 121500, 129300, 138900]
+      },
+      yearly: {
+        labels: ["2021","2022","2023","2024","2025","2026"],
+        orders: [4800, 6200, 7900, 10300, 12600, 14900],
+        visitors: [86000, 104000, 132000, 169000, 210000, 255000],
+        revenue: [1680000, 2140000, 2820000, 3690000, 4580000, 5520000],
+        traffic: [640000, 790000, 980000, 1240000, 1510000, 1860000]
+      }
+    };
+
+    const productSales = {
+      labels: ["Basic Tee", "Oversized Tee", "Jersey", "Polo", "Hoodie", "Essentials Set"],
+      data: {
+        daily: [14, 10, 8, 6, 5, 4],
+        weekly: [92, 70, 58, 44, 38, 31],
+        monthly: [410, 330, 280, 210, 180, 150],
+        yearly: [4200, 3500, 2800, 2200, 1850, 1500]
+      }
+    };
+
+    const productMix = {
+      labels: ["Men", "Jersey", "Essentials", "Accessories"],
+      data: {
+        daily: [46, 22, 26, 6],
+        weekly: [44, 24, 27, 5],
+        monthly: [43, 25, 27, 5],
+        yearly: [42, 26, 27, 5]
+      }
+    };
+
+    const ratingDist = {
+      labels: ["5★", "4★", "3★", "2★", "1★"],
+      data: {
+        daily: [62, 24, 8, 4, 2],
+        weekly: [58, 26, 9, 5, 2],
+        monthly: [56, 27, 10, 5, 2],
+        yearly: [55, 28, 10, 5, 2]
+      }
+    };
+
+    const genderSplit = {
+      labels: ["Male", "Female"],
+      data: {
+        daily: [64, 36],
+        weekly: [62, 38],
+        monthly: [61, 39],
+        yearly: [60, 40]
+      }
+    };
+
+    const kpiValue = document.getElementById("kpiValue");
+    const kpiBadge = document.getElementById("kpiBadge");
+    const visitorsValue = document.getElementById("visitorsValue");
+    const convValue = document.getElementById("convValue");
+    const revValue = document.getElementById("revValue");
+
+    const ctx = document.getElementById("activityChart").getContext("2d");
+    const gradient = ctx.createLinearGradient(0, 0, 0, 320);
+    gradient.addColorStop(0, "rgba(14,165,233,.35)");
+    gradient.addColorStop(1, "rgba(14,165,233,0)");
+
+    const activityChart = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels: ranges.daily.labels,
+        datasets: [
+          {
+            label: "Orders",
+            data: ranges.daily.orders,
+            borderColor: "rgba(14,165,233,1)",
+            backgroundColor: gradient,
+            fill: true,
+            tension: 0.35,
+            borderWidth: 3,
+            pointRadius: 3,
+            pointHoverRadius: 6
+          },
+          {
+            label: "Visitors",
+            data: ranges.daily.visitors,
+            borderColor: "rgba(34,197,94,1)",
+            backgroundColor: "rgba(34,197,94,.10)",
+            fill: false,
+            tension: 0.35,
+            borderWidth: 2,
+            pointRadius: 0
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        plugins: { legend: { display: true, labels: { boxWidth: 10, boxHeight: 10 } } },
+        scales: { x: { grid: { display: false } }, y: { grid: { drawBorder: false } } }
+      }
+    });
+
+    const productSalesBar = new Chart(document.getElementById("productSalesBar"), {
+      type: "bar",
+      data: {
+        labels: productSales.labels,
+        datasets: [{
+          label: "Units Sold",
+          data: productSales.data.daily,
+          backgroundColor: "rgba(14,165,233,.18)",
+          borderColor: "rgba(14,165,233,.65)",
+          borderWidth: 1,
+          borderRadius: 10
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: true } },
+        scales: {
+          x: { grid: { display: false } },
+          y: { grid: { drawBorder: false } }
+        }
+      }
+    });
+
+    const productMixPie = new Chart(document.getElementById("productMixPie"), {
+      type: "pie",
+      data: {
+        labels: productMix.labels,
+        datasets: [{
+          data: productMix.data.daily,
+          backgroundColor: [
+            "rgba(14,165,233,.70)",
+            "rgba(34,197,94,.70)",
+            "rgba(99,102,241,.70)",
+            "rgba(245,158,11,.70)"
+          ],
+          borderColor: "rgba(255,255,255,1)",
+          borderWidth: 2
+        }]
+      },
+      options: { responsive: true, maintainAspectRatio: false }
+    });
+
+    const ratingBar = new Chart(document.getElementById("ratingBar"), {
+      type: "bar",
+      data: {
+        labels: ratingDist.labels,
+        datasets: [{
+          label: "Reviews (%)",
+          data: ratingDist.data.daily,
+          backgroundColor: "rgba(34,197,94,.18)",
+          borderColor: "rgba(34,197,94,.65)",
+          borderWidth: 1,
+          borderRadius: 10
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: true } },
+        scales: {
+          x: { grid: { display: false } },
+          y: { grid: { drawBorder: false }, suggestedMax: 100 }
+        }
+      }
+    });
+
+    const trafficLine = new Chart(document.getElementById("trafficLine"), {
+      type: "line",
+      data: {
+        labels: ranges.daily.labels,
+        datasets: [{
+          label: "Hits",
+          data: ranges.daily.traffic,
+          borderColor: "rgba(99,102,241,1)",
+          backgroundColor: "rgba(99,102,241,.12)",
+          fill: true,
+          tension: 0.35,
+          borderWidth: 3,
+          pointRadius: 2,
+          pointHoverRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: "index", intersect: false },
+        plugins: { legend: { display: true } },
+        scales: { x: { grid: { display: false } }, y: { grid: { drawBorder: false } } }
+      }
+    });
+
+    const genderDoughnut = new Chart(document.getElementById("genderDoughnut"), {
+      type: "doughnut",
+      data: {
+        labels: genderSplit.labels,
+        datasets: [{
+          data: genderSplit.data.daily,
+          backgroundColor: ["rgba(14,165,233,.75)", "rgba(239,68,68,.65)"],
+          borderColor: "rgba(255,255,255,1)",
+          borderWidth: 2
+        }]
+      },
+      options: { responsive: true, maintainAspectRatio: false, cutout: "62%" }
+    });
+
+    function fmt(n) {
+      const s = Math.round(n).toString();
+      return s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    function setCards(rangeKey) {
+      const r = ranges[rangeKey];
+      const totalOrders = r.orders.reduce((a,b) => a + b, 0);
+      const totalVisitors = r.visitors.reduce((a,b) => a + b, 0);
+      const totalRevenue = r.revenue.reduce((a,b) => a + b, 0);
+      const conv = totalVisitors ? (totalOrders / totalVisitors) * 100 : 0;
+
+      kpiValue.textContent = fmt(totalOrders);
+      visitorsValue.textContent = fmt(totalVisitors);
+      convValue.textContent = conv.toFixed(2) + "%";
+      revValue.textContent = "৳ " + fmt(totalRevenue);
+
+      const last = r.orders[r.orders.length - 1] ?? 0;
+      const prev = r.orders[r.orders.length - 2] ?? last;
+      const diff = prev ? ((last - prev) / prev) * 100 : 0;
+      const sign = diff >= 0 ? "+" : "";
+      kpiBadge.textContent = sign + diff.toFixed(1) + "% vs prev";
+      kpiBadge.classList.toggle("statsCard__badge--down", diff < 0);
+    }
+
+    function setRange(rangeKey) {
+      const r = ranges[rangeKey];
+
+      activityChart.data.labels = r.labels;
+      activityChart.data.datasets[0].data = r.orders;
+      activityChart.data.datasets[1].data = r.visitors;
+      activityChart.update();
+
+      productSalesBar.data.datasets[0].data = productSales.data[rangeKey];
+      productSalesBar.update();
+
+      productMixPie.data.datasets[0].data = productMix.data[rangeKey];
+      productMixPie.update();
+
+      ratingBar.data.datasets[0].data = ratingDist.data[rangeKey];
+      ratingBar.update();
+
+      trafficLine.data.labels = r.labels;
+      trafficLine.data.datasets[0].data = r.traffic;
+      trafficLine.update();
+
+      genderDoughnut.data.datasets[0].data = genderSplit.data[rangeKey];
+      genderDoughnut.update();
+
+      setCards(rangeKey);
+    }
+
+    setCards("daily");
+
+    const tabBtns = document.querySelectorAll(".tabBtn");
+    tabBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        tabBtns.forEach(b => {
+          b.classList.remove("tabBtn--active");
+          b.setAttribute("aria-selected", "false");
+        });
+        btn.classList.add("tabBtn--active");
+        btn.setAttribute("aria-selected", "true");
+        setRange(btn.dataset.range);
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      const details = document.querySelector(".profileWrap");
+      if (!details) return;
+      if (details.hasAttribute("open") && !details.contains(e.target)) details.removeAttribute("open");
+    });
+  </script>
+</body>
+</html>
