@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DripLine | Men's Clothing Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="logo.jpg" alt="DripLine Logo" />
+      <span>DripLine</span>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="outlet.html">Outlet</a></li>
+      <li><a href="track.html">Order History</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="login.html" class="login-link" id="authLink">Login</a>
+      <a href="cart.html" class="cart-link">Cart</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <span class="subtitle">Men’s Everyday Clothing</span>
+      <h1>Clean Fits for Men Who Like Simple Confidence</h1>
+      <p>
+        DripLine brings essential men’s wear with premium comfort and minimal style —
+        drop shoulder t-shirts, shirts, casual pieces, and daily outfits made for a sharp look.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="shop.html" class="btn btn-dark">Shop Now</a>
+
+        <div class="style-note">
+          <strong>New drops coming soon</strong>
+          <span>Built for clean streetwear and daily comfort.</span>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <strong>Men Only</strong>
+          <span>Focused Clothing Line</span>
+        </div>
+        <div>
+          <strong>Premium</strong>
+          <span>Fabric Selection</span>
+        </div>
+        <div>
+          <strong>Clean</strong>
+          <span>Minimal Designs</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <div class="image-overlay">
+        <span>DripLine Collection</span>
+        <h3>Drop Shoulder. Shirts. Daily Essentials.</h3>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section-title" id="collections">
+    <span>Men’s Categories</span>
+    <h2>Shop by Essentials</h2>
+  </section>
+
+  <section class="collections">
+    <a href="shop.html" class="collection-card">
+      <h3>Drop Shoulder</h3>
+      <p>Relaxed oversized fit for modern streetwear style.</p>
+    </a>
+
+    <a href="shop.html" class="collection-card">
+      <h3>Shirts</h3>
+      <p>Clean men’s shirts for smart casual everyday wear.</p>
+    </a>
+
+    <a href="shop.html" class="collection-card">
+      <h3>T-Shirts</h3>
+      <p>Comfortable essentials with minimal premium finishing.</p>
+    </a>
+
+    <a href="shop.html" class="collection-card">
+      <h3>Casual Wear</h3>
+      <p>Simple outfits made for daily use and comfort.</p>
+    </a>
+  </section>
+
+  <section class="brand-story">
+    <div class="story-left">
+      <span>Why DripLine</span>
+      <h2>Designed with focus. Built for men’s everyday wear..</h2>
+    </div>
+
+    <div class="story-right">
+      <p>
+        We keep the collection focused so every product matches the same standard:
+        clean design, comfortable fabric, wearable color, and reliable fitting.
+      </p>
+
+      <div class="story-grid">
+        <div>
+          <strong>01</strong>
+          <span>Minimal design language</span>
+        </div>
+        <div>
+          <strong>02</strong>
+          <span>Streetwear-friendly fitting</span>
+        </div>
+        <div>
+          <strong>03</strong>
+          <span>Easy everyday styling</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="partner-section">
+    <div class="partner-info">
+      <span>Digital Marketing Partner</span>
+      <h2>Growth & marketing supported by YoursBrain</h2>
+      <p>
+        YoursBrain is a digital marketing agency helping brands grow through
+        online marketing, brand strategy, and performance-focused campaigns.
+      </p>
+    </div>
+
+    <a href="https://yoursbrain.com/" target="_blank" class="yoursbrain-box">
+      <img src="yoursbrain.jpeg" alt="YoursBrain Logo" />
+    </a>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>DripLine</h3>
+      <p>
+        A men’s clothing brand focused on clean design, comfortable fits,
+        and everyday essentials.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Information</h4>
+      <a href="about.html">About DripLine</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="return-policy.html">Return Policy</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="shop.html">Shop Now</a>
+      <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay Updated</h4>
+      <p>Get updates about new drops, offers, and restocks.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="button">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DripLine. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+  const authLink = document.getElementById("authLink");
+
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+  if (isLoggedIn) {
+    authLink.textContent = "Logout";
+    authLink.href = "#";
+
+    authLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "index.html";
+    });
+  } else {
+    authLink.textContent = "Login";
+    authLink.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

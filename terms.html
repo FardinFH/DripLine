@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions | DripLine</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="terms.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="logo.jpg" alt="DripLine Logo" />
+      <span>DripLine</span>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="outlet.html">Outlet</a></li>
+      <li><a href="track.html">Order History</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="login.html" class="login-link" id="authLink">Login</a>
+      <a href="cart.html" class="cart-link">Cart</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main class="terms-main">
+
+  <section class="terms-hero">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Terms & Conditions</span>
+    </div>
+
+    <span class="subtitle">Legal</span>
+    <h1>Terms & Conditions</h1>
+    <p>
+      Using DripLine and placing orders means you agree to the terms below.
+    </p>
+  </section>
+
+  <section class="terms-layout">
+    <article class="terms-card">
+      <h2>Orders</h2>
+      <ul>
+        <li>Orders are confirmed after successful checkout or verification where applicable.</li>
+        <li>We may cancel orders for stock unavailability, pricing issues, or suspected fraud.</li>
+      </ul>
+
+      <h2>Product Information</h2>
+      <ul>
+        <li>We try to display product colors accurately; screens may differ.</li>
+        <li>Size charts are guidance; minor tolerance may occur.</li>
+      </ul>
+
+      <h2>Pricing & Payment</h2>
+      <ul>
+        <li>Prices may change without notice; confirmed orders keep the placed price.</li>
+        <li>Payment methods and charges are shown at checkout.</li>
+      </ul>
+
+      <h2>Shipping</h2>
+      <ul>
+        <li>Delivery times vary by location and courier workload.</li>
+        <li>Tracking is provided after dispatch when available.</li>
+      </ul>
+
+      <h2>Limitation of Liability</h2>
+      <p>
+        DripLine is not liable for indirect losses. Where applicable,
+        liability is limited to the amount paid for the order.
+      </p>
+
+      <h2>Updates</h2>
+      <p>
+        We may update these terms from time to time. Updated versions will be posted on this page.
+      </p>
+    </article>
+
+    <aside class="terms-side-card">
+      <h3>Related Pages</h3>
+
+      <div class="terms-side-links">
+        <a href="privacy.html">
+          Privacy Policy
+          <span>Data</span>
+        </a>
+
+        <a href="return-policy.html">
+          Cancellation & Return
+          <span>Policy</span>
+        </a>
+
+        <a href="faqs.html">
+          FAQs
+          <span>Help</span>
+        </a>
+
+        <a href="about.html">
+          About DripLine
+          <span>Brand</span>
+        </a>
+      </div>
+    </aside>
+  </section>
+
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>DripLine</h3>
+      <p>
+        A men’s clothing brand focused on clean design, comfortable fits,
+        and everyday essentials.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Information</h4>
+      <a href="about.html">About DripLine</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="return-policy.html">Return Policy</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="shop.html">Shop Now</a>
+      <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay Updated</h4>
+      <p>Get updates about new drops, offers, and restocks.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="button">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DripLine. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+  const authLink = document.getElementById("authLink");
+
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+  if (isLoggedIn) {
+    authLink.textContent = "Logout";
+    authLink.href = "#";
+
+    authLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "index.html";
+    });
+  } else {
+    authLink.textContent = "Login";
+    authLink.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

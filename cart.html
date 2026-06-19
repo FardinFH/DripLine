@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart | DripLine</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="logo.jpg" alt="DripLine Logo" />
+      <span>DripLine</span>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="outlet.html">Outlet</a></li>
+      <li><a href="track.html">Order History</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="login.html" class="login-link" id="authLink">Login</a>
+      <a href="cart.html" class="cart-link">Cart</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="cart-hero">
+    <span>Your Cart</span>
+    <h1>Choose Your DripLine Fits</h1>
+    <p>Select the products you want to buy now, or remove the ones you do not need.</p>
+  </section>
+
+  <section class="cart-page">
+    <div class="cart-list" id="cartList">
+
+      <article class="cart-product" data-price="850">
+        <input type="checkbox" class="select-product" />
+
+        <div class="cart-product-img">
+          <img src="product1.jpg" alt="Drop Shoulder T-Shirt" />
+        </div>
+
+        <div class="cart-product-info">
+          <span>DROP 01</span>
+          <h2>Drop Shoulder T-Shirt</h2>
+          <p>Oversized shoulder, relaxed body, clean everyday streetwear fit.</p>
+
+          <div class="cart-meta">
+            <small>Size: M, L, XL, XXL</small>
+            <small>Color: Black</small>
+            <small>Available: In Stock</small>
+          </div>
+        </div>
+
+        <strong class="cart-price">৳850</strong>
+
+        <button type="button" class="remove-btn">×</button>
+      </article>
+
+      <article class="cart-product" data-price="650">
+        <input type="checkbox" class="select-product" />
+
+        <div class="cart-product-img">
+          <img src="product2.jpg" alt="Premium Basic T-Shirt" />
+        </div>
+
+        <div class="cart-product-info">
+          <span>DROP 02</span>
+          <h2>Premium Basic T-Shirt</h2>
+          <p>Soft minimal tee for daily comfort and simple styling.</p>
+
+          <div class="cart-meta">
+            <small>Size: M, L, XL</small>
+            <small>Color: White</small>
+            <small>Available: In Stock</small>
+          </div>
+        </div>
+
+        <strong class="cart-price">৳650</strong>
+
+        <button type="button" class="remove-btn">×</button>
+      </article>
+
+      <article class="cart-product" data-price="1200">
+        <input type="checkbox" class="select-product" />
+
+        <div class="cart-product-img">
+          <img src="product3.jpg" alt="Casual Cotton Shirt" />
+        </div>
+
+        <div class="cart-product-info">
+          <span>DROP 03</span>
+          <h2>Casual Cotton Shirt</h2>
+          <p>Clean smart casual shirt for everyday men’s outfits.</p>
+
+          <div class="cart-meta">
+            <small>Size: L, XL, XXL</small>
+            <small>Color: Beige</small>
+            <small>Available: In Stock</small>
+          </div>
+        </div>
+
+        <strong class="cart-price">৳1200</strong>
+
+        <button type="button" class="remove-btn">×</button>
+      </article>
+
+    </div>
+
+    <aside class="cart-summary">
+      <h3>Selected Items</h3>
+
+      <div class="summary-row">
+        <span>Selected Products</span>
+        <strong id="selectedCount">0</strong>
+      </div>
+
+      <div class="summary-row">
+        <span>Selected Total</span>
+        <strong id="selectedTotal">৳0</strong>
+      </div>
+
+      <button type="button" class="buy-now-btn" id="buyNowBtn">Buy Now</button>
+      <a href="shop.html" class="continue-btn">Continue Shopping</a>
+
+      <p id="cartMessage">Select at least one product to continue checkout.</p>
+    </aside>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>DripLine</h3>
+      <p>
+        A men’s clothing brand focused on clean design, comfortable fits,
+        and everyday essentials.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Information</h4>
+      <a href="about.html">About DripLine</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="return-policy.html">Return Policy</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="shop.html">Shop Now</a>
+      <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay Updated</h4>
+      <p>Get updates about new drops, offers, and restocks.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="button">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DripLine. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+  const authLink = document.getElementById("authLink");
+
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+  if (isLoggedIn) {
+    authLink.textContent = "Logout";
+    authLink.href = "index.html";
+
+    authLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "index.html";
+    });
+  } else {
+    authLink.textContent = "Login";
+    authLink.href = "login.html";
+  }
+
+  const cartList = document.getElementById("cartList");
+  const selectedCount = document.getElementById("selectedCount");
+  const selectedTotal = document.getElementById("selectedTotal");
+  const buyNowBtn = document.getElementById("buyNowBtn");
+  const cartMessage = document.getElementById("cartMessage");
+
+  function updateSummary() {
+    const products = document.querySelectorAll(".cart-product");
+    let count = 0;
+    let total = 0;
+
+    products.forEach(function (product) {
+      const checkbox = product.querySelector(".select-product");
+
+      if (checkbox.checked) {
+        count++;
+        total += Number(product.dataset.price);
+        product.classList.add("selected");
+      } else {
+        product.classList.remove("selected");
+      }
+    });
+
+    selectedCount.textContent = count;
+    selectedTotal.textContent = "৳" + total;
+  }
+
+  cartList.addEventListener("change", function (e) {
+    if (e.target.classList.contains("select-product")) {
+      updateSummary();
+    }
+  });
+
+  cartList.addEventListener("click", function (e) {
+    if (e.target.classList.contains("remove-btn")) {
+      e.target.closest(".cart-product").remove();
+      updateSummary();
+    }
+  });
+
+  buyNowBtn.addEventListener("click", function () {
+    const count = Number(selectedCount.textContent);
+
+    if (count === 0) {
+      cartMessage.classList.add("warning");
+      cartMessage.textContent = "Please select at least one product first.";
+      return;
+    }
+
+    window.location.href = "checkout.html";
+  });
+
+  updateSummary();
+</script>
+
+</body>
+</html>

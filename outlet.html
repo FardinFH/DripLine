@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outlet | DripLine</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="outlet.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="logo.jpg" alt="DripLine Logo" />
+      <span>DripLine</span>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="outlet.html">Outlet</a></li>
+      <li><a href="track.html">Order History</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="login.html" class="login-link" id="authLink">Login</a>
+      <a href="cart.html" class="cart-link">Cart</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="outlet-hero">
+    <div class="outlet-content">
+      <span class="outlet-subtitle">Outlet Information</span>
+
+      <h1>DripLine Outlet Coming Soon</h1>
+
+      <p>
+        Currently, DripLine does not have any physical outlet available.
+        We are working on it, and this page will be updated very soon with
+        our live outlet location.
+      </p>
+
+      <div class="outlet-status-box">
+        <div>
+          <strong>No Outlet Yet</strong>
+          <span>Physical store is not available right now.</span>
+        </div>
+
+        <div>
+          <strong>Work in Progress</strong>
+          <span>Our outlet setup is currently being planned.</span>
+        </div>
+
+        <div>
+          <strong>Live Location Soon</strong>
+          <span>Google Map/live location will be added here.</span>
+        </div>
+      </div>
+
+      <div class="outlet-buttons">
+        <a href="shop.html" class="btn btn-dark">Shop Online</a>
+        <a href="contact.html" class="outlet-contact-btn">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="location-preview">
+    <div class="location-card">
+      <span>Live Location</span>
+      <h2>Location Will Be Updated Soon</h2>
+      <p>
+        Once our outlet is ready, you will find the complete address,
+        map direction, and visiting information here.
+      </p>
+
+      <div class="map-placeholder">
+        <p>Google Map Coming Soon</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>DripLine</h3>
+      <p>
+        A men’s clothing brand focused on clean design, comfortable fits,
+        and everyday essentials.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Information</h4>
+      <a href="about.html">About DripLine</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="return-policy.html">Return Policy</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="shop.html">Shop Now</a>
+      <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay Updated</h4>
+      <p>Get updates about new drops, offers, and restocks.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="button">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DripLine. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+  const authLink = document.getElementById("authLink");
+
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+  if (isLoggedIn) {
+    authLink.textContent = "Logout";
+    authLink.href = "#";
+
+    authLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "index.html";
+    });
+  } else {
+    authLink.textContent = "Login";
+    authLink.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

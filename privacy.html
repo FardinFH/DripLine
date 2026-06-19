@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | DripLine</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="privacy.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="logo.jpg" alt="DripLine Logo" />
+      <span>DripLine</span>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="outlet.html">Outlet</a></li>
+      <li><a href="track.html">Order History</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="login.html" class="login-link" id="authLink">Login</a>
+      <a href="cart.html" class="cart-link">Cart</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main class="privacy-main">
+
+  <section class="privacy-hero">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Privacy Policy</span>
+    </div>
+
+    <span class="subtitle">Privacy</span>
+    <h1>Privacy Policy</h1>
+    <p>
+      We respect your privacy. This policy explains what we collect,
+      how we use it, and how we protect it.
+    </p>
+  </section>
+
+  <section class="privacy-layout">
+    <article class="privacy-card">
+      <h2>Information We Collect</h2>
+      <ul>
+        <li>Account info: name, phone, email if provided</li>
+        <li>Shipping info: address and delivery notes</li>
+        <li>Order history and customer support messages</li>
+        <li>Device/usage info for security and analytics</li>
+      </ul>
+
+      <h2>How We Use Information</h2>
+      <ul>
+        <li>To process orders, deliver products, and provide customer support</li>
+        <li>To communicate order updates, delivery status, and essential notifications</li>
+        <li>To improve the website experience and protect against fraud</li>
+      </ul>
+
+      <h2>Sharing of Information</h2>
+      <p>
+        We share data only with service providers required to complete your order
+        such as couriers, payment partners, and essential tools. We do not sell customer data.
+      </p>
+
+      <h2>Security</h2>
+      <p>
+        We use standard security practices to protect customer data. No online system is
+        100% secure, so please keep your account details private and use a strong password.
+      </p>
+
+      <h2>Your Choices</h2>
+      <ul>
+        <li>You can request correction of account information</li>
+        <li>You can opt out of promotional communications where applicable</li>
+      </ul>
+
+      <h2>Policy Updates</h2>
+      <p>
+        We may update this policy from time to time. Updates will be posted on this page.
+      </p>
+
+      <div class="privacy-note">
+        If you have questions about privacy, contact us through the Contact Us page.
+      </div>
+    </article>
+
+    <aside class="privacy-side-card">
+      <h3>Related Pages</h3>
+
+      <div class="privacy-side-links">
+        <a href="terms.html">
+          Terms & Conditions
+          <span>Legal</span>
+        </a>
+
+        <a href="return-policy.html">
+          Cancellation & Return
+          <span>Policy</span>
+        </a>
+
+        <a href="faqs.html">
+          FAQs
+          <span>Help</span>
+        </a>
+
+        <a href="about.html">
+          About DripLine
+          <span>Brand</span>
+        </a>
+      </div>
+    </aside>
+  </section>
+
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>DripLine</h3>
+      <p>
+        A men’s clothing brand focused on clean design, comfortable fits,
+        and everyday essentials.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Information</h4>
+      <a href="about.html">About DripLine</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="return-policy.html">Return Policy</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="shop.html">Shop Now</a>
+      <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay Updated</h4>
+      <p>Get updates about new drops, offers, and restocks.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="button">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DripLine. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+  const authLink = document.getElementById("authLink");
+
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+  if (isLoggedIn) {
+    authLink.textContent = "Logout";
+    authLink.href = "#";
+
+    authLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "index.html";
+    });
+  } else {
+    authLink.textContent = "Login";
+    authLink.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

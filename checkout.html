@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | DripLine</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="logo.jpg" alt="DripLine Logo" />
+      <span>DripLine</span>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="outlet.html">Outlet</a></li>
+      <li><a href="track.html">Order History</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="login.html" class="login-link" id="authLink">Login</a>
+      <a href="cart.html" class="cart-link">Cart</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="checkout-hero">
+    <span>Checkout</span>
+    <h1>Complete Your Order</h1>
+    <p>Select size, adjust quantity, and confirm your DripLine order.</p>
+  </section>
+
+  <section class="checkout-page">
+    <form class="checkout-form" id="checkoutForm">
+
+      <div class="form-block">
+        <h2>Selected Products</h2>
+        <div class="checkout-items" id="checkoutItems"></div>
+      </div>
+
+      <div class="form-block">
+        <h2>Customer Details</h2>
+
+        <div class="input-grid">
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your name" required />
+          </div>
+
+          <div class="input-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="01XXXXXXXXX" required />
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label>Full Address</label>
+          <textarea placeholder="House, road, area, district" required></textarea>
+        </div>
+
+        <div class="input-group">
+          <label>Delivery Area</label>
+          <select id="deliveryArea" required>
+            <option value="inside">Inside Dhaka - ৳80</option>
+            <option value="outside">Outside Dhaka - ৳120</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label>Other Details</label>
+          <textarea placeholder="Special instruction, color preference, etc."></textarea>
+        </div>
+      </div>
+
+      <div class="form-block">
+        <h2>Promo / Voucher</h2>
+        <p class="small-note">Only one offer can be used at a time.</p>
+
+        <div class="offer-selector">
+          <button type="button" id="openPromo">Choose Promo Code</button>
+          <button type="button" id="openVoucher">Choose Voucher</button>
+        </div>
+
+        <div class="selected-offer" id="selectedOfferBox">
+          <span>Selected Offer</span>
+          <strong id="selectedOfferText">No offer selected</strong>
+          <button type="button" id="removeOffer">Remove</button>
+        </div>
+      </div>
+
+      <div class="form-block">
+        <h2>Payment Method</h2>
+
+        <div class="payment-options">
+          <label>
+            <input type="radio" name="payment" value="cod" checked />
+            <span>Cash on Delivery</span>
+          </label>
+
+          <label>
+            <input type="radio" name="payment" value="bkash" />
+            <span>Bkash</span>
+          </label>
+        </div>
+
+        <div class="bkash-box" id="bkashBox">
+          <h3>Bkash Payment</h3>
+          <p>
+            Please send the total amount to this Bkash number:
+            <strong>01556300996</strong>
+          </p>
+
+          <div class="input-grid">
+            <div class="input-group">
+              <label>Your Bkash Number</label>
+              <input type="tel" id="bkashNumber" placeholder="01XXXXXXXXX" />
+            </div>
+
+            <div class="input-group">
+              <label>Transaction ID</label>
+              <input type="text" id="txnNumber" placeholder="Enter TXN ID" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="confirm-btn">Confirm Order</button>
+
+      <p class="success-message" id="successMessage">
+        Order confirmed successfully! Redirecting to shop page...
+      </p>
+    </form>
+
+    <aside class="order-summary">
+      <h2>Order Summary</h2>
+
+      <div class="summary-product-list" id="summaryProductList"></div>
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <strong id="subtotalAmount">৳0</strong>
+      </div>
+
+      <div class="summary-row">
+        <span>Total Quantity</span>
+        <strong id="summaryQty">0</strong>
+      </div>
+
+      <div class="summary-row">
+        <span>Delivery Charge</span>
+        <strong id="deliveryCharge">৳80</strong>
+      </div>
+
+      <div class="summary-row discount-row">
+        <span>Discount</span>
+        <strong id="discountAmount">৳0</strong>
+      </div>
+
+      <div class="summary-total">
+        <span>Total</span>
+        <strong id="totalAmount">৳0</strong>
+      </div>
+
+      <p class="summary-note">
+        For Bkash payment, pay first and then submit your Bkash number and transaction ID.
+      </p>
+    </aside>
+  </section>
+</main>
+
+<div class="offer-modal" id="offerModal">
+  <div class="offer-backdrop" id="closeModal"></div>
+
+  <div class="offer-panel">
+    <div class="offer-panel-head">
+      <div>
+        <span id="modalSubTitle">DripLine Offers</span>
+        <h2 id="modalTitle">Choose Offer</h2>
+      </div>
+      <button type="button" id="modalCloseBtn">×</button>
+    </div>
+
+    <div class="offer-ticket-list" id="offerList"></div>
+  </div>
+</div>
+
+<footer class="footer" id="contact">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>DripLine</h3>
+      <p>
+        A men’s clothing brand focused on clean design, comfortable fits,
+        and everyday essentials.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Information</h4>
+      <a href="about.html">About DripLine</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="return-policy.html">Return Policy</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="shop.html">Shop Now</a>
+      <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay Updated</h4>
+      <p>Get updates about new drops, offers, and restocks.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="button">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DripLine. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+  const authLink = document.getElementById("authLink");
+
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+  if (isLoggedIn) {
+    authLink.textContent = "Logout";
+    authLink.href = "index.html";
+
+    authLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "index.html";
+    });
+  } else {
+    authLink.textContent = "Login";
+    authLink.href = "login.html";
+  }
+
+  let checkoutProducts = JSON.parse(localStorage.getItem("checkoutItems")) || [
+    {
+      id: 1,
+      name: "Drop Shoulder T-Shirt",
+      price: 850,
+      image: "product.jpg",
+      quantity: 1,
+      size: "M"
+    }
+  ];
+
+  let discount = 0;
+  let selectedOffer = null;
+
+  const sizes = ["S", "M", "L", "XL", "XXL"];
+
+  const offers = {
+    promo: [
+      { code: "DRIP50", detail: "Save ৳50 on this order", discount: 50, type: "Promo" },
+      { code: "MENSTYLE80", detail: "Save ৳80 on selected essentials", discount: 80, type: "Promo" },
+      { code: "FIRST100", detail: "Save ৳100 for new customers", discount: 100, type: "Promo" }
+    ],
+    voucher: [
+      { code: "VOUCHER60", detail: "Use voucher and save ৳60", discount: 60, type: "Voucher" },
+      { code: "STYLE120", detail: "Save ৳120 on checkout", discount: 120, type: "Voucher" },
+      { code: "DAILY70", detail: "Save ৳70 on everyday fits", discount: 70, type: "Voucher" }
+    ]
+  };
+
+  const checkoutItems = document.getElementById("checkoutItems");
+  const summaryProductList = document.getElementById("summaryProductList");
+  const deliveryArea = document.getElementById("deliveryArea");
+  const subtotalAmount = document.getElementById("subtotalAmount");
+  const summaryQty = document.getElementById("summaryQty");
+  const deliveryCharge = document.getElementById("deliveryCharge");
+  const totalAmount = document.getElementById("totalAmount");
+  const discountAmount = document.getElementById("discountAmount");
+
+  const openPromo = document.getElementById("openPromo");
+  const openVoucher = document.getElementById("openVoucher");
+  const offerModal = document.getElementById("offerModal");
+  const closeModal = document.getElementById("closeModal");
+  const modalCloseBtn = document.getElementById("modalCloseBtn");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalSubTitle = document.getElementById("modalSubTitle");
+  const offerList = document.getElementById("offerList");
+  const selectedOfferText = document.getElementById("selectedOfferText");
+  const selectedOfferBox = document.getElementById("selectedOfferBox");
+  const removeOffer = document.getElementById("removeOffer");
+
+  const paymentMethods = document.querySelectorAll("input[name='payment']");
+  const bkashBox = document.getElementById("bkashBox");
+  const bkashNumber = document.getElementById("bkashNumber");
+  const txnNumber = document.getElementById("txnNumber");
+
+  const checkoutForm = document.getElementById("checkoutForm");
+  const successMessage = document.getElementById("successMessage");
+
+  function saveCheckoutProducts() {
+    localStorage.setItem("checkoutItems", JSON.stringify(checkoutProducts));
+  }
+
+  function getDeliveryCharge() {
+    return deliveryArea.value === "inside" ? 80 : 120;
+  }
+
+  function renderCheckoutProducts() {
+    checkoutItems.innerHTML = "";
+
+    checkoutProducts.forEach(function (product, index) {
+      const sizeOptions = sizes.map(function (size) {
+        return `<option value="${size}" ${product.size === size ? "selected" : ""}>${size}</option>`;
+      }).join("");
+
+      const card = document.createElement("div");
+      card.className = "checkout-product-card";
+
+      card.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" />
+
+        <div class="checkout-product-info">
+          <h3>${product.name}</h3>
+          <p>Price: <strong>৳${product.price}</strong></p>
+
+          <div class="product-controls">
+            <div class="input-group">
+              <label>Size</label>
+              <select class="product-size" data-index="${index}" required>
+                ${sizeOptions}
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label>Quantity</label>
+              <div class="qty-control">
+                <button type="button" class="qty-minus" data-index="${index}">−</button>
+                <span>${product.quantity}</span>
+                <button type="button" class="qty-plus" data-index="${index}">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      checkoutItems.appendChild(card);
+    });
+
+    document.querySelectorAll(".qty-plus").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const index = Number(btn.dataset.index);
+        checkoutProducts[index].quantity++;
+        saveCheckoutProducts();
+        renderCheckoutProducts();
+        updateTotal();
+      });
+    });
+
+    document.querySelectorAll(".qty-minus").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const index = Number(btn.dataset.index);
+
+        if (checkoutProducts[index].quantity > 1) {
+          checkoutProducts[index].quantity--;
+        }
+
+        saveCheckoutProducts();
+        renderCheckoutProducts();
+        updateTotal();
+      });
+    });
+
+    document.querySelectorAll(".product-size").forEach(function (select) {
+      select.addEventListener("change", function () {
+        const index = Number(select.dataset.index);
+        checkoutProducts[index].size = select.value;
+        saveCheckoutProducts();
+        updateTotal();
+      });
+    });
+  }
+
+  function updateTotal() {
+    let subtotal = 0;
+    let totalQty = 0;
+
+    summaryProductList.innerHTML = "";
+
+    checkoutProducts.forEach(function (product) {
+      subtotal += product.price * product.quantity;
+      totalQty += product.quantity;
+
+      const item = document.createElement("div");
+      item.className = "summary-product";
+
+      item.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" />
+        <div>
+          <h3>${product.name}</h3>
+          <span>৳${product.price} × ${product.quantity}</span>
+          <small>Size: ${product.size}</small>
+        </div>
+      `;
+
+      summaryProductList.appendChild(item);
+    });
+
+    const delivery = getDeliveryCharge();
+    let total = subtotal + delivery - discount;
+
+    if (total < 0) total = 0;
+
+    subtotalAmount.textContent = "৳" + subtotal;
+    summaryQty.textContent = totalQty;
+    deliveryCharge.textContent = "৳" + delivery;
+    discountAmount.textContent = "৳" + discount;
+    totalAmount.textContent = "৳" + total;
+  }
+
+  function openOfferModal(type) {
+    offerModal.classList.add("active");
+    offerList.innerHTML = "";
+
+    modalSubTitle.textContent = type === "promo" ? "Promo Codes" : "Voucher Codes";
+    modalTitle.textContent = type === "promo" ? "Choose One Promo Code" : "Choose One Voucher";
+
+    offers[type].forEach(function (offer) {
+      const ticket = document.createElement("button");
+      ticket.type = "button";
+      ticket.className = "offer-ticket";
+
+      ticket.innerHTML = `
+        <div class="ticket-left">
+          <span>${offer.type}</span>
+          <h3>${offer.code}</h3>
+          <p>${offer.detail}</p>
+        </div>
+        <div class="ticket-right">
+          <strong>৳${offer.discount}</strong>
+          <small>OFF</small>
+        </div>
+      `;
+
+      ticket.addEventListener("click", function () {
+        selectedOffer = offer;
+        discount = offer.discount;
+
+        selectedOfferText.textContent =
+          offer.type + " applied: " + offer.code + " - ৳" + offer.discount + " OFF";
+
+        selectedOfferBox.classList.add("has-offer");
+        offerModal.classList.remove("active");
+        updateTotal();
+      });
+
+      offerList.appendChild(ticket);
+    });
+  }
+
+  openPromo.addEventListener("click", function () {
+    openOfferModal("promo");
+  });
+
+  openVoucher.addEventListener("click", function () {
+    openOfferModal("voucher");
+  });
+
+  closeModal.addEventListener("click", function () {
+    offerModal.classList.remove("active");
+  });
+
+  modalCloseBtn.addEventListener("click", function () {
+    offerModal.classList.remove("active");
+  });
+
+  removeOffer.addEventListener("click", function () {
+    selectedOffer = null;
+    discount = 0;
+    selectedOfferText.textContent = "No offer selected";
+    selectedOfferBox.classList.remove("has-offer");
+    updateTotal();
+  });
+
+  deliveryArea.addEventListener("change", updateTotal);
+
+  paymentMethods.forEach(function (method) {
+    method.addEventListener("change", function () {
+      if (method.value === "bkash" && method.checked) {
+        bkashBox.style.display = "block";
+        bkashNumber.required = true;
+        txnNumber.required = true;
+      }
+
+      if (method.value === "cod" && method.checked) {
+        bkashBox.style.display = "none";
+        bkashNumber.required = false;
+        txnNumber.required = false;
+      }
+    });
+  });
+
+  checkoutForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const orderData = {
+      products: checkoutProducts,
+      deliveryArea: deliveryArea.value,
+      discount: discount,
+      offer: selectedOffer,
+      total: totalAmount.textContent,
+      payment: document.querySelector("input[name='payment']:checked").value
+    };
+
+    localStorage.setItem("lastOrder", JSON.stringify(orderData));
+    localStorage.removeItem("checkoutItems");
+
+    successMessage.style.display = "block";
+
+    setTimeout(function () {
+      window.location.href = "shop.html";
+    }, 2000);
+  });
+
+  renderCheckoutProducts();
+  updateTotal();
+</script>
+
+</body>
+</html>

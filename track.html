@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order History | DripLine</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="track.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="logo.jpg" alt="DripLine Logo" />
+      <span>DripLine</span>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="outlet.html">Outlet</a></li>
+      <li><a href="track.html">Order History</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="login.html" class="login-link" id="authLink">Login</a>
+      <a href="cart.html" class="cart-link">Cart</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="history-hero">
+    <span>Order History</span>
+    <h1>Your DripLine Orders</h1>
+    <p>Track order status, view purchased items, and cancel eligible orders.</p>
+  </section>
+
+  <section class="history-page">
+    <div class="history-tools">
+      <div class="history-search">
+        <label>Search Orders</label>
+        <input type="text" id="searchInput" placeholder="Search by product, order ID, status..." />
+      </div>
+
+      <div class="history-sort">
+        <label>Sort By</label>
+        <select id="sortSelect">
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+          <option value="high">Highest Total</option>
+          <option value="low">Lowest Total</option>
+          <option value="status">Status</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="order-list" id="orderList"></div>
+
+    <div class="empty-orders" id="emptyOrders">
+      <h2>No orders found</h2>
+      <p>Your matching orders will appear here.</p>
+      <a href="shop.html">Shop Now</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>DripLine</h3>
+      <p>
+        A men’s clothing brand focused on clean design, comfortable fits,
+        and everyday essentials.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Information</h4>
+      <a href="about.html">About DripLine</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="return-policy.html">Return Policy</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="shop.html">Shop Now</a>
+      <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay Updated</h4>
+      <p>Get updates about new drops, offers, and restocks.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="button">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DripLine. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+  const authLink = document.getElementById("authLink");
+
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+  if (isLoggedIn) {
+    authLink.textContent = "Logout";
+    authLink.href = "index.html";
+
+    authLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "index.html";
+    });
+  } else {
+    authLink.textContent = "Login";
+    authLink.href = "login.html";
+  }
+
+  const CANCEL_LIMIT_HOURS = 6;
+
+  let orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+  if (orders.length === 0) {
+    orders = [
+      {
+        id: "DL-1001",
+        date: "2026-05-03T10:30:00",
+        status: "Pending",
+        payment: "Cash on Delivery",
+        total: 1780,
+        products: [
+          {
+            name: "Drop Shoulder T-Shirt",
+            image: "product1.jpg",
+            price: 850,
+            quantity: 2,
+            size: "L"
+          }
+        ]
+      },
+      {
+        id: "DL-1002",
+        date: "2026-05-02T16:15:00",
+        status: "In Review",
+        payment: "Bkash",
+        total: 970,
+        products: [
+          {
+            name: "Oversized Black Tee",
+            image: "product2.jpg",
+            price: 850,
+            quantity: 1,
+            size: "M"
+          }
+        ]
+      },
+      {
+        id: "DL-1003",
+        date: "2026-04-30T12:00:00",
+        status: "Dispatched",
+        payment: "Cash on Delivery",
+        total: 1820,
+        products: [
+          {
+            name: "Premium White T-Shirt",
+            image: "product3.jpg",
+            price: 850,
+            quantity: 1,
+            size: "XL"
+          },
+          {
+            name: "Drop Shoulder T-Shirt",
+            image: "product1.jpg",
+            price: 850,
+            quantity: 1,
+            size: "M"
+          }
+        ]
+      },
+      {
+        id: "DL-1004",
+        date: "2026-04-25T09:45:00",
+        status: "Delivered",
+        payment: "Bkash",
+        total: 930,
+        products: [
+          {
+            name: "Classic Navy Tee",
+            image: "product4.jpg",
+            price: 850,
+            quantity: 1,
+            size: "S"
+          }
+        ]
+      }
+    ];
+
+    localStorage.setItem("orders", JSON.stringify(orders));
+  }
+
+  const orderList = document.getElementById("orderList");
+  const emptyOrders = document.getElementById("emptyOrders");
+  const searchInput = document.getElementById("searchInput");
+  const sortSelect = document.getElementById("sortSelect");
+
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+
+    return date.toLocaleString("en-BD", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit"
+    });
+  }
+
+  function getHoursPassed(dateString) {
+    const orderDate = new Date(dateString);
+    const now = new Date();
+    const diffMs = now - orderDate;
+
+    return diffMs / (1000 * 60 * 60);
+  }
+
+  function canCancel(order) {
+    const hoursPassed = getHoursPassed(order.date);
+
+    return (
+      hoursPassed <= CANCEL_LIMIT_HOURS &&
+      order.status !== "Cancelled" &&
+      order.status !== "Dispatched" &&
+      order.status !== "Delivered"
+    );
+  }
+
+  function getCancelText(order) {
+    if (order.status === "Cancelled") return "Already Cancelled";
+    if (order.status === "Dispatched") return "Already Dispatched";
+    if (order.status === "Delivered") return "Already Delivered";
+
+    const hoursPassed = getHoursPassed(order.date);
+
+    if (hoursPassed > CANCEL_LIMIT_HOURS) {
+      return "Cancel Time Over";
+    }
+
+    const remaining = Math.ceil(CANCEL_LIMIT_HOURS - hoursPassed);
+    return "Cancel Order (" + remaining + "h left)";
+  }
+
+  function getStatusClass(status) {
+    return status.toLowerCase().replaceAll(" ", "-");
+  }
+
+  function saveOrders() {
+    localStorage.setItem("orders", JSON.stringify(orders));
+  }
+
+  function cancelOrder(orderId) {
+    orders = orders.map(function (order) {
+      if (order.id === orderId && canCancel(order)) {
+        order.status = "Cancelled";
+      }
+
+      return order;
+    });
+
+    saveOrders();
+    renderOrders();
+  }
+
+  function getFilteredOrders() {
+    const searchValue = searchInput.value.toLowerCase().trim();
+    let filteredOrders = orders.filter(function (order) {
+      const productNames = order.products.map(function (product) {
+        return product.name;
+      }).join(" ");
+
+      const searchText = (
+        order.id + " " +
+        order.status + " " +
+        order.payment + " " +
+        productNames
+      ).toLowerCase();
+
+      return searchText.includes(searchValue);
+    });
+
+    const sortValue = sortSelect.value;
+
+    if (sortValue === "newest") {
+      filteredOrders.sort(function (a, b) {
+        return new Date(b.date) - new Date(a.date);
+      });
+    }
+
+    if (sortValue === "oldest") {
+      filteredOrders.sort(function (a, b) {
+        return new Date(a.date) - new Date(b.date);
+      });
+    }
+
+    if (sortValue === "high") {
+      filteredOrders.sort(function (a, b) {
+        return b.total - a.total;
+      });
+    }
+
+    if (sortValue === "low") {
+      filteredOrders.sort(function (a, b) {
+        return a.total - b.total;
+      });
+    }
+
+    if (sortValue === "status") {
+      filteredOrders.sort(function (a, b) {
+        return a.status.localeCompare(b.status);
+      });
+    }
+
+    return filteredOrders;
+  }
+
+  function renderOrders() {
+    const filteredOrders = getFilteredOrders();
+
+    orderList.innerHTML = "";
+
+    if (filteredOrders.length === 0) {
+      emptyOrders.style.display = "block";
+      return;
+    }
+
+    emptyOrders.style.display = "none";
+
+    filteredOrders.forEach(function (order) {
+      const productHTML = order.products.map(function (product) {
+        return `
+          <div class="history-product">
+            <img src="${product.image}" alt="${product.name}" />
+
+            <div>
+              <h3>${product.name}</h3>
+              <p>
+                Size: <strong>${product.size}</strong> |
+                Qty: <strong>${product.quantity}</strong> |
+                Price: <strong>৳${product.price}</strong>
+              </p>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      const card = document.createElement("div");
+      card.className = "order-card";
+
+      card.innerHTML = `
+        <div class="order-head">
+          <div>
+            <span>Order ID</span>
+            <h2>${order.id}</h2>
+            <p>${formatDate(order.date)}</p>
+          </div>
+
+          <strong class="status-badge ${getStatusClass(order.status)}">
+            ${order.status}
+          </strong>
+        </div>
+
+        <div class="history-product-list">
+          ${productHTML}
+        </div>
+
+        <div class="order-info-grid">
+          <div>
+            <span>Total Amount</span>
+            <strong>৳${order.total}</strong>
+          </div>
+
+          <div>
+            <span>Payment</span>
+            <strong>${order.payment}</strong>
+          </div>
+
+          <div>
+            <span>Products</span>
+            <strong>${order.products.length}</strong>
+          </div>
+
+          <div>
+            <span>Total Quantity</span>
+            <strong>
+              ${order.products.reduce(function (sum, product) {
+                return sum + product.quantity;
+              }, 0)}
+            </strong>
+          </div>
+        </div>
+
+        <div class="order-actions">
+          <button 
+            type="button"
+            class="cancel-btn"
+            ${canCancel(order) ? "" : "disabled"}
+            onclick="cancelOrder('${order.id}')"
+          >
+            ${getCancelText(order)}
+          </button>
+        </div>
+      `;
+
+      orderList.appendChild(card);
+    });
+  }
+
+  searchInput.addEventListener("input", renderOrders);
+  sortSelect.addEventListener("change", renderOrders);
+
+  renderOrders();
+</script>
+
+</body>
+</html>

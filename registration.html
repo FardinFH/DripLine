@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Registration | DripLine</title>
+
+  <link rel="stylesheet" href="registration.css" />
+</head>
+
+<body>
+
+<section class="registration-page">
+  <div class="registration-card">
+
+    <a href="index.html" class="brand">
+      <img src="logo.jpg" alt="DripLine Logo" />
+      <span>DripLine</span>
+    </a>
+
+    <h1>Create Account</h1>
+
+    <p class="subtitle">
+      Join DripLine and get updates about new drops and offers.
+    </p>
+
+    <!-- Demo information -->
+    <div class="demo-notice">
+      <strong>Demo Notice:</strong>
+      This website is currently a frontend design only.
+      Please use <strong>123456</strong> as your password.
+    </div>
+
+    <!-- Success message -->
+    <div class="success-message" id="successMessage">
+      Registration successful! Redirecting to login...
+    </div>
+
+    <form id="registrationForm">
+
+      <div class="input-group">
+        <label for="userName">User Name</label>
+
+        <input
+          type="text"
+          id="userName"
+          placeholder="Enter your name"
+          required
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="address">Address</label>
+
+        <textarea
+          id="address"
+          placeholder="Enter your complete address"
+          required
+        ></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="birthDate">Birth Date</label>
+
+        <input
+          type="date"
+          id="birthDate"
+          required
+        />
+
+        <small>
+          Why birth date? Every year on your birthday, you’ll receive
+          a secret DripLine offer.
+        </small>
+      </div>
+
+      <div class="input-group">
+        <label for="phone">Phone Number</label>
+
+        <input
+          type="tel"
+          id="phone"
+          placeholder="Example: 01XXXXXXXXX"
+          maxlength="11"
+          required
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email Address</label>
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email address"
+          required
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="input-group">
+        <label for="password">Password</label>
+
+        <div class="password-box">
+          <input
+            type="password"
+            id="password"
+            placeholder="Use password: 123456"
+            required
+          />
+
+          <button type="button" id="togglePass1">
+            Show
+          </button>
+        </div>
+
+        <small>
+          Demo password: <strong>123456</strong>
+        </small>
+      </div>
+
+      <!-- Confirm password -->
+      <div class="input-group">
+        <label for="confirmPassword">Confirm Password</label>
+
+        <div class="password-box">
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Enter 123456 again"
+            required
+          />
+
+          <button type="button" id="togglePass2">
+            Show
+          </button>
+        </div>
+      </div>
+
+      <p class="error-message" id="errorMessage"></p>
+
+      <button type="submit" class="register-btn">
+        Create Account
+      </button>
+
+    </form>
+
+    <p class="login-text">
+      Already have an account?
+      <a href="login.html">Login</a>
+    </p>
+
+  </div>
+</section>
+
+<script>
+  const registrationForm = document.getElementById("registrationForm");
+
+  const errorMessage = document.getElementById("errorMessage");
+  const successMessage = document.getElementById("successMessage");
+
+  const passwordInput = document.getElementById("password");
+  const confirmPasswordInput = document.getElementById("confirmPassword");
+
+  const togglePass1 = document.getElementById("togglePass1");
+  const togglePass2 = document.getElementById("togglePass2");
+
+  const demoPassword = "123456";
+
+  /*
+   * Show and hide password
+   */
+  togglePass1.addEventListener("click", function () {
+    const isHidden = passwordInput.type === "password";
+
+    passwordInput.type = isHidden ? "text" : "password";
+    togglePass1.textContent = isHidden ? "Hide" : "Show";
+  });
+
+  togglePass2.addEventListener("click", function () {
+    const isHidden = confirmPasswordInput.type === "password";
+
+    confirmPasswordInput.type = isHidden ? "text" : "password";
+    togglePass2.textContent = isHidden ? "Hide" : "Show";
+  });
+
+  /*
+   * Registration form submission
+   */
+  registrationForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const userName = document
+      .getElementById("userName")
+      .value
+      .trim();
+
+    const address = document
+      .getElementById("address")
+      .value
+      .trim();
+
+    const birthDate = document
+      .getElementById("birthDate")
+      .value;
+
+    const phone = document
+      .getElementById("phone")
+      .value
+      .trim();
+
+    const email = document
+      .getElementById("email")
+      .value
+      .trim()
+      .toLowerCase();
+
+    const password = passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+
+    errorMessage.textContent = "";
+    successMessage.style.display = "none";
+
+    /*
+     * Empty field checking
+     */
+    if (
+      userName === "" ||
+      address === "" ||
+      birthDate === "" ||
+      phone === "" ||
+      email === "" ||
+      password === "" ||
+      confirmPassword === ""
+    ) {
+      errorMessage.textContent = "Please complete all required fields.";
+      return;
+    }
+
+    /*
+     * Bangladesh phone number validation
+     */
+    const phonePattern = /^01[3-9][0-9]{8}$/;
+
+    if (!phonePattern.test(phone)) {
+      errorMessage.textContent =
+        "Please enter a valid 11-digit Bangladeshi phone number.";
+
+      return;
+    }
+
+    /*
+     * Demo password checking
+     */
+    if (password !== demoPassword) {
+      errorMessage.textContent =
+        "This is a demo website. Please use 123456 as your password.";
+
+      return;
+    }
+
+    /*
+     * Confirm password checking
+     */
+    if (password !== confirmPassword) {
+      errorMessage.textContent = "Passwords do not match.";
+      return;
+    }
+
+    /*
+     * Get previously registered users
+     */
+    let users = [];
+
+    try {
+      const savedUsers = localStorage.getItem("driplineUsers");
+
+      users = savedUsers ? JSON.parse(savedUsers) : [];
+
+      if (!Array.isArray(users)) {
+        users = [];
+      }
+    } catch (error) {
+      users = [];
+    }
+
+    /*
+     * Check duplicate email or phone number
+     */
+    const existingUser = users.find(function (user) {
+      return user.email === email || user.phone === phone;
+    });
+
+    if (existingUser) {
+      errorMessage.textContent =
+        "This email address or phone number is already registered.";
+
+      return;
+    }
+
+    /*
+     * Create new user object
+     */
+    const newUser = {
+      id: Date.now(),
+      userName: userName,
+      address: address,
+      birthDate: birthDate,
+      phone: phone,
+      email: email,
+      password: demoPassword,
+      registrationDate: new Date().toISOString()
+    };
+
+    /*
+     * Save user in localStorage
+     */
+    users.push(newUser);
+
+    localStorage.setItem(
+      "driplineUsers",
+      JSON.stringify(users)
+    );
+
+    /*
+     * Save recently registered email for login page
+     */
+    localStorage.setItem(
+      "driplineRecentEmail",
+      email
+    );
+
+    successMessage.style.display = "block";
+
+    registrationForm.reset();
+
+    passwordInput.type = "password";
+    confirmPasswordInput.type = "password";
+
+    togglePass1.textContent = "Show";
+    togglePass2.textContent = "Show";
+
+    setTimeout(function () {
+      window.location.href = "login.html";
+    }, 1800);
+  });
+</script>
+
+</body>
+</html>

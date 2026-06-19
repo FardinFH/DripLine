@@ -1,0 +1,401 @@
+.shop-intro {
+  max-width: 1200px;
+  margin: auto;
+  padding: 72px 24px 32px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: end;
+}
+
+.shop-intro span,
+.coming-drop span {
+  color: #7c6f5d;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.shop-intro h1 {
+  margin-top: 10px;
+  font-size: 54px;
+  line-height: 1.05;
+  letter-spacing: -1.8px;
+}
+
+.shop-intro p {
+  color: #57534e;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.shop-tools {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px 35px;
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 18px;
+}
+
+.search-wrap,
+.filter-wrap {
+  background: #ffffff;
+  border: 1px solid #e7e2d8;
+  padding: 14px;
+}
+
+.search-wrap label,
+.filter-wrap label {
+  display: block;
+  margin-bottom: 8px;
+  color: #7c6f5d;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.search-wrap input,
+.filter-wrap select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #f8f7f4;
+  padding: 15px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.filter-wrap select {
+  cursor: pointer;
+}
+
+.drop-board {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px 90px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(240px, auto);
+  gap: 24px;
+}
+
+.drop-card {
+  grid-column: span 3;
+  background: #ffffff;
+  border: 1px solid #e7e2d8;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  min-height: 360px;
+  overflow: hidden;
+  transition: 0.25s ease;
+  position: relative;
+}
+
+.drop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 24px 65px rgba(23, 23, 23, 0.12);
+}
+
+.drop-card.featured {
+  grid-column: span 6;
+  min-height: 520px;
+  grid-template-columns: 1.1fr 0.9fr;
+}
+
+.drop-card.tall {
+  grid-row: span 2;
+  grid-template-columns: 1fr;
+}
+
+.drop-card.wide {
+  grid-column: span 4;
+}
+
+.dark-drop {
+  background: #171717;
+  color: #ffffff;
+  border-color: #171717;
+}
+
+.dark-drop .drop-details p,
+.dark-drop .drop-no {
+  color: #d6d3d1;
+}
+
+.dark-drop .drop-actions a:first-child {
+  background: #ffffff;
+  color: #171717;
+}
+
+.dark-drop .drop-actions a:last-child {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.drop-image {
+  position: relative;
+  min-height: 260px;
+  background: #eee9df;
+  overflow: hidden;
+}
+
+.drop-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.drop-tag {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  background: #ffffff;
+  color: #171717;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.drop-details {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.drop-no {
+  color: #7c6f5d;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.drop-details h2 {
+  margin-top: 10px;
+  font-size: 30px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.drop-card.featured .drop-details h2 {
+  font-size: 46px;
+}
+
+.drop-details p {
+  margin-top: 14px;
+  color: #57534e;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.drop-meta {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.drop-meta span {
+  background: #f8f7f4;
+  border: 1px solid #e7e2d8;
+  padding: 8px 11px;
+  color: #57534e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.drop-bottom {
+  margin-top: auto;
+  padding-top: 26px;
+}
+
+.drop-bottom strong {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 30px;
+}
+
+.drop-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.drop-actions a {
+  flex: 1;
+  text-align: center;
+  padding: 13px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 900;
+  transition: 0.2s ease;
+}
+
+.drop-actions a:first-child {
+  background: #171717;
+  color: #ffffff;
+}
+
+.drop-actions a:last-child {
+  border: 1px solid #171717;
+  color: #171717;
+}
+
+.drop-actions a:hover {
+  transform: translateY(-2px);
+}
+
+.coming-drop {
+  grid-column: span 2;
+  background:
+    linear-gradient(135deg, rgba(23, 23, 23, 0.08), rgba(23, 23, 23, 0.02)),
+    #ffffff;
+  border: 1px dashed #b8afa2;
+  padding: 34px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.coming-drop h2 {
+  margin-top: 12px;
+  font-size: 30px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.coming-drop p {
+  margin-top: 14px;
+  color: #57534e;
+  line-height: 1.7;
+}
+
+.coming-drop a {
+  margin-top: 24px;
+  display: inline-block;
+  width: fit-content;
+  background: #171717;
+  color: #ffffff;
+  padding: 13px 18px;
+  border-radius: 6px;
+  font-weight: 900;
+}
+
+.no-product {
+  max-width: 1200px;
+  margin: -55px auto 85px;
+  padding: 0 24px;
+  text-align: center;
+  color: #706b66;
+  font-size: 18px;
+  font-weight: 800;
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .shop-intro {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .shop-intro h1 {
+    font-size: 44px;
+  }
+
+  .drop-card,
+  .drop-card.featured,
+  .drop-card.wide,
+  .coming-drop {
+    grid-column: span 6;
+  }
+
+  .drop-card.tall {
+    grid-row: auto;
+    grid-template-columns: 0.95fr 1.05fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .shop-intro {
+    padding: 55px 18px 28px;
+  }
+
+  .shop-intro h1 {
+    font-size: 34px;
+  }
+
+  .shop-tools {
+    padding: 0 18px 30px;
+    grid-template-columns: 1fr;
+  }
+
+  .drop-board {
+    padding: 0 18px 70px;
+    grid-template-columns: 1fr;
+  }
+
+  .drop-card,
+  .drop-card.featured,
+  .drop-card.tall,
+  .drop-card.wide {
+    grid-column: span 1;
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .drop-card.featured .drop-details h2 {
+    font-size: 32px;
+  }
+
+  .drop-details h2,
+  .coming-drop h2 {
+    font-size: 26px;
+  }
+
+  .drop-actions {
+    flex-direction: column;
+  }
+
+  .coming-drop {
+    grid-column: span 1;
+  }
+}
+@media (max-width: 700px) {
+  .drop-board {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 0 18px 60px;
+  }
+
+  .drop-board::-webkit-scrollbar {
+    display: none;
+  }
+
+  .drop-card {
+    min-width: 85%;
+    flex-shrink: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .drop-card.featured {
+    min-width: 90%;
+  }
+
+  .drop-card.tall,
+  .drop-card.wide {
+    grid-column: unset;
+  }
+
+  .drop-actions {
+    flex-direction: column;
+  }
+
+  .coming-drop {
+    min-width: 85%;
+  }
+}

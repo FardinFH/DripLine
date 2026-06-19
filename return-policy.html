@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cancellation & Return Policy | DripLine</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="return-policy.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="logo.jpg" alt="DripLine Logo" />
+      <span>DripLine</span>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="outlet.html">Outlet</a></li>
+      <li><a href="track.html">Order History</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="login.html" class="login-link" id="authLink">Login</a>
+      <a href="cart.html" class="cart-link">Cart</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main class="policy-main">
+
+  <section class="policy-hero">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>Cancellation & Return Policy</span>
+    </div>
+
+    <span class="subtitle">Policy</span>
+    <h1>Cancellation & Return Policy</h1>
+    <p>
+      Simple and transparent process. Please read eligibility rules before requesting.
+    </p>
+  </section>
+
+  <section class="policy-layout">
+    <article class="policy-card">
+      <h2>Cancellation</h2>
+      <ul>
+        <li>You can request cancellation before the order is dispatched.</li>
+        <li>Once dispatched, cancellation may not be possible; you can use return options if eligible.</li>
+      </ul>
+
+      <h2>Return Eligibility</h2>
+      <ul>
+        <li>Item must be unused, unwashed, and in original packaging with tags intact.</li>
+        <li>Return request must be placed within the return window mentioned on the product page or invoice.</li>
+        <li>Items marked as “Final Sale” may not be returnable if stated.</li>
+      </ul>
+
+      <h2>Wrong / Damaged Item</h2>
+      <ul>
+        <li>Contact support as soon as possible with unboxing photos/video.</li>
+        <li>After verification, we will arrange a replacement/return based on availability.</li>
+      </ul>
+
+      <h2>Refunds</h2>
+      <ul>
+        <li>Refund method depends on your payment method.</li>
+        <li>Processing time varies depending on banks/payment gateways.</li>
+      </ul>
+
+      <h2>Exchange</h2>
+      <p>
+        Exchange depends on stock availability. If the requested size/color is unavailable,
+        we’ll suggest an alternative solution.
+      </p>
+
+      <div class="policy-note">
+        Keep the invoice and packaging intact until the return/exchange process is completed.
+      </div>
+    </article>
+
+    <aside class="policy-side-card">
+      <h3>Helpful Pages</h3>
+
+      <div class="policy-side-links">
+        <a href="faqs.html">
+          FAQs
+          <span>Quick answers</span>
+        </a>
+
+        <a href="terms.html">
+          Terms & Conditions
+          <span>Legal</span>
+        </a>
+
+        <a href="privacy.html">
+          Privacy Policy
+          <span>Data</span>
+        </a>
+
+        <a href="about.html">
+          About DripLine
+          <span>Brand</span>
+        </a>
+      </div>
+    </aside>
+  </section>
+
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>DripLine</h3>
+      <p>
+        A men’s clothing brand focused on clean design, comfortable fits,
+        and everyday essentials.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Information</h4>
+      <a href="about.html">About DripLine</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="return-policy.html">Return Policy</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="shop.html">Shop Now</a>
+      <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay Updated</h4>
+      <p>Get updates about new drops, offers, and restocks.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="button">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DripLine. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+  const authLink = document.getElementById("authLink");
+
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+  if (isLoggedIn) {
+    authLink.textContent = "Logout";
+    authLink.href = "#";
+
+    authLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "index.html";
+    });
+  } else {
+    authLink.textContent = "Login";
+    authLink.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

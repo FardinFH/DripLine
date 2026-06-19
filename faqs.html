@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQs | DripLine</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="faqs.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="logo.jpg" alt="DripLine Logo" />
+      <span>DripLine</span>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="outlet.html">Outlet</a></li>
+      <li><a href="track.html">Order History</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="login.html" class="login-link" id="authLink">Login</a>
+      <a href="cart.html" class="cart-link">Cart</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main class="faq-main">
+
+  <section class="faq-hero">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <span>FAQs</span>
+    </div>
+
+    <span class="subtitle">Help Center</span>
+    <h1>FAQs</h1>
+    <p>
+      Most common questions are answered here. If you still need help,
+      contact support.
+    </p>
+  </section>
+
+  <section class="faq-layout">
+    <article class="faq-card">
+      <h2>Common Questions</h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>How do I choose the right size?</summary>
+          <div class="faq-answer">
+            Use the size chart on the product page. If you prefer relaxed fit,
+            choose one size up. For regular fit, follow your chest measurement.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How long does delivery take?</summary>
+          <div class="faq-answer">
+            Delivery time varies by location and courier workload. You’ll receive
+            tracking once the order is dispatched.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I cancel my order?</summary>
+          <div class="faq-answer">
+            Yes, if the order hasn’t been dispatched. After dispatch, you can
+            follow the return policy if eligible.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do returns work?</summary>
+          <div class="faq-answer">
+            Return eligibility depends on condition and return window. Keep
+            tags/packaging intact and submit a return request with order details.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What if I receive a wrong or damaged item?</summary>
+          <div class="faq-answer">
+            Contact support quickly with unboxing photos/video. After verification,
+            we’ll arrange a replacement or return based on availability.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you offer exchanges?</summary>
+          <div class="faq-answer">
+            Yes, exchanges depend on stock availability. If your desired size/color
+            is unavailable, we’ll suggest alternatives.
+          </div>
+        </details>
+      </div>
+
+      <div class="faq-note">
+        Tip: Save your invoice and keep packaging until the order is fully confirmed.
+      </div>
+    </article>
+
+    <aside class="faq-side-card">
+      <h3>Support Pages</h3>
+
+      <div class="faq-side-links">
+        <a href="return-policy.html">
+          Cancellation & Return
+          <span>Policy</span>
+        </a>
+
+        <a href="privacy.html">
+          Privacy Policy
+          <span>Data</span>
+        </a>
+
+        <a href="terms.html">
+          Terms & Conditions
+          <span>Legal</span>
+        </a>
+
+        <a href="about.html">
+          About DripLine
+          <span>Brand</span>
+        </a>
+
+        <a href="contact.html">
+          Contact Us
+          <span>Help</span>
+        </a>
+      </div>
+    </aside>
+  </section>
+
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>DripLine</h3>
+      <p>
+        A men’s clothing brand focused on clean design, comfortable fits,
+        and everyday essentials.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Information</h4>
+      <a href="about.html">About DripLine</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="return-policy.html">Return Policy</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="shop.html">Shop Now</a>
+      <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay Updated</h4>
+      <p>Get updates about new drops, offers, and restocks.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="button">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DripLine. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+  const authLink = document.getElementById("authLink");
+
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+  if (isLoggedIn) {
+    authLink.textContent = "Logout";
+    authLink.href = "#";
+
+    authLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "index.html";
+    });
+  } else {
+    authLink.textContent = "Login";
+    authLink.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

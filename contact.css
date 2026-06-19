@@ -1,0 +1,155 @@
+.contact-main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 70px 24px;
+}
+
+.contact-hero {
+  margin-bottom: 42px;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 8px;
+  color: #78716c;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.breadcrumb a {
+  font-weight: 700;
+  color: #171717;
+}
+
+.contact-hero h1 {
+  font-size: 52px;
+  letter-spacing: -2px;
+  margin-bottom: 14px;
+}
+
+.contact-hero p {
+  max-width: 700px;
+  color: #57534e;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.response-badge {
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #e7e2d8;
+  padding: 13px 18px;
+  font-weight: 800;
+  box-shadow: 0 14px 35px rgba(23, 23, 23, 0.06);
+}
+
+.response-badge span {
+  width: 10px;
+  height: 10px;
+  background: #047857;
+  border-radius: 50%;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.contact-card {
+  background: #ffffff;
+  border: 1px solid #e7e2d8;
+  padding: 36px;
+  box-shadow: 0 20px 50px rgba(23, 23, 23, 0.06);
+}
+
+.contact-card h2 {
+  font-size: 30px;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+
+.role {
+  color: #7c6f5d;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 26px;
+}
+
+.person-box {
+  background: #f8f7f4;
+  border: 1px solid #e7e2d8;
+  padding: 24px;
+  margin-bottom: 18px;
+}
+
+.person-box h3 {
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+
+.person-box p {
+  color: #57534e;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.action-row {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.action-row a {
+  background: #171717;
+  color: #ffffff;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.action-row a:hover {
+  transform: translateY(-2px);
+}
+
+.contact-note {
+  margin-top: 22px;
+  background: #171717;
+  color: #ffffff;
+  padding: 16px 18px;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-main {
+    padding: 50px 20px;
+  }
+
+  .contact-hero h1 {
+    font-size: 38px;
+  }
+
+  .contact-card {
+    padding: 24px;
+  }
+
+  .action-row {
+    flex-direction: column;
+  }
+
+  .action-row a {
+    text-align: center;
+  }
+}

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop | DripLine</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar">
+    <a href="index.html" class="brand">
+      <img src="logo.jpg" alt="DripLine Logo" />
+      <span>DripLine</span>
+    </a>
+
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="outlet.html">Outlet</a></li>
+      <li><a href="track.html">Order History</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="login.html" class="login-link" id="authLink">Login</a>
+      <a href="cart.html" class="cart-link">Cart</a>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="shop-intro">
+    <div>
+      <span>DripLine Drop Board</span>
+      <h1>Shop the Latest Men’s Essentials</h1>
+    </div>
+
+    <p>
+      A cleaner way to browse drops — search, filter by price, and pick your next everyday fit.
+    </p>
+  </section>
+
+  <section class="shop-tools">
+    <div class="search-wrap">
+      <label for="searchInput">Search Drops</label>
+      <input type="text" id="searchInput" placeholder="Search t-shirt, shirt, polo..." />
+    </div>
+
+    <div class="filter-wrap">
+      <label for="priceFilter">Price Range</label>
+      <select id="priceFilter">
+      <option value="all">All Prices</option>
+      <option value="1-200">৳0 - ৳200</option>
+      <option value="201-400">৳201-400</option>
+      <option value="401-600">৳401-600</option>
+<option value="601-800">৳601-800</option>
+<option value="801-1000">৳801-1000</option>
+<option value="1001-1200">৳1001-1200</option>
+<option value="1201-1400">৳1201-1400</option>
+    </select>
+
+    </div>
+  </section>
+
+  <section class="drop-board" id="productList">
+
+    <article class="drop-card featured" data-name="Drop Shoulder T-Shirt Oversized Tee" data-price="850">
+      <div class="drop-image">
+        <img src="product.jpg" alt="Drop Shoulder T-Shirt" />
+        <span class="drop-tag">Featured Drop</span>
+      </div>
+
+      <div class="drop-details">
+        <span class="drop-no">DROP 01</span>
+        <h2>Drop Shoulder T-Shirt</h2>
+        <p>Relaxed oversized fit with clean streetwear energy and daily comfort.</p>
+
+        <div class="drop-meta">
+          <span>Oversized Fit</span>
+          <span>Minimal Style</span>
+          <span>Daily Wear</span>
+        </div>
+
+        <div class="drop-bottom">
+          <strong>৳850</strong>
+          <div class="drop-actions">
+            <a href="cart.html">Add to Cart</a>
+            <a href="checkout.html">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="drop-card" data-name="Premium Basic T-Shirt Minimal Tee" data-price="650">
+      <div class="drop-image">
+        <img src="product.jpg" alt="Premium Basic T-Shirt" />
+      </div>
+
+      <div class="drop-details">
+        <span class="drop-no">DROP 02</span>
+        <h2>Premium Basic T-Shirt</h2>
+        <p>Soft essential tee for simple everyday styling.</p>
+
+        <div class="drop-bottom">
+          <strong>৳650</strong>
+          <div class="drop-actions">
+            <a href="cart.html">Add to Cart</a>
+            <a href="checkout.html">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="drop-card tall" data-name="Casual Cotton Shirt Men Shirt" data-price="1200">
+      <div class="drop-image">
+        <img src="product.jpg" alt="Casual Cotton Shirt" />
+        <span class="drop-tag">Smart Casual</span>
+      </div>
+
+      <div class="drop-details">
+        <span class="drop-no">DROP 03</span>
+        <h2>Casual Cotton Shirt</h2>
+        <p>Clean shirt for smart casual everyday outfits.</p>
+
+        <div class="drop-bottom">
+          <strong>৳1200</strong>
+          <div class="drop-actions">
+            <a href="cart.html">Add to Cart</a>
+            <a href="checkout.html">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="drop-card dark-drop" data-name="Oversized Streetwear Tee Black T-Shirt" data-price="950">
+      <div class="drop-image">
+        <img src="product.jpg" alt="Oversized Streetwear Tee" />
+      </div>
+
+      <div class="drop-details">
+        <span class="drop-no">DROP 04</span>
+        <h2>Oversized Streetwear Tee</h2>
+        <p>Modern streetwear silhouette with clean finishing.</p>
+
+        <div class="drop-bottom">
+          <strong>৳950</strong>
+          <div class="drop-actions">
+            <a href="cart.html">Add to Cart</a>
+            <a href="checkout.html">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="drop-card" data-name="Men Casual Polo Premium Polo" data-price="1100">
+      <div class="drop-image">
+        <img src="product.jpg" alt="Men Casual Polo" />
+      </div>
+
+      <div class="drop-details">
+        <span class="drop-no">DROP 05</span>
+        <h2>Men Casual Polo</h2>
+        <p>Comfortable polo for clean daily looks.</p>
+
+        <div class="drop-bottom">
+          <strong>৳1100</strong>
+          <div class="drop-actions">
+            <a href="cart.html">Add to Cart</a>
+            <a href="checkout.html">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="drop-card wide" data-name="Minimal Black Shirt Premium Shirt" data-price="1450">
+      <div class="drop-image">
+        <img src="product.jpg" alt="Minimal Black Shirt" />
+      </div>
+
+      <div class="drop-details">
+        <span class="drop-no">DROP 06</span>
+        <h2>Minimal Black Shirt</h2>
+        <p>Sharp black shirt built for premium minimal outfits.</p>
+
+        <div class="drop-meta">
+          <span>Premium Look</span>
+          <span>Clean Fit</span>
+        </div>
+
+        <div class="drop-bottom">
+          <strong>৳1450</strong>
+          <div class="drop-actions">
+            <a href="cart.html">Add to Cart</a>
+            <a href="checkout.html">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="coming-drop">
+      <span>Next Drop</span>
+      <h2>More DripLine pieces coming soon.</h2>
+      <p>New drops will be added here after product update.</p>
+      <a href="contact.html">Ask for Update</a>
+    </article>
+
+  </section>
+
+  <p class="no-product" id="noProduct">No matching drops found.</p>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h3>DripLine</h3>
+      <p>
+        A men’s clothing brand focused on clean design, comfortable fits,
+        and everyday essentials.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Information</h4>
+      <a href="about.html">About DripLine</a>
+      <a href="terms.html">Terms & Conditions</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="return-policy.html">Return Policy</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Support</h4>
+      <a href="faqs.html">FAQs</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="shop.html">Shop Now</a>
+      <a href="cart.html">Cart</a>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay Updated</h4>
+      <p>Get updates about new drops, offers, and restocks.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" />
+        <button type="button">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DripLine. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const navMenu = document.getElementById("navMenu");
+  const authLink = document.getElementById("authLink");
+
+  menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+  });
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+
+  if (isLoggedIn) {
+    authLink.textContent = "Logout";
+    authLink.href = "index.html";
+
+    authLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "index.html";
+    });
+  } else {
+    authLink.textContent = "Login";
+    authLink.href = "login.html";
+  }
+
+  const searchInput = document.getElementById("searchInput");
+  const priceFilter = document.getElementById("priceFilter");
+  const products = document.querySelectorAll(".drop-card");
+  const noProduct = document.getElementById("noProduct");
+
+  function filterProducts() {
+    const searchValue = searchInput.value.toLowerCase();
+    const priceValue = priceFilter.value;
+    let visibleCount = 0;
+
+    products.forEach(function (product) {
+      const name = product.dataset.name.toLowerCase();
+      const price = Number(product.dataset.price);
+
+      let matchesSearch = name.includes(searchValue);
+      let matchesPrice = true;
+
+      if (priceValue !== "all") {
+        const range = priceValue.split("-");
+        const min = Number(range[0]);
+        const max = Number(range[1]);
+        matchesPrice = price >= min && price <= max;
+      }
+
+      if (matchesSearch && matchesPrice) {
+        product.style.display = "grid";
+        visibleCount++;
+      } else {
+        product.style.display = "none";
+      }
+    });
+
+    noProduct.style.display = visibleCount === 0 ? "block" : "none";
+  }
+
+  searchInput.addEventListener("input", filterProducts);
+  priceFilter.addEventListener("change", filterProducts);
+</script>
+
+</body>
+</html>
